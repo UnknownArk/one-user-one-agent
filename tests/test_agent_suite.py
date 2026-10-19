@@ -1,4 +1,5 @@
 """Comprehensive test suite covering all required data traps, safety verifications, and edge cases."""
+import os
 import pytest
 from datetime import datetime
 
