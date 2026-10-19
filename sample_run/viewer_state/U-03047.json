@@ -1,0 +1,104 @@
+{
+  "viewer_id": "U-03047",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-08T04:26:15.658Z",
+      "freshness_s": 12665110.3
+    },
+    "preferred_dialect": {
+      "value": "d4",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-08T04:26:15.658Z",
+      "freshness_s": 12665110.3
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-08T04:26:15.658Z",
+      "freshness_s": 12665110.3
+    },
+    "signup_at": {
+      "value": "2026-05-08T04:26:15.658Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-05-08T04:26:15.658Z",
+      "freshness_s": 12665110.3
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-08T04:26:15.658Z",
+      "freshness_s": 12665110.3
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-08T04:26:15.658Z",
+      "freshness_s": 12665110.3
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 4,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-2732",
+    "viewer_id": "U-03047",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T18:01:14.751Z",
+      "event_age_s": 0.8,
+      "trigger_event_id": "58fe9b67-09b6-46a5-8f24-c6186d2c743c"
+    },
+    "goal": {
+      "id": "G08",
+      "deadline": "2026-10-08T07:08:12.201Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d4",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T1155",
+      "title:T1040",
+      "title:T1116",
+      "title:T0988",
+      "title:T1085"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:58fe9b67-09b6-46a5-8f24-c6186d2c743c"
+    ],
+    "assumptions": [
+      "Viewer will interact with personalized rows in dialect d4."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "goal_measurable",
+        "holdout_compliance",
+        "goal_eligibility",
+        "dialect_specified"
+      ],
+      "failed": [
+        "holdout_veto"
+      ]
+    },
+    "decided_in_ms": 1,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G08 succeeded: Played new release T0927 (Riya Gune) (exposure: False)."
+  ]
+}

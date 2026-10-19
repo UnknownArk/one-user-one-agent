@@ -1,0 +1,123 @@
+{
+  "viewer_id": "U-01896",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-05T13:32:23.507Z",
+      "freshness_s": 28529942.4
+    },
+    "preferred_dialect": {
+      "value": "d4",
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-05T13:32:23.507Z",
+      "freshness_s": 28529942.4
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-05T13:32:23.507Z",
+      "freshness_s": 28529942.4
+    },
+    "signup_at": {
+      "value": "2025-11-05T13:32:23.507Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-11-05T13:32:23.507Z",
+      "freshness_s": 28529942.4
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-05T13:32:23.507Z",
+      "freshness_s": 28529942.4
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-05T13:32:23.507Z",
+      "freshness_s": 28529942.4
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-1532",
+    "viewer_id": "U-01896",
+    "arm": "holdout",
+    "suppressed": true,
+    "would_have_action": "HOME_PAGE",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T12:10:25.861Z",
+      "event_age_s": 2.9,
+      "trigger_event_id": "18eb238c-153c-420b-9dfb-4bf751707426"
+    },
+    "goal": {
+      "id": "G08",
+      "deadline": "2026-10-08T12:10:25.861Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "message_decision": null,
+    "dialect": {
+      "used": "d4",
+      "source": "app_setting",
+      "conflicts": [
+        "deeplink:d5"
+      ]
+    },
+    "content": [
+      "title:T1101",
+      "title:T1051",
+      "title:T1083",
+      "title:T0971",
+      "title:T1017"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:18eb238c-153c-420b-9dfb-4bf751707426",
+        "freshness_s": 2.9
+      },
+      {
+        "ref": "fact:status:2025-11-05T13:32:23.507Z",
+        "freshness_s": 28507082.4
+      }
+    ],
+    "assumptions": [
+      "Interprets G08: active subscriber eligible to discover titles released in last 30 days.",
+      "Viewer will interact with personalized rows in dialect d4."
+    ],
+    "checks": {
+      "passed": [
+        "home_page_structure",
+        "evidence_grounding",
+        "max_rows",
+        "duplicate_action",
+        "holdout_compliance",
+        "hero_valid",
+        "dialect_specified",
+        "goal_measurable",
+        "goal_eligibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 6,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G08 succeeded: Played new release T0928 (Nisu Sapapa) (exposure: False).",
+    "Goal G08 succeeded: Played new release T0955 (Baba Yarachu) (exposure: False).",
+    "Goal G08 succeeded: Played new release T0955 (Baba Yarachu) (exposure: False).",
+    "Goal G08 succeeded: Played new release T0940 (Vamo Sapa) (exposure: False)."
+  ]
+}

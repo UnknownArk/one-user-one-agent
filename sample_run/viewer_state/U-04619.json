@@ -1,0 +1,105 @@
+{
+  "viewer_id": "U-04619",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-04-22T13:10:18.276Z",
+      "freshness_s": 14016067.7
+    },
+    "preferred_dialect": {
+      "value": "",
+      "source": "profile_snapshot",
+      "observed_at": "2026-04-22T13:10:18.276Z",
+      "freshness_s": 14016067.7
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-04-22T13:10:18.276Z",
+      "freshness_s": 14016067.7
+    },
+    "signup_at": {
+      "value": "2026-04-22T13:10:18.276Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-04-22T13:10:18.276Z",
+      "freshness_s": 14016067.7
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-04-22T13:10:18.276Z",
+      "freshness_s": 14016067.7
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-04-22T13:10:18.276Z",
+      "freshness_s": 14016067.7
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 3,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-1906",
+    "viewer_id": "U-04619",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T14:27:43.777Z",
+      "event_age_s": 0.8,
+      "trigger_event_id": "2bf9b320-930c-49a6-b2dd-0d3fd75f607d"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T11:09:37.259Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": null,
+      "source": "app_setting",
+      "conflicts": [
+        "profile:"
+      ]
+    },
+    "content": [],
+    "confidence": 0.95,
+    "confidence_reason": "No active titles available for dialect None at this time.",
+    "evidence": [
+      {
+        "ref": "event:2bf9b320-930c-49a6-b2dd-0d3fd75f607d",
+        "freshness_s": 0.8
+      },
+      {
+        "ref": "goal:G_INST_U-04619_G07_1790852977",
+        "freshness_s": 11886.5
+      }
+    ],
+    "assumptions": [],
+    "checks": {
+      "passed": [
+        "dialect_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 4,
+    "status": "ABSTAINED",
+    "no_action_reason": "insufficient_evidence",
+    "model_calls": 1,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T11:09:37.259Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T11:09:37.259Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T11:09:37.259Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T11:09:37.259Z."
+  ]
+}

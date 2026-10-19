@@ -1,0 +1,213 @@
+{
+  "viewer_id": "U-03515",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-17T00:50:14.945Z",
+      "freshness_s": 59074871.0
+    },
+    "preferred_dialect": {
+      "value": "d5",
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-17T00:50:14.945Z",
+      "freshness_s": 59074871.0
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-17T00:50:14.945Z",
+      "freshness_s": 59074871.0
+    },
+    "signup_at": {
+      "value": "2024-11-17T00:50:14.945Z",
+      "source": "profile_or_events",
+      "observed_at": "2024-11-17T00:50:14.945Z",
+      "freshness_s": 59074871.0
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-17T00:50:14.945Z",
+      "freshness_s": 59074871.0
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-17T00:50:14.945Z",
+      "freshness_s": 59074871.0
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-2436",
+    "viewer_id": "U-03515",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T16:20:01.514Z",
+      "event_age_s": 1.5,
+      "trigger_event_id": "f6bcfc75-d224-4bd3-970e-909906796188"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T16:20:01.514Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-2377",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d5",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T1181",
+      "title:T1236",
+      "title:T1285",
+      "title:T1248",
+      "title:T1339"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:f6bcfc75-d224-4bd3-970e-909906796188",
+        "freshness_s": 1.5
+      },
+      {
+        "ref": "event:29e12890-4c0e-40c8-8b4b-7e3d83392462",
+        "freshness_s": 553543.6
+      },
+      {
+        "ref": "episode:kova-sako-d5-s1e3",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T1180",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug kova-sako-d5 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d5."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_specified",
+        "push_consent",
+        "hero_valid",
+        "evidence_grounding",
+        "frequency_cap",
+        "push_copy_valid",
+        "home_page_structure",
+        "duplicate_action",
+        "holdout_compliance",
+        "max_rows",
+        "message_title_valid",
+        "goal_measurable",
+        "goal_eligibility",
+        "quiet_hours",
+        "goal_plausibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 6,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-2376",
+      "decision_id": "D-2436",
+      "user_id": "U-03515",
+      "trigger_event_id": "f6bcfc75-d224-4bd3-970e-909906796188",
+      "type": "home_page",
+      "published_at": "2026-10-01T16:20:01.520Z",
+      "dialect": "d5",
+      "hero_title_id": "T1181",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T1236",
+            "T1285",
+            "T1248",
+            "T1186",
+            "T1259",
+            "T1290"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T1339",
+            "T1244",
+            "T1369",
+            "T1342",
+            "T1315",
+            "T1191"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T1192",
+            "T1213",
+            "T1219",
+            "T1250",
+            "T1264",
+            "T1183"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T1218",
+            "T1184",
+            "T1372",
+            "T1309",
+            "T1296",
+            "T1274"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-2377",
+      "decision_id": "D-2436",
+      "user_id": "U-03515",
+      "trigger_event_id": "f6bcfc75-d224-4bd3-970e-909906796188",
+      "type": "push",
+      "published_at": "2026-10-01T16:20:01.520Z",
+      "send_at": "2026-10-01T16:20:16.514Z",
+      "title_id": "T1181",
+      "dialect": "d5",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d5",
+        "body": "Watch Pana Mobako now on STAGE."
+      },
+      "deeplink": "ott://title/T1181"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:20:01.514Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:20:01.514Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:20:01.514Z.",
+    "Goal G07 succeeded: Resumed series slug kova-sako-d5 on title T1180 (exposure: True)."
+  ]
+}

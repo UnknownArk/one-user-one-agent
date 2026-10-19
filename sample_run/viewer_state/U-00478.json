@@ -1,0 +1,205 @@
+{
+  "viewer_id": "U-00478",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-06T03:51:53.249Z",
+      "freshness_s": 49646372.7
+    },
+    "preferred_dialect": {
+      "value": "d6",
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-06T03:51:53.249Z",
+      "freshness_s": 49646372.7
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-06T03:51:53.249Z",
+      "freshness_s": 49646372.7
+    },
+    "signup_at": {
+      "value": "2025-03-06T03:51:53.249Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-03-06T03:51:53.249Z",
+      "freshness_s": 49646372.7
+    },
+    "subscription_status": {
+      "value": "lapsed",
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-06T03:51:53.249Z",
+      "freshness_s": 49646372.7
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-06T03:51:53.249Z",
+      "freshness_s": 49646372.7
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-1046",
+    "viewer_id": "U-00478",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T08:23:44.504Z",
+      "event_age_s": 1.5,
+      "trigger_event_id": "11123156-32dd-4114-814e-94d24fe7ee68"
+    },
+    "goal": {
+      "id": "G06",
+      "deadline": "2026-10-15T08:23:44.504Z",
+      "signal": "purchase_completed",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-0873",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d6",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T1484",
+      "title:T1456",
+      "title:T1455",
+      "title:T1500",
+      "title:T1416"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:11123156-32dd-4114-814e-94d24fe7ee68",
+        "freshness_s": 1.5
+      },
+      {
+        "ref": "fact:status:2025-03-06T03:51:53.249Z",
+        "freshness_s": 49609911.3
+      }
+    ],
+    "assumptions": [
+      "Assumes lapsed viewer has interest in new catalogue additions.",
+      "Viewer will interact with personalized rows in dialect d6."
+    ],
+    "checks": {
+      "passed": [
+        "quiet_hours",
+        "duplicate_action",
+        "max_rows",
+        "goal_eligibility",
+        "evidence_grounding",
+        "push_copy_valid",
+        "goal_plausibility",
+        "frequency_cap",
+        "home_page_structure",
+        "goal_measurable",
+        "dialect_specified",
+        "message_title_valid",
+        "push_consent",
+        "holdout_compliance",
+        "hero_valid"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0872",
+      "decision_id": "D-1046",
+      "user_id": "U-00478",
+      "trigger_event_id": "11123156-32dd-4114-814e-94d24fe7ee68",
+      "type": "home_page",
+      "published_at": "2026-10-01T08:23:44.504Z",
+      "dialect": "d6",
+      "hero_title_id": "T1484",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T1456",
+            "T1455",
+            "T1500",
+            "T1459",
+            "T1402",
+            "T1407"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T1416",
+            "T1499",
+            "T1481",
+            "T1419",
+            "T1434",
+            "T1432"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T1421",
+            "T1461",
+            "T1468",
+            "T1491",
+            "T1463",
+            "T1393"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T1476",
+            "T1387",
+            "T1403",
+            "T1454",
+            "T1495",
+            "T1472"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-0873",
+      "decision_id": "D-1046",
+      "user_id": "U-00478",
+      "trigger_event_id": "11123156-32dd-4114-814e-94d24fe7ee68",
+      "type": "push",
+      "published_at": "2026-10-01T08:23:44.504Z",
+      "send_at": "2026-10-01T08:23:59.504Z",
+      "title_id": "T1484",
+      "dialect": "d6",
+      "goal_id": "G06",
+      "text": {
+        "title": "Recommended in d6",
+        "body": "Watch Sunini now on STAGE."
+      },
+      "deeplink": "ott://title/T1484"
+    }
+  ],
+  "lessons": [
+    "Goal G06 succeeded: Reactivated subscription via purchase_completed at 2026-10-05T07:12:00.000Z (exposure: True).",
+    "Goal G06 succeeded: Reactivated subscription via purchase_completed at 2026-10-05T07:12:00.000Z (exposure: True).",
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T08:23:44.504Z.",
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T08:23:44.504Z."
+  ]
+}

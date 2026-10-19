@@ -1,0 +1,107 @@
+{
+  "viewer_id": "U-01009",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-01T05:18:35.326Z",
+      "freshness_s": 13266770.6
+    },
+    "preferred_dialect": {
+      "value": "d6",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-01T05:18:35.326Z",
+      "freshness_s": 13266770.6
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-01T05:18:35.326Z",
+      "freshness_s": 13266770.6
+    },
+    "signup_at": {
+      "value": "2026-05-01T05:18:35.326Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-05-01T05:18:35.326Z",
+      "freshness_s": 13266770.6
+    },
+    "subscription_status": {
+      "value": "lapsed",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-01T05:18:35.326Z",
+      "freshness_s": 13266770.6
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-01T05:18:35.326Z",
+      "freshness_s": 13266770.6
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-2042",
+    "viewer_id": "U-01009",
+    "arm": "holdout",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T15:01:39.811Z",
+      "event_age_s": 2.0,
+      "trigger_event_id": "1a20e098-c4d2-4a65-9059-1a8c09f5e86e"
+    },
+    "goal": {
+      "id": "G06",
+      "deadline": "2026-10-15T15:01:39.811Z",
+      "signal": "purchase_completed",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d7",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d6"
+      ]
+    },
+    "content": [],
+    "confidence": 0.95,
+    "confidence_reason": "No active titles available for dialect d7 at this time.",
+    "evidence": [
+      {
+        "ref": "event:1a20e098-c4d2-4a65-9059-1a8c09f5e86e",
+        "freshness_s": 2.0
+      },
+      {
+        "ref": "fact:status:2026-05-01T05:18:35.326Z",
+        "freshness_s": 13254184.5
+      }
+    ],
+    "assumptions": [
+      "Assumes lapsed viewer has interest in new catalogue additions."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "ABSTAINED",
+    "no_action_reason": "insufficient_evidence",
+    "model_calls": 1,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T15:01:39.811Z.",
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T15:01:39.811Z.",
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T15:01:39.811Z.",
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T15:01:39.811Z."
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "viewer_id": "U-02259",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-15T16:47:15.255Z",
+      "freshness_s": 19705450.7
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-15T16:47:15.255Z",
+      "freshness_s": 19705450.7
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-15T16:47:15.255Z",
+      "freshness_s": 19705450.7
+    },
+    "signup_at": {
+      "value": "2026-02-15T16:47:15.255Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-02-15T16:47:15.255Z",
+      "freshness_s": 19705450.7
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-15T16:47:15.255Z",
+      "freshness_s": 19705450.7
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-15T16:47:15.255Z",
+      "freshness_s": 19705450.7
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-0832",
+    "viewer_id": "U-02259",
+    "arm": "holdout",
+    "suppressed": true,
+    "would_have_action": "HOME_PAGE",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T06:45:03.947Z",
+      "event_age_s": 1.9,
+      "trigger_event_id": "1c9541e3-1be2-4151-8340-6a0476a0b51b"
+    },
+    "goal": {
+      "id": "G08",
+      "deadline": "2026-10-08T06:45:03.947Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d6",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d2"
+      ]
+    },
+    "content": [
+      "title:T1468",
+      "title:T1396",
+      "title:T1455",
+      "title:T1465",
+      "title:T1410"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:1c9541e3-1be2-4151-8340-6a0476a0b51b",
+        "freshness_s": 1.9
+      },
+      {
+        "ref": "fact:status:2026-02-15T16:47:15.255Z",
+        "freshness_s": 19663068.7
+      }
+    ],
+    "assumptions": [
+      "Interprets G08: active subscriber eligible to discover titles released in last 30 days.",
+      "Viewer will interact with personalized rows in dialect d6."
+    ],
+    "checks": {
+      "passed": [
+        "hero_valid",
+        "goal_eligibility",
+        "evidence_grounding",
+        "dialect_specified",
+        "holdout_compliance",
+        "goal_measurable",
+        "max_rows",
+        "home_page_structure"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 6,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G08 succeeded: Played new release T1431 (Kaka Niyabha) (exposure: False).",
+    "Goal G08 succeeded: Played new release T1414 (Saja Chubha) (exposure: False).",
+    "Goal G08 succeeded: Played new release T1411 (Losubha Rima) (exposure: False).",
+    "Goal G08 succeeded: Played new release T1398 (Naka) (exposure: False)."
+  ]
+}

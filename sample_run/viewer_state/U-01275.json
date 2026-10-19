@@ -1,0 +1,119 @@
+{
+  "viewer_id": "U-01275",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-12T21:19:40.882Z",
+      "freshness_s": 17529105.1
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-12T21:19:40.882Z",
+      "freshness_s": 17529105.1
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-12T21:19:40.882Z",
+      "freshness_s": 17529105.1
+    },
+    "signup_at": {
+      "value": "2026-03-12T21:19:40.882Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-03-12T21:19:40.882Z",
+      "freshness_s": 17529105.1
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "live_purchase_event",
+      "observed_at": "2026-10-01T12:54:22.923Z",
+      "freshness_s": 20223.0
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-12T21:19:40.882Z",
+      "freshness_s": 17529105.1
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-1618",
+    "viewer_id": "U-01275",
+    "arm": "holdout",
+    "suppressed": true,
+    "would_have_action": "HOME_PAGE",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T12:52:42.257Z",
+      "event_age_s": 0.3,
+      "trigger_event_id": "13aa6ee5-d601-43f4-924b-f8494f8a4428"
+    },
+    "goal": {
+      "id": "G05",
+      "deadline": "2026-10-08T12:52:42.257Z",
+      "signal": "purchase_completed",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0511",
+      "title:T0060",
+      "title:T0274",
+      "title:T0051",
+      "title:T0363"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:13aa6ee5-d601-43f4-924b-f8494f8a4428",
+        "freshness_s": 0.3
+      },
+      {
+        "ref": "fact:subscription_status:never:profile_snapshot",
+        "freshness_s": 17508781.4
+      }
+    ],
+    "assumptions": [
+      "Assumes user is ready for paid conversion proposition.",
+      "Viewer will interact with personalized rows in dialect d1."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_specified",
+        "goal_eligibility",
+        "home_page_structure",
+        "goal_measurable",
+        "evidence_grounding",
+        "hero_valid",
+        "max_rows",
+        "holdout_compliance"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 2,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G05 succeeded: Purchased paid plan P_MONTH (price \u20b9149) (exposure: False).",
+    "Goal G05 succeeded: Purchased paid plan P_MONTH (price \u20b9149) (exposure: False).",
+    "Goal G05 succeeded: Purchased paid plan P_MONTH (price \u20b9149) (exposure: False).",
+    "Goal G05 succeeded: Purchased paid plan P_MONTH (price \u20b9149) (exposure: False)."
+  ]
+}

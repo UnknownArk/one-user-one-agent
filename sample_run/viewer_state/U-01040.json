@@ -1,0 +1,215 @@
+{
+  "viewer_id": "U-01040",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-11T13:23:32.528Z",
+      "freshness_s": 49180073.4
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-11T13:23:32.528Z",
+      "freshness_s": 49180073.4
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-11T13:23:32.528Z",
+      "freshness_s": 49180073.4
+    },
+    "signup_at": {
+      "value": "2025-03-11T13:23:32.528Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-03-11T13:23:32.528Z",
+      "freshness_s": 49180073.4
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-11T13:23:32.528Z",
+      "freshness_s": 49180073.4
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-11T13:23:32.528Z",
+      "freshness_s": 49180073.4
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-1740",
+    "viewer_id": "U-01040",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T13:42:38.859Z",
+      "event_age_s": 1.9,
+      "trigger_event_id": "9a4167ed-e0dd-477a-8c23-3681147114d6"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T13:42:38.859Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-1622",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": [
+        "deeplink:d4"
+      ]
+    },
+    "content": [
+      "title:T0511",
+      "title:T0060",
+      "title:T0274",
+      "title:T0051",
+      "title:T0363"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:9a4167ed-e0dd-477a-8c23-3681147114d6",
+        "freshness_s": 1.9
+      },
+      {
+        "ref": "event:0507521e-ce4a-499c-9a1a-ae6ba8825eff",
+        "freshness_s": 1855845.1
+      },
+      {
+        "ref": "episode:bagugu-gigupi-d1-s1e1",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0009",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug bagugu-gigupi-d1 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d1."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_specified",
+        "push_consent",
+        "hero_valid",
+        "evidence_grounding",
+        "frequency_cap",
+        "push_copy_valid",
+        "home_page_structure",
+        "duplicate_action",
+        "holdout_compliance",
+        "max_rows",
+        "message_title_valid",
+        "goal_measurable",
+        "goal_eligibility",
+        "quiet_hours",
+        "goal_plausibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 96,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1621",
+      "decision_id": "D-1740",
+      "user_id": "U-01040",
+      "trigger_event_id": "9a4167ed-e0dd-477a-8c23-3681147114d6",
+      "type": "home_page",
+      "published_at": "2026-10-01T13:42:38.955Z",
+      "dialect": "d1",
+      "hero_title_id": "T0511",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0060",
+            "T0274",
+            "T0051",
+            "T0303",
+            "T0390",
+            "T0046"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0363",
+            "T0047",
+            "T0263",
+            "T0495",
+            "T0258",
+            "T0179"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0426",
+            "T0382",
+            "T0435",
+            "T0195",
+            "T0036",
+            "T0413"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0270",
+            "T0162",
+            "T0338",
+            "T0198",
+            "T0065",
+            "T0299"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-1622",
+      "decision_id": "D-1740",
+      "user_id": "U-01040",
+      "trigger_event_id": "9a4167ed-e0dd-477a-8c23-3681147114d6",
+      "type": "push",
+      "published_at": "2026-10-01T13:42:38.955Z",
+      "send_at": "2026-10-01T13:42:53.859Z",
+      "title_id": "T0511",
+      "dialect": "d1",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d1",
+        "body": "Watch Nela Guja now on STAGE."
+      },
+      "deeplink": "ott://title/T0511"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T13:42:38.859Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T13:42:38.859Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T13:42:38.859Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T13:42:38.859Z."
+  ]
+}

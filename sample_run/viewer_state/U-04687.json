@@ -1,0 +1,197 @@
+{
+  "viewer_id": "U-04687",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-20T11:27:02.462Z",
+      "freshness_s": 61455863.5
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-20T11:27:02.462Z",
+      "freshness_s": 61455863.5
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-20T11:27:02.462Z",
+      "freshness_s": 61455863.5
+    },
+    "signup_at": {
+      "value": "2024-10-20T11:27:02.462Z",
+      "source": "profile_or_events",
+      "observed_at": "2024-10-20T11:27:02.462Z",
+      "freshness_s": 61455863.5
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-20T11:27:02.462Z",
+      "freshness_s": 61455863.5
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-20T11:27:02.462Z",
+      "freshness_s": 61455863.5
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-1023",
+    "viewer_id": "U-04687",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T08:13:21.834Z",
+      "event_age_s": 0.8,
+      "trigger_event_id": "83fd6772-65b2-498c-bebd-7ddf7ea8b421"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T08:13:21.834Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "VETOED",
+      "channel": "push",
+      "reason": "push_consent"
+    },
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0419",
+      "title:T0277",
+      "title:T0097",
+      "title:T0211",
+      "title:T0031"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:83fd6772-65b2-498c-bebd-7ddf7ea8b421",
+        "freshness_s": 0.8
+      },
+      {
+        "ref": "event:d349db7c-c801-4572-89bc-ab13f123e522",
+        "freshness_s": 2302105.0
+      },
+      {
+        "ref": "episode:hama-chudibha-d1-s1e1",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0002",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug hama-chudibha-d1 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d1."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_specified",
+        "hero_valid",
+        "evidence_grounding",
+        "frequency_cap",
+        "push_copy_valid",
+        "home_page_structure",
+        "duplicate_action",
+        "holdout_compliance",
+        "max_rows",
+        "message_title_valid",
+        "goal_measurable",
+        "goal_eligibility",
+        "quiet_hours",
+        "goal_plausibility"
+      ],
+      "failed": [
+        "push_consent"
+      ]
+    },
+    "decided_in_ms": 8,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0842",
+      "decision_id": "D-1023",
+      "user_id": "U-04687",
+      "trigger_event_id": "83fd6772-65b2-498c-bebd-7ddf7ea8b421",
+      "type": "home_page",
+      "published_at": "2026-10-01T08:13:21.842Z",
+      "dialect": "d1",
+      "hero_title_id": "T0419",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0277",
+            "T0097",
+            "T0211",
+            "T0028",
+            "T0196",
+            "T0403"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0031",
+            "T0070",
+            "T0214",
+            "T0384",
+            "T0258",
+            "T0271"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0426",
+            "T0382",
+            "T0435",
+            "T0195",
+            "T0036",
+            "T0413"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0346",
+            "T0302",
+            "T0174",
+            "T0234",
+            "T0383",
+            "T0446"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T08:13:21.834Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T08:13:21.834Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T08:13:21.834Z.",
+    "Goal G07 succeeded: Resumed series slug hama-chudibha-d1 on title T0002 (exposure: True)."
+  ]
+}

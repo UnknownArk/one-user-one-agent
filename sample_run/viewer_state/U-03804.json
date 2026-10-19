@@ -1,0 +1,181 @@
+{
+  "viewer_id": "U-03804",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-10T20:42:23.826Z",
+      "freshness_s": 57016142.1
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-10T20:42:23.826Z",
+      "freshness_s": 57016142.1
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-10T20:42:23.826Z",
+      "freshness_s": 57016142.1
+    },
+    "signup_at": {
+      "value": "2024-12-10T20:42:23.826Z",
+      "source": "profile_or_events",
+      "observed_at": "2024-12-10T20:42:23.826Z",
+      "freshness_s": 57016142.1
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-10T20:42:23.826Z",
+      "freshness_s": 57016142.1
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-10T20:42:23.826Z",
+      "freshness_s": 57016142.1
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-2511",
+    "viewer_id": "U-03804",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T16:41:11.820Z",
+      "event_age_s": 0.8,
+      "trigger_event_id": "c6b9b087-e245-40b7-a113-1565b4c8e864"
+    },
+    "goal": {
+      "id": "G08",
+      "deadline": "2026-10-08T16:41:08.120Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "VETOED",
+      "channel": "none",
+      "reason": "ineligible_goal"
+    },
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0829",
+      "title:T0832",
+      "title:T0746",
+      "title:T0711",
+      "title:T0807"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:c6b9b087-e245-40b7-a113-1565b4c8e864",
+        "freshness_s": 0.8
+      },
+      {
+        "ref": "goal:G_INST_U-03804_G08_1790872868",
+        "freshness_s": 3.7
+      }
+    ],
+    "assumptions": [
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "duplicate_action",
+        "max_rows",
+        "goal_eligibility",
+        "evidence_grounding",
+        "home_page_structure",
+        "goal_measurable",
+        "dialect_specified",
+        "holdout_compliance",
+        "hero_valid"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 2,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-2450",
+      "decision_id": "D-2511",
+      "user_id": "U-03804",
+      "trigger_event_id": "c6b9b087-e245-40b7-a113-1565b4c8e864",
+      "type": "home_page",
+      "published_at": "2026-10-01T16:41:11.822Z",
+      "dialect": "d2",
+      "hero_title_id": "T0829",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0832",
+            "T0746",
+            "T0711",
+            "T0726",
+            "T0706",
+            "T0852"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0807",
+            "T0866",
+            "T0762",
+            "T0745",
+            "T0790",
+            "T0522"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0535",
+            "T0584",
+            "T0596",
+            "T0616",
+            "T0679",
+            "T0779"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0837",
+            "T0697",
+            "T0633",
+            "T0699",
+            "T0556",
+            "T0835"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G08 succeeded: Played new release T0538 (Gisu) (exposure: False).",
+    "Goal G08 succeeded: Played new release T0538 (Gisu) (exposure: False).",
+    "Goal G08 succeeded: Played new release T0546 (Bhariya) (exposure: False).",
+    "Goal G08 succeeded: Played new release T0531 (Chugu) (exposure: False)."
+  ]
+}

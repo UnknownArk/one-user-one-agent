@@ -1,0 +1,87 @@
+{
+  "viewer_id": "U-01911",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-30T06:48:00.582Z",
+      "freshness_s": 44883805.4
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-30T06:48:00.582Z",
+      "freshness_s": 44883805.4
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-30T06:48:00.582Z",
+      "freshness_s": 44883805.4
+    },
+    "signup_at": {
+      "value": "2025-04-30T06:48:00.582Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-04-30T06:48:00.582Z",
+      "freshness_s": 44883805.4
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-30T06:48:00.582Z",
+      "freshness_s": 44883805.4
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-30T06:48:00.582Z",
+      "freshness_s": 44883805.4
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-2757",
+    "viewer_id": "U-01911",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T18:22:01.830Z",
+      "event_age_s": 106922.7,
+      "trigger_event_id": "939d718a-6b5f-49f4-9377-390774d87fac"
+    },
+    "goal": null,
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [],
+    "confidence": 0.99,
+    "confidence_reason": "Trigger event is 106923s old (> 600s threshold); offline-buffered event ignored.",
+    "evidence": [
+      "event:939d718a-6b5f-49f4-9377-390774d87fac"
+    ],
+    "assumptions": [
+      "Offline-buffered historical app opens do not reflect a live user session."
+    ],
+    "checks": {
+      "passed": [
+        "stale_trigger_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "ABSTAINED",
+    "no_action_reason": "stale_trigger",
+    "model_calls": 0,
+    "tool_calls": 0,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G05 failed: No attributable success signal before deadline 2026-10-08T09:05:44.513Z."
+  ]
+}

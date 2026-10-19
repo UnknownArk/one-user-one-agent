@@ -1,0 +1,106 @@
+{
+  "viewer_id": "U-01214",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-15T01:43:50.990Z",
+      "freshness_s": 27708455.0
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-15T01:43:50.990Z",
+      "freshness_s": 27708455.0
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-15T01:43:50.990Z",
+      "freshness_s": 27708455.0
+    },
+    "signup_at": {
+      "value": "2025-11-15T01:43:50.990Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-11-15T01:43:50.990Z",
+      "freshness_s": 27708455.0
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-15T01:43:50.990Z",
+      "freshness_s": 27708455.0
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-15T01:43:50.990Z",
+      "freshness_s": 27708455.0
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-0816",
+    "viewer_id": "U-01214",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T06:39:00.445Z",
+      "event_age_s": 2.4,
+      "trigger_event_id": "2da323c2-e5e2-433e-ad91-838d2d51e5e8"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T06:39:00.445Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0741",
+      "title:T0787",
+      "title:T0724",
+      "title:T0657",
+      "title:T0695"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:2da323c2-e5e2-433e-ad91-838d2d51e5e8",
+      "event:39a29c39-7279-455d-8901-72fe83aded71"
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug kolani-mari-d2 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "goal_eligibility",
+        "dialect_specified",
+        "holdout_compliance",
+        "goal_measurable",
+        "evidence_grounding"
+      ],
+      "failed": [
+        "holdout_veto"
+      ]
+    },
+    "decided_in_ms": 2,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T06:39:00.445Z."
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "viewer_id": "U-04573",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-10-17T08:50:45.269Z",
+      "freshness_s": 30188440.7
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2025-10-17T08:50:45.269Z",
+      "freshness_s": 30188440.7
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-10-17T08:50:45.269Z",
+      "freshness_s": 30188440.7
+    },
+    "signup_at": {
+      "value": "2025-10-17T08:50:45.269Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-10-17T08:50:45.269Z",
+      "freshness_s": 30188440.7
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "events_purchase_completed",
+      "observed_at": "2025-10-17T08:50:45.269Z",
+      "freshness_s": 30188440.7
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-10-17T08:50:45.269Z",
+      "freshness_s": 30188440.7
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-1247",
+    "viewer_id": "U-04573",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T09:56:49.428Z",
+      "event_age_s": 2.4,
+      "trigger_event_id": "ab86f74a-b45e-419c-bc7c-fc9fee564569"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T09:56:49.428Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0195",
+      "title:T0007",
+      "title:T0294",
+      "title:T0403",
+      "title:T0465"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:ab86f74a-b45e-419c-bc7c-fc9fee564569",
+      "event:fdc7e279-699c-4277-ad52-b7028d2a9589"
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug kopibha-niya-d1 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d1."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "goal_measurable",
+        "holdout_compliance",
+        "goal_eligibility",
+        "dialect_specified"
+      ],
+      "failed": [
+        "holdout_veto"
+      ]
+    },
+    "decided_in_ms": 2,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 succeeded: Resumed series slug kopibha-niya-d1 on title T0013 (exposure: False)."
+  ]
+}

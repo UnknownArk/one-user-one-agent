@@ -1,0 +1,215 @@
+{
+  "viewer_id": "U-03011",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-30T04:26:29.301Z",
+      "freshness_s": 39621896.6
+    },
+    "preferred_dialect": {
+      "value": "d5",
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-30T04:26:29.301Z",
+      "freshness_s": 39621896.6
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-30T04:26:29.301Z",
+      "freshness_s": 39621896.6
+    },
+    "signup_at": {
+      "value": "2025-06-30T04:26:29.301Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-06-30T04:26:29.301Z",
+      "freshness_s": 39621896.6
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-30T04:26:29.301Z",
+      "freshness_s": 39621896.6
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-30T04:26:29.301Z",
+      "freshness_s": 39621896.6
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-1135",
+    "viewer_id": "U-03011",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T09:05:17.739Z",
+      "event_age_s": 0.7,
+      "trigger_event_id": "a7f51590-f4e6-4e86-88fc-d37be85fd35b"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T09:05:17.739Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-0964",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d5"
+      ]
+    },
+    "content": [
+      "title:T0829",
+      "title:T0832",
+      "title:T0746",
+      "title:T0711",
+      "title:T0807"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:a7f51590-f4e6-4e86-88fc-d37be85fd35b",
+        "freshness_s": 0.7
+      },
+      {
+        "ref": "event:fb8cdb42-6368-4cd4-bd42-4115b84bc628",
+        "freshness_s": 2538645.0
+      },
+      {
+        "ref": "episode:chugu-d2-s1e1",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0531",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug chugu-d2 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "quiet_hours",
+        "home_page_structure",
+        "evidence_grounding",
+        "goal_plausibility",
+        "max_rows",
+        "message_title_valid",
+        "duplicate_action",
+        "push_consent",
+        "holdout_compliance",
+        "hero_valid",
+        "push_copy_valid",
+        "dialect_specified",
+        "goal_measurable",
+        "frequency_cap",
+        "goal_eligibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 13,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0963",
+      "decision_id": "D-1135",
+      "user_id": "U-03011",
+      "trigger_event_id": "a7f51590-f4e6-4e86-88fc-d37be85fd35b",
+      "type": "home_page",
+      "published_at": "2026-10-01T09:05:17.752Z",
+      "dialect": "d2",
+      "hero_title_id": "T0829",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0832",
+            "T0746",
+            "T0711",
+            "T0726",
+            "T0706",
+            "T0852"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0807",
+            "T0866",
+            "T0530",
+            "T0762",
+            "T0745",
+            "T0790"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0535",
+            "T0584",
+            "T0596",
+            "T0616",
+            "T0679",
+            "T0779"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0522",
+            "T0837",
+            "T0697",
+            "T0633",
+            "T0699",
+            "T0556"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-0964",
+      "decision_id": "D-1135",
+      "user_id": "U-03011",
+      "trigger_event_id": "a7f51590-f4e6-4e86-88fc-d37be85fd35b",
+      "type": "push",
+      "published_at": "2026-10-01T09:05:17.752Z",
+      "send_at": "2026-10-01T09:05:32.739Z",
+      "title_id": "T0829",
+      "dialect": "d2",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d2",
+        "body": "Watch Riya now on STAGE."
+      },
+      "deeplink": "ott://title/T0829"
+    }
+  ],
+  "lessons": [
+    "Goal G07 succeeded: Resumed series slug chugu-d2 on title T0531 (exposure: True).",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T09:05:17.739Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T09:05:17.739Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T09:05:17.739Z."
+  ]
+}

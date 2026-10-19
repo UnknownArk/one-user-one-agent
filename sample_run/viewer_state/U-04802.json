@@ -1,0 +1,107 @@
+{
+  "viewer_id": "U-04802",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-16T03:41:38.276Z",
+      "freshness_s": 1349387.7
+    },
+    "preferred_dialect": {
+      "value": "d3",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-16T03:41:38.276Z",
+      "freshness_s": 1349387.7
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-16T03:41:38.276Z",
+      "freshness_s": 1349387.7
+    },
+    "signup_at": {
+      "value": "2026-09-16T03:41:38.276Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-09-16T03:41:38.276Z",
+      "freshness_s": 1349387.7
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-16T03:41:38.276Z",
+      "freshness_s": 1349387.7
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-16T03:41:38.276Z",
+      "freshness_s": 1349387.7
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-1600",
+    "viewer_id": "U-04802",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T12:45:45.666Z",
+      "event_age_s": 2.7,
+      "trigger_event_id": "5cd39d83-f7a9-4109-b5b0-aa86d9e8e5bb"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T03:29:12.647Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0901",
+      "title:T0910",
+      "title:T0909",
+      "title:T0905",
+      "title:T0903"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:5cd39d83-f7a9-4109-b5b0-aa86d9e8e5bb"
+    ],
+    "assumptions": [
+      "Viewer will interact with personalized rows in dialect d3."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "holdout_compliance",
+        "dialect_specified",
+        "goal_eligibility",
+        "goal_measurable"
+      ],
+      "failed": [
+        "holdout_veto"
+      ]
+    },
+    "decided_in_ms": 1,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:29:12.647Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:29:12.647Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:29:12.647Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:29:12.647Z."
+  ]
+}

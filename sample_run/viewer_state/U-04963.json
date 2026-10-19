@@ -1,0 +1,133 @@
+{
+  "viewer_id": "U-04963",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-09T11:26:11.132Z",
+      "freshness_s": 17823914.8
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-09T11:26:11.132Z",
+      "freshness_s": 17823914.8
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-09T11:26:11.132Z",
+      "freshness_s": 17823914.8
+    },
+    "signup_at": {
+      "value": "2026-03-09T11:26:11.132Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-03-09T11:26:11.132Z",
+      "freshness_s": 17823914.8
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-09T11:26:11.132Z",
+      "freshness_s": 17823914.8
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-09T11:26:11.132Z",
+      "freshness_s": 17823914.8
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-0542",
+    "viewer_id": "U-04963",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T04:47:28.438Z",
+      "event_age_s": 48514.5,
+      "trigger_event_id": "77233873-318f-433f-ba50-f5cef2a9ae19"
+    },
+    "goal": null,
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [],
+    "confidence": 0.99,
+    "confidence_reason": "Trigger event is 48514s old (> 600s threshold); offline-buffered event ignored.",
+    "evidence": [
+      "event:77233873-318f-433f-ba50-f5cef2a9ae19"
+    ],
+    "assumptions": [
+      "Offline-buffered historical app opens do not reflect a live user session."
+    ],
+    "checks": {
+      "passed": [
+        "stale_trigger_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "ABSTAINED",
+    "no_action_reason": "stale_trigger",
+    "model_calls": 0,
+    "tool_calls": 0,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0152",
+      "decision_id": "D-0176",
+      "user_id": "U-04963",
+      "trigger_event_id": "d16c59b0-51bc-4374-a090-fea379cf67c7",
+      "type": "home_page",
+      "published_at": "2026-10-01T02:40:16.415Z",
+      "dialect": "d2",
+      "hero_title_id": "T0521",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0522",
+            "T0523",
+            "T0524",
+            "T0525",
+            "T0526",
+            "T0528"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0535",
+            "T0584",
+            "T0596",
+            "T0616",
+            "T0679",
+            "T0779"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0529",
+            "T0530",
+            "T0531",
+            "T0533",
+            "T0534",
+            "T0536"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G02 succeeded: First episode completed for title T0531 at 2026-10-03T13:43:45.000Z (exposure: True)."
+  ]
+}

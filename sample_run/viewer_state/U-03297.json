@@ -1,0 +1,121 @@
+{
+  "viewer_id": "U-03297",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-06-05T09:41:26.540Z",
+      "freshness_s": 10226999.4
+    },
+    "preferred_dialect": {
+      "value": "d3",
+      "source": "profile_snapshot",
+      "observed_at": "2026-06-05T09:41:26.540Z",
+      "freshness_s": 10226999.4
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-06-05T09:41:26.540Z",
+      "freshness_s": 10226999.4
+    },
+    "signup_at": {
+      "value": "2026-06-05T09:41:26.540Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-06-05T09:41:26.540Z",
+      "freshness_s": 10226999.4
+    },
+    "subscription_status": {
+      "value": "lapsed",
+      "source": "events_subscription_lapsed",
+      "observed_at": "2026-06-05T09:41:26.540Z",
+      "freshness_s": 10226999.4
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-06-05T09:41:26.540Z",
+      "freshness_s": 10226999.4
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-0600",
+    "viewer_id": "U-03297",
+    "arm": "holdout",
+    "suppressed": true,
+    "would_have_action": "HOME_PAGE",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T04:58:18.690Z",
+      "event_age_s": 0.7,
+      "trigger_event_id": "b0fb5fcb-bfc3-49d1-9676-bcd1b809b326"
+    },
+    "goal": {
+      "id": "G06",
+      "deadline": "2026-10-15T04:58:18.690Z",
+      "signal": "purchase_completed",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "message_decision": null,
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0901",
+      "title:T0910",
+      "title:T0909",
+      "title:T0905",
+      "title:T0903"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:b0fb5fcb-bfc3-49d1-9676-bcd1b809b326",
+        "freshness_s": 0.7
+      },
+      {
+        "ref": "event:f7b24936-8b73-4fbe-ba4e-2b76a1b575e7",
+        "freshness_s": 356971.8
+      }
+    ],
+    "assumptions": [
+      "Assumes lapsed viewer has interest in new catalogue additions.",
+      "Viewer will interact with personalized rows in dialect d3."
+    ],
+    "checks": {
+      "passed": [
+        "duplicate_action",
+        "max_rows",
+        "goal_eligibility",
+        "evidence_grounding",
+        "home_page_structure",
+        "goal_measurable",
+        "dialect_specified",
+        "holdout_compliance",
+        "hero_valid"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 2,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T04:58:18.690Z.",
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T04:58:18.690Z.",
+    "Goal G06 succeeded: Reactivated subscription via purchase_completed at 2026-10-01T05:09:18.690Z (exposure: False).",
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T04:58:18.690Z."
+  ]
+}

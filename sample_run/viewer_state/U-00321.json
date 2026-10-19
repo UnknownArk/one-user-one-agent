@@ -1,0 +1,213 @@
+{
+  "viewer_id": "U-00321",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-26T23:14:07.949Z",
+      "freshness_s": 39899838.0
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-26T23:14:07.949Z",
+      "freshness_s": 39899838.0
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-26T23:14:07.949Z",
+      "freshness_s": 39899838.0
+    },
+    "signup_at": {
+      "value": "2025-06-26T23:14:07.949Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-06-26T23:14:07.949Z",
+      "freshness_s": 39899838.0
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-26T23:14:07.949Z",
+      "freshness_s": 39899838.0
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-26T23:14:07.949Z",
+      "freshness_s": 39899838.0
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-0686",
+    "viewer_id": "U-00321",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T05:35:09.417Z",
+      "event_age_s": 0.4,
+      "trigger_event_id": "1690a49f-bef7-4659-aaa2-2025e6a1f8a1"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T05:35:09.417Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-0486",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0741",
+      "title:T0787",
+      "title:T0724",
+      "title:T0657",
+      "title:T0695"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:1690a49f-bef7-4659-aaa2-2025e6a1f8a1",
+        "freshness_s": 0.4
+      },
+      {
+        "ref": "event:8411cdeb-b3aa-43cb-a5e1-0481e7e2b578",
+        "freshness_s": 1436385.7
+      },
+      {
+        "ref": "episode:dhapipa-gini-d2-s1e2",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0523",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug dhapipa-gini-d2 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_specified",
+        "push_consent",
+        "hero_valid",
+        "evidence_grounding",
+        "frequency_cap",
+        "push_copy_valid",
+        "home_page_structure",
+        "duplicate_action",
+        "holdout_compliance",
+        "max_rows",
+        "message_title_valid",
+        "goal_measurable",
+        "goal_eligibility",
+        "quiet_hours",
+        "goal_plausibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 4,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0485",
+      "decision_id": "D-0686",
+      "user_id": "U-00321",
+      "trigger_event_id": "1690a49f-bef7-4659-aaa2-2025e6a1f8a1",
+      "type": "home_page",
+      "published_at": "2026-10-01T05:35:09.421Z",
+      "dialect": "d2",
+      "hero_title_id": "T0741",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0787",
+            "T0724",
+            "T0657",
+            "T0753",
+            "T0847",
+            "T0777"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0695",
+            "T0860",
+            "T0799",
+            "T0769",
+            "T0721",
+            "T0595"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0535",
+            "T0584",
+            "T0596",
+            "T0616",
+            "T0679",
+            "T0779"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0645",
+            "T0876",
+            "T0814",
+            "T0839",
+            "T0523",
+            "T0694"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-0486",
+      "decision_id": "D-0686",
+      "user_id": "U-00321",
+      "trigger_event_id": "1690a49f-bef7-4659-aaa2-2025e6a1f8a1",
+      "type": "push",
+      "published_at": "2026-10-01T05:35:09.421Z",
+      "send_at": "2026-10-01T05:35:24.417Z",
+      "title_id": "T0741",
+      "dialect": "d2",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d2",
+        "body": "Watch Moya Kolo now on STAGE."
+      },
+      "deeplink": "ott://title/T0741"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T05:35:09.417Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T05:35:09.417Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T05:35:09.417Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T05:35:09.417Z."
+  ]
+}

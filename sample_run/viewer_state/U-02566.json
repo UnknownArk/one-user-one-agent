@@ -1,0 +1,215 @@
+{
+  "viewer_id": "U-02566",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-16T04:26:04.883Z",
+      "freshness_s": 6703521.1
+    },
+    "preferred_dialect": {
+      "value": "d4",
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-16T04:26:04.883Z",
+      "freshness_s": 6703521.1
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-16T04:26:04.883Z",
+      "freshness_s": 6703521.1
+    },
+    "signup_at": {
+      "value": "2026-07-16T04:26:04.883Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-07-16T04:26:04.883Z",
+      "freshness_s": 6703521.1
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "events_purchase_completed",
+      "observed_at": "2026-07-16T04:26:04.883Z",
+      "freshness_s": 6703521.1
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-16T04:26:04.883Z",
+      "freshness_s": 6703521.1
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-1527",
+    "viewer_id": "U-02566",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T12:07:06.061Z",
+      "event_age_s": 2.1,
+      "trigger_event_id": "a2b8f4eb-cb7b-4006-a5b5-df1ee241c182"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T12:07:06.061Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-1394",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d4"
+      ]
+    },
+    "content": [
+      "title:T0076",
+      "title:T0230",
+      "title:T0430",
+      "title:T0112",
+      "title:T0238"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:a2b8f4eb-cb7b-4006-a5b5-df1ee241c182",
+        "freshness_s": 2.1
+      },
+      {
+        "ref": "event:2d7ab706-d666-4470-9e62-a3f4861d0c36",
+        "freshness_s": 425849.0
+      },
+      {
+        "ref": "episode:tidha-dakachu-d1-s1e2",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0005",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug tidha-dakachu-d1 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d1."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_specified",
+        "push_consent",
+        "hero_valid",
+        "evidence_grounding",
+        "frequency_cap",
+        "push_copy_valid",
+        "home_page_structure",
+        "duplicate_action",
+        "holdout_compliance",
+        "max_rows",
+        "message_title_valid",
+        "goal_measurable",
+        "goal_eligibility",
+        "quiet_hours",
+        "goal_plausibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 9,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1393",
+      "decision_id": "D-1527",
+      "user_id": "U-02566",
+      "trigger_event_id": "a2b8f4eb-cb7b-4006-a5b5-df1ee241c182",
+      "type": "home_page",
+      "published_at": "2026-10-01T12:07:06.070Z",
+      "dialect": "d1",
+      "hero_title_id": "T0076",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0230",
+            "T0430",
+            "T0112",
+            "T0124",
+            "T0507",
+            "T0411"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0238",
+            "T0359",
+            "T0223",
+            "T0424",
+            "T0506",
+            "T0117"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0426",
+            "T0382",
+            "T0435",
+            "T0195",
+            "T0036",
+            "T0413"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0299",
+            "T0381",
+            "T0312",
+            "T0497",
+            "T0272",
+            "T0330"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-1394",
+      "decision_id": "D-1527",
+      "user_id": "U-02566",
+      "trigger_event_id": "a2b8f4eb-cb7b-4006-a5b5-df1ee241c182",
+      "type": "push",
+      "published_at": "2026-10-01T12:07:06.070Z",
+      "send_at": "2026-10-01T12:07:21.061Z",
+      "title_id": "T0076",
+      "dialect": "d1",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d1",
+        "body": "Watch Dija now on STAGE."
+      },
+      "deeplink": "ott://title/T0076"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T12:07:06.061Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T12:07:06.061Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T12:07:06.061Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T12:07:06.061Z."
+  ]
+}

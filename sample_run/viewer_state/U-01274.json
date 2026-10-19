@@ -1,0 +1,202 @@
+{
+  "viewer_id": "U-01274",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-01-17T06:33:52.344Z",
+      "freshness_s": 22247853.6
+    },
+    "preferred_dialect": {
+      "value": "d6",
+      "source": "profile_snapshot",
+      "observed_at": "2026-01-17T06:33:52.344Z",
+      "freshness_s": 22247853.6
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-01-17T06:33:52.344Z",
+      "freshness_s": 22247853.6
+    },
+    "signup_at": {
+      "value": "2026-01-17T06:33:52.344Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-01-17T06:33:52.344Z",
+      "freshness_s": 22247853.6
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-01-17T06:33:52.344Z",
+      "freshness_s": 22247853.6
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-01-17T06:33:52.344Z",
+      "freshness_s": 22247853.6
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-2292",
+    "viewer_id": "U-01274",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T15:35:39.721Z",
+      "event_age_s": 0.7,
+      "trigger_event_id": "3036b1bf-d692-49bb-870f-1bc120ca6ca3"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T13:59:16.536Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "message_decision": {
+      "status": "VETOED",
+      "channel": "push",
+      "reason": "frequency_cap"
+    },
+    "dialect": {
+      "used": "d6",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T1393",
+      "title:T1456",
+      "title:T1486",
+      "title:T1397",
+      "title:T1410"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:3036b1bf-d692-49bb-870f-1bc120ca6ca3",
+        "freshness_s": 0.7
+      },
+      {
+        "ref": "goal:G_INST_U-01274_G07_1790863156",
+        "freshness_s": 5783.2
+      }
+    ],
+    "assumptions": [
+      "Viewer will interact with personalized rows in dialect d6."
+    ],
+    "checks": {
+      "passed": [
+        "quiet_hours",
+        "goal_eligibility",
+        "evidence_grounding",
+        "push_copy_valid",
+        "goal_plausibility",
+        "goal_measurable",
+        "dialect_specified",
+        "message_title_valid",
+        "push_consent",
+        "holdout_compliance"
+      ],
+      "failed": [
+        "frequency_cap",
+        "duplicate_action"
+      ]
+    },
+    "decided_in_ms": 2,
+    "status": "VETOED",
+    "no_action_reason": "duplicate_action",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1674",
+      "decision_id": "D-1800",
+      "user_id": "U-01274",
+      "trigger_event_id": "df29eddb-8cd7-467d-ba3f-791d39a93cc9",
+      "type": "home_page",
+      "published_at": "2026-10-01T13:59:16.539Z",
+      "dialect": "d6",
+      "hero_title_id": "T1393",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T1456",
+            "T1486",
+            "T1397",
+            "T1448",
+            "T1497",
+            "T1398"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T1410",
+            "T1427",
+            "T1482",
+            "T1424",
+            "T1438",
+            "T1444"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T1421",
+            "T1461",
+            "T1468",
+            "T1491",
+            "T1484",
+            "T1472"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T1481",
+            "T1492",
+            "T1487",
+            "T1433",
+            "T1460",
+            "T1464"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-1675",
+      "decision_id": "D-1800",
+      "user_id": "U-01274",
+      "trigger_event_id": "df29eddb-8cd7-467d-ba3f-791d39a93cc9",
+      "type": "push",
+      "published_at": "2026-10-01T13:59:16.539Z",
+      "send_at": "2026-10-01T13:59:31.536Z",
+      "title_id": "T1393",
+      "dialect": "d6",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d6",
+        "body": "Watch Bhari Vagi now on STAGE."
+      },
+      "deeplink": "ott://title/T1393"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T13:59:16.536Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T13:59:16.536Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T13:59:16.536Z.",
+    "Goal G07 succeeded: Resumed series slug rasuya-moni-d6 on title T1387 (exposure: True)."
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "viewer_id": "U-02201",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-25T09:21:10.731Z",
+      "freshness_s": 16449015.2
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-25T09:21:10.731Z",
+      "freshness_s": 16449015.2
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-25T09:21:10.731Z",
+      "freshness_s": 16449015.2
+    },
+    "signup_at": {
+      "value": "2026-03-25T09:21:10.731Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-03-25T09:21:10.731Z",
+      "freshness_s": 16449015.2
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-25T09:21:10.731Z",
+      "freshness_s": 16449015.2
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-25T09:21:10.731Z",
+      "freshness_s": 16449015.2
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-1852",
+    "viewer_id": "U-02201",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T14:15:33.941Z",
+      "event_age_s": 0.9,
+      "trigger_event_id": "515bf2b7-5758-40de-aa67-cff4ac9f5644"
+    },
+    "goal": {
+      "id": "G08",
+      "deadline": "2026-10-08T14:15:33.941Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "VETOED",
+      "channel": "none",
+      "reason": "ineligible_goal"
+    },
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0195",
+      "title:T0413",
+      "title:T0419",
+      "title:T0072",
+      "title:T0305"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:515bf2b7-5758-40de-aa67-cff4ac9f5644",
+        "freshness_s": 0.9
+      },
+      {
+        "ref": "fact:status:2026-03-25T09:21:10.731Z",
+        "freshness_s": 16433663.2
+      }
+    ],
+    "assumptions": [
+      "Interprets G08: active subscriber eligible to discover titles released in last 30 days.",
+      "Viewer will interact with personalized rows in dialect d1."
+    ],
+    "checks": {
+      "passed": [
+        "home_page_structure",
+        "evidence_grounding",
+        "max_rows",
+        "duplicate_action",
+        "holdout_compliance",
+        "hero_valid",
+        "dialect_specified",
+        "goal_measurable",
+        "goal_eligibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 5,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1732",
+      "decision_id": "D-1852",
+      "user_id": "U-02201",
+      "trigger_event_id": "515bf2b7-5758-40de-aa67-cff4ac9f5644",
+      "type": "home_page",
+      "published_at": "2026-10-01T14:15:33.946Z",
+      "dialect": "d1",
+      "hero_title_id": "T0195",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0413",
+            "T0419",
+            "T0072",
+            "T0218",
+            "T0277",
+            "T0390"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0305",
+            "T0230",
+            "T0447",
+            "T0196",
+            "T0214",
+            "T0363"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0426",
+            "T0382",
+            "T0435",
+            "T0036",
+            "T0137",
+            "T0511"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0458",
+            "T0465",
+            "T0127",
+            "T0160",
+            "T0174",
+            "T0172"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G08 succeeded: Played new release T0024 (Dhalo Gumo) (exposure: True).",
+    "Goal G08 succeeded: Played new release T0037 (Palava Raroti) (exposure: True).",
+    "Goal G08 succeeded: Played new release T0015 (Salosa Valo) (exposure: True).",
+    "Goal G08 succeeded: Played new release T0019 (Chuya Nasuya) (exposure: False)."
+  ]
+}

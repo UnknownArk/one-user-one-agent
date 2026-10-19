@@ -1,0 +1,106 @@
+{
+  "viewer_id": "U-04332",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-25T03:53:16.417Z",
+      "freshness_s": 18887889.5
+    },
+    "preferred_dialect": {
+      "value": "d4",
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-25T03:53:16.417Z",
+      "freshness_s": 18887889.5
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-25T03:53:16.417Z",
+      "freshness_s": 18887889.5
+    },
+    "signup_at": {
+      "value": "2026-02-25T03:53:16.417Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-02-25T03:53:16.417Z",
+      "freshness_s": 18887889.5
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-25T03:53:16.417Z",
+      "freshness_s": 18887889.5
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-25T03:53:16.417Z",
+      "freshness_s": 18887889.5
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-0732",
+    "viewer_id": "U-04332",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T05:53:51.630Z",
+      "event_age_s": 1.6,
+      "trigger_event_id": "bf2f40ac-3b18-47ec-b5b2-dcad62f3bc5b"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T05:53:51.630Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d4",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T1155",
+      "title:T1048",
+      "title:T0922",
+      "title:T0956",
+      "title:T1013"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:bf2f40ac-3b18-47ec-b5b2-dcad62f3bc5b",
+      "event:cb634ec4-de4b-4cf1-9224-6049fdebebda"
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug tichumo-d4 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d4."
+    ],
+    "checks": {
+      "passed": [
+        "goal_eligibility",
+        "dialect_specified",
+        "holdout_compliance",
+        "goal_measurable",
+        "evidence_grounding"
+      ],
+      "failed": [
+        "holdout_veto"
+      ]
+    },
+    "decided_in_ms": 3,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T05:53:51.630Z."
+  ]
+}

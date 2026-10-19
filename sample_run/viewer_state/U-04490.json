@@ -1,0 +1,214 @@
+{
+  "viewer_id": "U-04490",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-04T01:03:32.349Z",
+      "freshness_s": 47150873.6
+    },
+    "preferred_dialect": {
+      "value": "d4",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-04T01:03:32.349Z",
+      "freshness_s": 47150873.6
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-04T01:03:32.349Z",
+      "freshness_s": 47150873.6
+    },
+    "signup_at": {
+      "value": "2025-04-04T01:03:32.349Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-04-04T01:03:32.349Z",
+      "freshness_s": 47150873.6
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-04T01:03:32.349Z",
+      "freshness_s": 47150873.6
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-04T01:03:32.349Z",
+      "freshness_s": 47150873.6
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-0609",
+    "viewer_id": "U-04490",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T05:02:50.259Z",
+      "event_age_s": 1.3,
+      "trigger_event_id": "f4753fb5-9a52-4e3b-9064-96493d872156"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T05:02:50.259Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-0403",
+      "channel": "whatsapp"
+    },
+    "dialect": {
+      "used": "d4",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T1040",
+      "title:T1107",
+      "title:T1162",
+      "title:T1150",
+      "title:T1021"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:f4753fb5-9a52-4e3b-9064-96493d872156",
+        "freshness_s": 1.3
+      },
+      {
+        "ref": "event:4465cda2-e46d-4495-b2b6-518e52e36b51",
+        "freshness_s": 2283315.2
+      },
+      {
+        "ref": "episode:radi-d4-s1e1",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0918",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug radi-d4 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d4."
+    ],
+    "checks": {
+      "passed": [
+        "wa_template_approved",
+        "quiet_hours",
+        "whatsapp_consent",
+        "home_page_structure",
+        "evidence_grounding",
+        "goal_plausibility",
+        "max_rows",
+        "message_title_valid",
+        "duplicate_action",
+        "holdout_compliance",
+        "hero_valid",
+        "dialect_specified",
+        "goal_measurable",
+        "wa_variables_complete",
+        "frequency_cap",
+        "goal_eligibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 4,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0402",
+      "decision_id": "D-0609",
+      "user_id": "U-04490",
+      "trigger_event_id": "f4753fb5-9a52-4e3b-9064-96493d872156",
+      "type": "home_page",
+      "published_at": "2026-10-01T05:02:50.263Z",
+      "dialect": "d4",
+      "hero_title_id": "T1040",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T1107",
+            "T1162",
+            "T1150",
+            "T1083",
+            "T0983",
+            "T0998"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T1021",
+            "T1132",
+            "T1050",
+            "T1170",
+            "T1066",
+            "T1088"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T1155",
+            "T0937",
+            "T1116",
+            "T1014",
+            "T1048",
+            "T1101"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T1005",
+            "T1002",
+            "T1161",
+            "T1136",
+            "T0932",
+            "T1054"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-0403",
+      "decision_id": "D-0609",
+      "user_id": "U-04490",
+      "trigger_event_id": "f4753fb5-9a52-4e3b-9064-96493d872156",
+      "type": "whatsapp",
+      "published_at": "2026-10-01T05:02:50.263Z",
+      "send_at": "2026-10-01T05:03:05.259Z",
+      "title_id": "T1040",
+      "dialect": "d4",
+      "goal_id": "G07",
+      "template_id": "wa_recommend_title_v1",
+      "variables": {
+        "title_name": "Nakalo Yasa",
+        "dialect_name": "d4"
+      }
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T05:02:50.259Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T05:02:50.259Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T05:02:50.259Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T05:02:50.259Z."
+  ]
+}

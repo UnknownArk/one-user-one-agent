@@ -1,0 +1,214 @@
+{
+  "viewer_id": "U-01080",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-11T22:22:41.071Z",
+      "freshness_s": 1714124.9
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-11T22:22:41.071Z",
+      "freshness_s": 1714124.9
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-11T22:22:41.071Z",
+      "freshness_s": 1714124.9
+    },
+    "signup_at": {
+      "value": "2026-09-11T22:22:41.071Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-09-11T22:22:41.071Z",
+      "freshness_s": 1714124.9
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "events_purchase_completed",
+      "observed_at": "2026-09-11T22:22:41.071Z",
+      "freshness_s": 1714124.9
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-11T22:22:41.071Z",
+      "freshness_s": 1714124.9
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-1375",
+    "viewer_id": "U-01080",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T10:57:35.286Z",
+      "event_age_s": 0.3,
+      "trigger_event_id": "7e960984-1db3-4e4a-9482-7a3513b6daac"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T10:57:35.286Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-1230",
+      "channel": "whatsapp"
+    },
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0076",
+      "title:T0230",
+      "title:T0430",
+      "title:T0112",
+      "title:T0238"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:7e960984-1db3-4e4a-9482-7a3513b6daac",
+        "freshness_s": 0.3
+      },
+      {
+        "ref": "event:6c30e1c5-a34e-4224-8116-6868b8631966",
+        "freshness_s": 1686805.5
+      },
+      {
+        "ref": "episode:gidi-dima-d1-s1e1",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0025",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug gidi-dima-d1 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d1."
+    ],
+    "checks": {
+      "passed": [
+        "quiet_hours",
+        "duplicate_action",
+        "max_rows",
+        "whatsapp_consent",
+        "goal_eligibility",
+        "evidence_grounding",
+        "wa_template_approved",
+        "wa_variables_complete",
+        "goal_plausibility",
+        "frequency_cap",
+        "home_page_structure",
+        "goal_measurable",
+        "dialect_specified",
+        "message_title_valid",
+        "holdout_compliance",
+        "hero_valid"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 3,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1229",
+      "decision_id": "D-1375",
+      "user_id": "U-01080",
+      "trigger_event_id": "7e960984-1db3-4e4a-9482-7a3513b6daac",
+      "type": "home_page",
+      "published_at": "2026-10-01T10:57:35.289Z",
+      "dialect": "d1",
+      "hero_title_id": "T0076",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0230",
+            "T0430",
+            "T0112",
+            "T0124",
+            "T0507",
+            "T0411"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0238",
+            "T0359",
+            "T0223",
+            "T0424",
+            "T0506",
+            "T0117"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0426",
+            "T0382",
+            "T0435",
+            "T0195",
+            "T0036",
+            "T0413"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0299",
+            "T0381",
+            "T0312",
+            "T0497",
+            "T0272",
+            "T0330"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-1230",
+      "decision_id": "D-1375",
+      "user_id": "U-01080",
+      "trigger_event_id": "7e960984-1db3-4e4a-9482-7a3513b6daac",
+      "type": "whatsapp",
+      "published_at": "2026-10-01T10:57:35.289Z",
+      "send_at": "2026-10-01T10:57:50.286Z",
+      "title_id": "T0076",
+      "dialect": "d1",
+      "goal_id": "G07",
+      "template_id": "wa_recommend_title_v1",
+      "variables": {
+        "title_name": "Dija",
+        "dialect_name": "d1"
+      }
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T10:57:35.286Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T10:57:35.286Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T10:57:35.286Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T10:57:35.286Z."
+  ]
+}

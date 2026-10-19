@@ -1,0 +1,213 @@
+{
+  "viewer_id": "U-03138",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-22T02:50:49.528Z",
+      "freshness_s": 45589236.4
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-22T02:50:49.528Z",
+      "freshness_s": 45589236.4
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-22T02:50:49.528Z",
+      "freshness_s": 45589236.4
+    },
+    "signup_at": {
+      "value": "2025-04-22T02:50:49.528Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-04-22T02:50:49.528Z",
+      "freshness_s": 45589236.4
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "events_purchase_completed",
+      "observed_at": "2025-04-22T02:50:49.528Z",
+      "freshness_s": 45589236.4
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-22T02:50:49.528Z",
+      "freshness_s": 45589236.4
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-2064",
+    "viewer_id": "U-03138",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T15:02:45.535Z",
+      "event_age_s": 2.0,
+      "trigger_event_id": "139888c1-5228-4450-9f3d-7cdfa795aeac"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T15:02:45.535Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-1967",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0511",
+      "title:T0060",
+      "title:T0274",
+      "title:T0051",
+      "title:T0363"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:139888c1-5228-4450-9f3d-7cdfa795aeac",
+        "freshness_s": 2.0
+      },
+      {
+        "ref": "event:aadf4509-bab5-44aa-8841-aef24e5f626e",
+        "freshness_s": 2617255.7
+      },
+      {
+        "ref": "episode:suda-d1-s1e1",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0042",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug suda-d1 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d1."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_specified",
+        "push_consent",
+        "hero_valid",
+        "evidence_grounding",
+        "frequency_cap",
+        "push_copy_valid",
+        "home_page_structure",
+        "duplicate_action",
+        "holdout_compliance",
+        "max_rows",
+        "message_title_valid",
+        "goal_measurable",
+        "goal_eligibility",
+        "quiet_hours",
+        "goal_plausibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 7,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1966",
+      "decision_id": "D-2064",
+      "user_id": "U-03138",
+      "trigger_event_id": "139888c1-5228-4450-9f3d-7cdfa795aeac",
+      "type": "home_page",
+      "published_at": "2026-10-01T15:02:45.542Z",
+      "dialect": "d1",
+      "hero_title_id": "T0511",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0060",
+            "T0274",
+            "T0051",
+            "T0303",
+            "T0390",
+            "T0046"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0363",
+            "T0047",
+            "T0263",
+            "T0495",
+            "T0258",
+            "T0179"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0426",
+            "T0382",
+            "T0435",
+            "T0195",
+            "T0036",
+            "T0413"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0270",
+            "T0162",
+            "T0338",
+            "T0198",
+            "T0065",
+            "T0299"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-1967",
+      "decision_id": "D-2064",
+      "user_id": "U-03138",
+      "trigger_event_id": "139888c1-5228-4450-9f3d-7cdfa795aeac",
+      "type": "push",
+      "published_at": "2026-10-01T15:02:45.542Z",
+      "send_at": "2026-10-01T15:03:00.535Z",
+      "title_id": "T0511",
+      "dialect": "d1",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d1",
+        "body": "Watch Nela Guja now on STAGE."
+      },
+      "deeplink": "ott://title/T0511"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:02:45.535Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:02:45.535Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:02:45.535Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:02:45.535Z."
+  ]
+}

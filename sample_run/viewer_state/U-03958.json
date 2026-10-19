@@ -1,0 +1,131 @@
+{
+  "viewer_id": "U-03958",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-26T18:30:08.969Z",
+      "freshness_s": 45187277.0
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-26T18:30:08.969Z",
+      "freshness_s": 45187277.0
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-26T18:30:08.969Z",
+      "freshness_s": 45187277.0
+    },
+    "signup_at": {
+      "value": "2025-04-26T18:30:08.969Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-04-26T18:30:08.969Z",
+      "freshness_s": 45187277.0
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-26T18:30:08.969Z",
+      "freshness_s": 45187277.0
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-26T18:30:08.969Z",
+      "freshness_s": 45187277.0
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-0998",
+    "viewer_id": "U-03958",
+    "arm": "holdout",
+    "suppressed": true,
+    "would_have_action": "HOME_PAGE",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T08:02:29.265Z",
+      "event_age_s": 2.3,
+      "trigger_event_id": "7968bf8b-4926-4134-b1bf-1c9016f0209c"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T08:02:29.265Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "message_decision": null,
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d1"
+      ]
+    },
+    "content": [
+      "title:T0905",
+      "title:T0908",
+      "title:T0903",
+      "title:T0902",
+      "title:T0906"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:7968bf8b-4926-4134-b1bf-1c9016f0209c",
+        "freshness_s": 2.3
+      },
+      {
+        "ref": "event:4788ef41-7d88-4873-b320-173f625df696",
+        "freshness_s": 2286808.6
+      },
+      {
+        "ref": "episode:lomobha-moni-d3-s1e2",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0908",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug lomobha-moni-d3 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d3."
+    ],
+    "checks": {
+      "passed": [
+        "home_page_structure",
+        "evidence_grounding",
+        "max_rows",
+        "duplicate_action",
+        "holdout_compliance",
+        "hero_valid",
+        "dialect_specified",
+        "goal_measurable",
+        "goal_eligibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 2,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T08:02:29.265Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T08:02:29.265Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T08:02:29.265Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T08:02:29.265Z."
+  ]
+}

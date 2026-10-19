@@ -1,0 +1,115 @@
+{
+  "viewer_id": "U-04340",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-29T10:12:34.888Z",
+      "freshness_s": 55412331.1
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-29T10:12:34.888Z",
+      "freshness_s": 55412331.1
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-29T10:12:34.888Z",
+      "freshness_s": 55412331.1
+    },
+    "signup_at": {
+      "value": "2024-12-29T10:12:34.888Z",
+      "source": "profile_or_events",
+      "observed_at": "2024-12-29T10:12:34.888Z",
+      "freshness_s": 55412331.1
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-29T10:12:34.888Z",
+      "freshness_s": 55412331.1
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-29T10:12:34.888Z",
+      "freshness_s": 55412331.1
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-0307",
+    "viewer_id": "U-04340",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T04:15:35.891Z",
+      "event_age_s": 1.9,
+      "trigger_event_id": "afbc494a-2a27-484d-8978-c41c207a8ff1"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T04:15:35.891Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": null,
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d2"
+      ]
+    },
+    "content": [],
+    "confidence": 0.95,
+    "confidence_reason": "No active titles available for dialect None at this time.",
+    "evidence": [
+      {
+        "ref": "event:afbc494a-2a27-484d-8978-c41c207a8ff1",
+        "freshness_s": 1.9
+      },
+      {
+        "ref": "event:f44f5409-e082-4517-b6f9-76f11c44d41e",
+        "freshness_s": 304544.7
+      },
+      {
+        "ref": "episode:hama-chudibha-d1-s1e6",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0002",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug hama-chudibha-d1 and inactive for >= 3 days."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 7,
+    "status": "ABSTAINED",
+    "no_action_reason": "insufficient_evidence",
+    "model_calls": 1,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T04:15:35.891Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T04:15:35.891Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T04:15:35.891Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T04:15:35.891Z."
+  ]
+}

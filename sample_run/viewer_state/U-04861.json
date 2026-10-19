@@ -1,0 +1,191 @@
+{
+  "viewer_id": "U-04861",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-03T21:38:09.066Z",
+      "freshness_s": 60209596.9
+    },
+    "preferred_dialect": {
+      "value": "d3",
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-03T21:38:09.066Z",
+      "freshness_s": 60209596.9
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-03T21:38:09.066Z",
+      "freshness_s": 60209596.9
+    },
+    "signup_at": {
+      "value": "2024-11-03T21:38:09.066Z",
+      "source": "profile_or_events",
+      "observed_at": "2024-11-03T21:38:09.066Z",
+      "freshness_s": 60209596.9
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-03T21:38:09.066Z",
+      "freshness_s": 60209596.9
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-03T21:38:09.066Z",
+      "freshness_s": 60209596.9
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-2321",
+    "viewer_id": "U-04861",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T15:45:50.433Z",
+      "event_age_s": 0.4,
+      "trigger_event_id": "1fea97f2-436d-403d-a010-b9afd739ad2f"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T15:45:50.433Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-2246",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0905",
+      "title:T0908",
+      "title:T0903",
+      "title:T0902",
+      "title:T0906"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:1fea97f2-436d-403d-a010-b9afd739ad2f",
+        "freshness_s": 0.4
+      },
+      {
+        "ref": "event:7956b207-7e75-47e7-97cd-761b24ec05c6",
+        "freshness_s": 2007407.0
+      },
+      {
+        "ref": "episode:ririgi-d3-s1e1",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0914",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug ririgi-d3 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d3."
+    ],
+    "checks": {
+      "passed": [
+        "quiet_hours",
+        "duplicate_action",
+        "max_rows",
+        "goal_eligibility",
+        "evidence_grounding",
+        "push_copy_valid",
+        "goal_plausibility",
+        "frequency_cap",
+        "home_page_structure",
+        "goal_measurable",
+        "dialect_specified",
+        "message_title_valid",
+        "push_consent",
+        "holdout_compliance",
+        "hero_valid"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-2245",
+      "decision_id": "D-2321",
+      "user_id": "U-04861",
+      "trigger_event_id": "1fea97f2-436d-403d-a010-b9afd739ad2f",
+      "type": "home_page",
+      "published_at": "2026-10-01T15:45:50.434Z",
+      "dialect": "d3",
+      "hero_title_id": "T0905",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0908",
+            "T0903",
+            "T0902",
+            "T0904",
+            "T0901",
+            "T0910"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0906",
+            "T0913",
+            "T0909",
+            "T0907",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-2246",
+      "decision_id": "D-2321",
+      "user_id": "U-04861",
+      "trigger_event_id": "1fea97f2-436d-403d-a010-b9afd739ad2f",
+      "type": "push",
+      "published_at": "2026-10-01T15:45:50.434Z",
+      "send_at": "2026-10-01T15:46:05.433Z",
+      "title_id": "T0905",
+      "dialect": "d3",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d3",
+        "body": "Watch Yadha Kopa now on STAGE."
+      },
+      "deeplink": "ott://title/T0905"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:45:50.433Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:45:50.433Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:45:50.433Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:45:50.433Z."
+  ]
+}

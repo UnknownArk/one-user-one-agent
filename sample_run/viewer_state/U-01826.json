@@ -1,0 +1,85 @@
+{
+  "viewer_id": "U-01826",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-23T04:09:57.929Z",
+      "freshness_s": 11370088.0
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-23T04:09:57.929Z",
+      "freshness_s": 11370088.0
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-23T04:09:57.929Z",
+      "freshness_s": 11370088.0
+    },
+    "signup_at": {
+      "value": "2026-05-23T04:09:57.929Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-05-23T04:09:57.929Z",
+      "freshness_s": 11370088.0
+    },
+    "subscription_status": {
+      "value": "lapsed",
+      "source": "events_subscription_lapsed",
+      "observed_at": "2026-05-23T04:09:57.929Z",
+      "freshness_s": 11370088.0
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-23T04:09:57.929Z",
+      "freshness_s": 11370088.0
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-0450",
+    "viewer_id": "U-01826",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T04:46:06.248Z",
+      "event_age_s": 517477.4,
+      "trigger_event_id": "d9fd1643-47fc-4d96-b791-f82bbd4397ef"
+    },
+    "goal": null,
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [],
+    "confidence": 0.99,
+    "confidence_reason": "Trigger event is 517477s old (> 600s threshold); offline-buffered event ignored.",
+    "evidence": [
+      "event:d9fd1643-47fc-4d96-b791-f82bbd4397ef"
+    ],
+    "assumptions": [
+      "Offline-buffered historical app opens do not reflect a live user session."
+    ],
+    "checks": {
+      "passed": [
+        "stale_trigger_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "ABSTAINED",
+    "no_action_reason": "stale_trigger",
+    "model_calls": 0,
+    "tool_calls": 0,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": []
+}

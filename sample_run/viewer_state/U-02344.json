@@ -1,0 +1,325 @@
+{
+  "viewer_id": "U-02344",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-01-09T02:54:51.862Z",
+      "freshness_s": 54488194.1
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2025-01-09T02:54:51.862Z",
+      "freshness_s": 54488194.1
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-01-09T02:54:51.862Z",
+      "freshness_s": 54488194.1
+    },
+    "signup_at": {
+      "value": "2025-01-09T02:54:51.862Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-01-09T02:54:51.862Z",
+      "freshness_s": 54488194.1
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2025-01-09T02:54:51.862Z",
+      "freshness_s": 54488194.1
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-01-09T02:54:51.862Z",
+      "freshness_s": 54488194.1
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 6,
+  "actions_count": 6,
+  "recent_decision": {
+    "decision_id": "D-2698",
+    "viewer_id": "U-02344",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T17:45:11.722Z",
+      "event_age_s": 0.7,
+      "trigger_event_id": "df7e6c25-339c-4e40-9a61-de037f1d15ac"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-03T18:32:59.458Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d1"
+      ]
+    },
+    "content": [
+      "title:T0901",
+      "title:T0910",
+      "title:T0909",
+      "title:T0905",
+      "title:T0903"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:df7e6c25-339c-4e40-9a61-de037f1d15ac",
+        "freshness_s": 0.7
+      },
+      {
+        "ref": "goal:G_INST_U-02344_G07_1790793179",
+        "freshness_s": 83532.3
+      }
+    ],
+    "assumptions": [
+      "Viewer will interact with personalized rows in dialect d3."
+    ],
+    "checks": {
+      "passed": [
+        "hero_valid",
+        "goal_eligibility",
+        "evidence_grounding",
+        "dialect_specified",
+        "holdout_compliance",
+        "goal_measurable",
+        "max_rows",
+        "home_page_structure"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0001",
+      "decision_id": "D-0001",
+      "user_id": "U-02344",
+      "trigger_event_id": "9ffd7200-d9e5-4fd0-8106-bb555fdf33cb",
+      "type": "home_page",
+      "published_at": "2026-09-30T18:32:59.460Z",
+      "dialect": "d3",
+      "hero_title_id": "T0901",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0910",
+            "T0909",
+            "T0905",
+            "T0902",
+            "T0904",
+            "T0908"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0903",
+            "T0906",
+            "T0913",
+            "T0907",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-0458",
+      "decision_id": "D-0778",
+      "user_id": "U-02344",
+      "trigger_event_id": "af345733-f9f3-4243-b5bf-c2cf0d2a4860",
+      "type": "home_page",
+      "published_at": "2026-10-01T06:18:42.518Z",
+      "dialect": "d3",
+      "hero_title_id": "T0901",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0910",
+            "T0909",
+            "T0905",
+            "T0902",
+            "T0904",
+            "T0908"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0903",
+            "T0906",
+            "T0913",
+            "T0907",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-0989",
+      "decision_id": "D-1428",
+      "user_id": "U-02344",
+      "trigger_event_id": "3dbabf70-3e9b-4998-b397-9eb4b859decf",
+      "type": "home_page",
+      "published_at": "2026-10-01T11:31:37.820Z",
+      "dialect": "d3",
+      "hero_title_id": "T0901",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0910",
+            "T0909",
+            "T0905",
+            "T0902",
+            "T0904",
+            "T0908"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0903",
+            "T0906",
+            "T0913",
+            "T0907",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-1361",
+      "decision_id": "D-1901",
+      "user_id": "U-02344",
+      "trigger_event_id": "818de0a8-8e86-4bc3-b00a-2bb62d48bf17",
+      "type": "home_page",
+      "published_at": "2026-10-01T14:26:42.975Z",
+      "dialect": "d3",
+      "hero_title_id": "T0901",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0910",
+            "T0909",
+            "T0905",
+            "T0902",
+            "T0904",
+            "T0908"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0903",
+            "T0906",
+            "T0913",
+            "T0907",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-1612",
+      "decision_id": "D-2194",
+      "user_id": "U-02344",
+      "trigger_event_id": "77ff802d-30f5-4f8d-a694-f8132a6ab2f4",
+      "type": "home_page",
+      "published_at": "2026-10-01T15:12:31.105Z",
+      "dialect": "d3",
+      "hero_title_id": "T0901",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0910",
+            "T0909",
+            "T0905",
+            "T0902",
+            "T0904",
+            "T0908"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0903",
+            "T0906",
+            "T0913",
+            "T0907",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-2019",
+      "decision_id": "D-2698",
+      "user_id": "U-02344",
+      "trigger_event_id": "df7e6c25-339c-4e40-9a61-de037f1d15ac",
+      "type": "home_page",
+      "published_at": "2026-10-01T17:45:11.723Z",
+      "dialect": "d3",
+      "hero_title_id": "T0901",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0910",
+            "T0909",
+            "T0905",
+            "T0902",
+            "T0904",
+            "T0908"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0903",
+            "T0906",
+            "T0913",
+            "T0907",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T18:32:59.458Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T18:32:59.458Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T18:32:59.458Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T18:32:59.458Z."
+  ]
+}

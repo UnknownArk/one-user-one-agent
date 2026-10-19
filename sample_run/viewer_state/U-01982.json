@@ -1,0 +1,185 @@
+{
+  "viewer_id": "U-01982",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-04-26T17:49:41.323Z",
+      "freshness_s": 13653704.6
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2026-04-26T17:49:41.323Z",
+      "freshness_s": 13653704.6
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-04-26T17:49:41.323Z",
+      "freshness_s": 13653704.6
+    },
+    "signup_at": {
+      "value": "2026-04-26T17:49:41.323Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-04-26T17:49:41.323Z",
+      "freshness_s": 13653704.6
+    },
+    "subscription_status": {
+      "value": "lapsed",
+      "source": "profile_snapshot",
+      "observed_at": "2026-04-26T17:49:41.323Z",
+      "freshness_s": 13653704.6
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-04-26T17:49:41.323Z",
+      "freshness_s": 13653704.6
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-1521",
+    "viewer_id": "U-01982",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T12:04:30.471Z",
+      "event_age_s": 2.5,
+      "trigger_event_id": "720eb91a-b975-4f4b-a7c9-251186b2c1e3"
+    },
+    "goal": {
+      "id": "G06",
+      "deadline": "2026-10-15T12:04:30.471Z",
+      "signal": "purchase_completed",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-1388",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d2"
+      ]
+    },
+    "content": [
+      "title:T0901",
+      "title:T0902",
+      "title:T0903",
+      "title:T0904",
+      "title:T0908"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:720eb91a-b975-4f4b-a7c9-251186b2c1e3",
+        "freshness_s": 2.5
+      },
+      {
+        "ref": "fact:status:2026-04-26T17:49:41.323Z",
+        "freshness_s": 13630489.1
+      }
+    ],
+    "assumptions": [
+      "Assumes lapsed viewer has interest in new catalogue additions.",
+      "Viewer will interact with personalized rows in dialect d3."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_specified",
+        "push_consent",
+        "hero_valid",
+        "evidence_grounding",
+        "frequency_cap",
+        "push_copy_valid",
+        "home_page_structure",
+        "duplicate_action",
+        "holdout_compliance",
+        "max_rows",
+        "message_title_valid",
+        "goal_measurable",
+        "goal_eligibility",
+        "quiet_hours",
+        "goal_plausibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1387",
+      "decision_id": "D-1521",
+      "user_id": "U-01982",
+      "trigger_event_id": "720eb91a-b975-4f4b-a7c9-251186b2c1e3",
+      "type": "home_page",
+      "published_at": "2026-10-01T12:04:30.472Z",
+      "dialect": "d3",
+      "hero_title_id": "T0901",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0902",
+            "T0903",
+            "T0904",
+            "T0905",
+            "T0906",
+            "T0907"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0908",
+            "T0910",
+            "T0913",
+            "T0909",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-1388",
+      "decision_id": "D-1521",
+      "user_id": "U-01982",
+      "trigger_event_id": "720eb91a-b975-4f4b-a7c9-251186b2c1e3",
+      "type": "push",
+      "published_at": "2026-10-01T12:04:30.472Z",
+      "send_at": "2026-10-01T12:04:45.471Z",
+      "title_id": "T0901",
+      "dialect": "d3",
+      "goal_id": "G06",
+      "text": {
+        "title": "Recommended in d3",
+        "body": "Watch Yatite Roloda now on STAGE."
+      },
+      "deeplink": "ott://title/T0901"
+    }
+  ],
+  "lessons": [
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T12:04:30.471Z.",
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T12:04:30.471Z.",
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T12:04:30.471Z.",
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T12:04:30.471Z."
+  ]
+}

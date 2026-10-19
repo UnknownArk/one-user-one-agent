@@ -1,0 +1,199 @@
+{
+  "viewer_id": "U-01940",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-29T16:20:39.252Z",
+      "freshness_s": 16078246.7
+    },
+    "preferred_dialect": {
+      "value": "d6",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-29T16:20:39.252Z",
+      "freshness_s": 16078246.7
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-29T16:20:39.252Z",
+      "freshness_s": 16078246.7
+    },
+    "signup_at": {
+      "value": "2026-03-29T16:20:39.252Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-03-29T16:20:39.252Z",
+      "freshness_s": 16078246.7
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-29T16:20:39.252Z",
+      "freshness_s": 16078246.7
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-29T16:20:39.252Z",
+      "freshness_s": 16078246.7
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-1537",
+    "viewer_id": "U-01940",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T12:11:42.692Z",
+      "event_age_s": 2.7,
+      "trigger_event_id": "a881e981-0164-49b0-8376-933f60f9e900"
+    },
+    "goal": {
+      "id": "G02",
+      "deadline": "2026-10-04T06:45:36.783Z",
+      "signal": "episode_completed",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d6"
+      ]
+    },
+    "content": [
+      "title:T0521",
+      "title:T0522",
+      "title:T0523",
+      "title:T0524",
+      "title:T0535"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:a881e981-0164-49b0-8376-933f60f9e900"
+    ],
+    "assumptions": [
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "home_page_structure",
+        "goal_eligibility",
+        "dialect_specified",
+        "holdout_compliance",
+        "hero_valid",
+        "max_rows",
+        "goal_measurable",
+        "evidence_grounding",
+        "holdout_veto"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0505",
+      "decision_id": "D-0833",
+      "user_id": "U-01940",
+      "trigger_event_id": "53c9cfb5-45ac-4a20-8cb3-8bd3c334c7df",
+      "type": "home_page",
+      "published_at": "2026-10-01T06:45:36.784Z",
+      "dialect": "d2",
+      "hero_title_id": "T0521",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0522",
+            "T0523",
+            "T0524",
+            "T0525",
+            "T0526",
+            "T0528"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0535",
+            "T0584",
+            "T0596",
+            "T0616",
+            "T0679",
+            "T0779"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0529",
+            "T0530",
+            "T0531",
+            "T0533",
+            "T0534",
+            "T0536"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-1080",
+      "decision_id": "D-1537",
+      "user_id": "U-01940",
+      "trigger_event_id": "a881e981-0164-49b0-8376-933f60f9e900",
+      "type": "home_page",
+      "published_at": "2026-10-01T12:11:42.692Z",
+      "dialect": "d2",
+      "hero_title_id": "T0521",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0522",
+            "T0523",
+            "T0524",
+            "T0525",
+            "T0526",
+            "T0528"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0535",
+            "T0584",
+            "T0596",
+            "T0616",
+            "T0679",
+            "T0779"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0529",
+            "T0530",
+            "T0531",
+            "T0533",
+            "T0534",
+            "T0536"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G02 failed: No attributable success signal before deadline 2026-10-04T06:45:36.783Z."
+  ]
+}

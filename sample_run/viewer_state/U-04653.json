@@ -1,0 +1,153 @@
+{
+  "viewer_id": "U-04653",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-09-08T20:19:44.452Z",
+      "freshness_s": 33516701.5
+    },
+    "preferred_dialect": {
+      "value": "d4",
+      "source": "profile_snapshot",
+      "observed_at": "2025-09-08T20:19:44.452Z",
+      "freshness_s": 33516701.5
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-09-08T20:19:44.452Z",
+      "freshness_s": 33516701.5
+    },
+    "signup_at": {
+      "value": "2025-09-08T20:19:44.452Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-09-08T20:19:44.452Z",
+      "freshness_s": 33516701.5
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "events_purchase_completed",
+      "observed_at": "2025-09-08T20:19:44.452Z",
+      "freshness_s": 33516701.5
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-09-08T20:19:44.452Z",
+      "freshness_s": 33516701.5
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-0459",
+    "viewer_id": "U-04653",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T04:46:10.296Z",
+      "event_age_s": 611912.7,
+      "trigger_event_id": "0d983431-3cbc-4472-8925-27971eb9115f"
+    },
+    "goal": null,
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d4",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [],
+    "confidence": 0.99,
+    "confidence_reason": "Trigger event is 611913s old (> 600s threshold); offline-buffered event ignored.",
+    "evidence": [
+      {
+        "ref": "event:0d983431-3cbc-4472-8925-27971eb9115f",
+        "freshness_s": 611912.7
+      }
+    ],
+    "assumptions": [
+      "Offline-buffered historical app opens do not reflect a live user session."
+    ],
+    "checks": {
+      "passed": [
+        "stale_trigger_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "ABSTAINED",
+    "no_action_reason": "stale_trigger",
+    "model_calls": 0,
+    "tool_calls": 0,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0361",
+      "decision_id": "D-0353",
+      "user_id": "U-04653",
+      "trigger_event_id": "897ad0eb-b51b-403e-880c-b3c4362c6294",
+      "type": "home_page",
+      "published_at": "2026-10-01T04:40:32.758Z",
+      "dialect": "d4",
+      "hero_title_id": "T1101",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T1051",
+            "T1083",
+            "T0971",
+            "T0917",
+            "T0941",
+            "T0915"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T1017",
+            "T1070",
+            "T1166",
+            "T1034",
+            "T1039",
+            "T1015"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T1155",
+            "T0937",
+            "T1040",
+            "T1107",
+            "T1116",
+            "T1014"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T1066",
+            "T1005",
+            "T0979",
+            "T0963",
+            "T1019",
+            "T1020"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G09 failed: No attributable success signal before deadline 2026-10-15T04:40:32.755Z.",
+    "Goal G09 succeeded: Built weekly habit across 4 distinct IST days (exposure: True).",
+    "Goal G09 failed: No attributable success signal before deadline 2026-10-15T04:40:32.755Z.",
+    "Goal G09 succeeded: Built weekly habit across 3 distinct IST days (exposure: True)."
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "viewer_id": "U-03068",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-29T06:00:52.367Z",
+      "freshness_s": 44973033.6
+    },
+    "preferred_dialect": {
+      "value": "d3",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-29T06:00:52.367Z",
+      "freshness_s": 44973033.6
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-29T06:00:52.367Z",
+      "freshness_s": 44973033.6
+    },
+    "signup_at": {
+      "value": "2025-04-29T06:00:52.367Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-04-29T06:00:52.367Z",
+      "freshness_s": 44973033.6
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-29T06:00:52.367Z",
+      "freshness_s": 44973033.6
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-29T06:00:52.367Z",
+      "freshness_s": 44973033.6
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-0379",
+    "viewer_id": "U-03068",
+    "arm": "holdout",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T04:45:08.885Z",
+      "event_age_s": 695202.3,
+      "trigger_event_id": "603ebcbc-bf76-41c6-adf4-83c84de6cc4a"
+    },
+    "goal": null,
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [],
+    "confidence": 0.99,
+    "confidence_reason": "Trigger event is 695202s old (> 600s threshold); offline-buffered event ignored.",
+    "evidence": [
+      {
+        "ref": "event:603ebcbc-bf76-41c6-adf4-83c84de6cc4a",
+        "freshness_s": 695202.3
+      }
+    ],
+    "assumptions": [
+      "Offline-buffered historical app opens do not reflect a live user session."
+    ],
+    "checks": {
+      "passed": [
+        "stale_trigger_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "ABSTAINED",
+    "no_action_reason": "stale_trigger",
+    "model_calls": 0,
+    "tool_calls": 0,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G02 failed: No attributable success signal before deadline 2026-10-04T04:32:15.966Z.",
+    "Goal G02 failed: No attributable success signal before deadline 2026-10-04T04:32:15.966Z.",
+    "Goal G02 failed: No attributable success signal before deadline 2026-10-04T04:32:15.966Z.",
+    "Goal G02 failed: No attributable success signal before deadline 2026-10-04T04:32:15.966Z."
+  ]
+}

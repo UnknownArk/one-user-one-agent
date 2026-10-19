@@ -1,0 +1,143 @@
+{
+  "viewer_id": "U-04925",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-24T12:41:15.934Z",
+      "freshness_s": 11253010.0
+    },
+    "preferred_dialect": {
+      "value": "d3",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-24T12:41:15.934Z",
+      "freshness_s": 11253010.0
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-24T12:41:15.934Z",
+      "freshness_s": 11253010.0
+    },
+    "signup_at": {
+      "value": "2026-05-24T12:41:15.934Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-05-24T12:41:15.934Z",
+      "freshness_s": 11253010.0
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-24T12:41:15.934Z",
+      "freshness_s": 11253010.0
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-24T12:41:15.934Z",
+      "freshness_s": 11253010.0
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-2573",
+    "viewer_id": "U-04925",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T16:58:49.772Z",
+      "event_age_s": 0.8,
+      "trigger_event_id": "76c82650-f936-4e03-9417-46e8c587d6c6"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T16:58:49.772Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0908",
+      "title:T0913",
+      "title:T0911",
+      "title:T0905",
+      "title:T0910"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:76c82650-f936-4e03-9417-46e8c587d6c6",
+      "event:efe54306-697f-4824-8322-3d8160d85857"
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug pima-pana-d3 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d3."
+    ],
+    "checks": {
+      "passed": [
+        "home_page_structure",
+        "goal_eligibility",
+        "dialect_specified",
+        "holdout_compliance",
+        "hero_valid",
+        "max_rows",
+        "goal_measurable",
+        "evidence_grounding",
+        "holdout_veto"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 2,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1918",
+      "decision_id": "D-2573",
+      "user_id": "U-04925",
+      "trigger_event_id": "76c82650-f936-4e03-9417-46e8c587d6c6",
+      "type": "home_page",
+      "published_at": "2026-10-01T16:58:49.774Z",
+      "dialect": "d3",
+      "hero_title_id": "T0908",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0913",
+            "T0911",
+            "T0905",
+            "T0902",
+            "T0904",
+            "T0901"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0910",
+            "T0903",
+            "T0906",
+            "T0909",
+            "T0907",
+            "T0914"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:58:49.772Z."
+  ]
+}

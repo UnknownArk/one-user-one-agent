@@ -1,0 +1,118 @@
+{
+  "viewer_id": "U-01254",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-24T16:21:35.867Z",
+      "freshness_s": 16510190.1
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-24T16:21:35.867Z",
+      "freshness_s": 16510190.1
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-24T16:21:35.867Z",
+      "freshness_s": 16510190.1
+    },
+    "signup_at": {
+      "value": "2026-03-24T16:21:35.867Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-03-24T16:21:35.867Z",
+      "freshness_s": 16510190.1
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-24T16:21:35.867Z",
+      "freshness_s": 16510190.1
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-24T16:21:35.867Z",
+      "freshness_s": 16510190.1
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 3,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-2744",
+    "viewer_id": "U-01254",
+    "arm": "holdout",
+    "suppressed": true,
+    "would_have_action": "HOME_PAGE",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T18:12:36.891Z",
+      "event_age_s": 0.9,
+      "trigger_event_id": "94ebc9e6-2289-40ef-a0d7-59d78411ac2a"
+    },
+    "goal": {
+      "id": "G08",
+      "deadline": "2026-10-08T18:12:32.787Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0419",
+      "title:T0277",
+      "title:T0097",
+      "title:T0211",
+      "title:T0031"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:94ebc9e6-2289-40ef-a0d7-59d78411ac2a",
+        "freshness_s": 0.9
+      },
+      {
+        "ref": "goal:G_INST_U-01254_G08_1790878352",
+        "freshness_s": 4.1
+      }
+    ],
+    "assumptions": [
+      "Viewer will interact with personalized rows in dialect d1."
+    ],
+    "checks": {
+      "passed": [
+        "holdout_compliance",
+        "goal_eligibility",
+        "evidence_grounding",
+        "max_rows",
+        "dialect_specified",
+        "hero_valid",
+        "home_page_structure",
+        "goal_measurable"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G08 failed: No attributable success signal before deadline 2026-10-08T18:12:32.787Z.",
+    "Goal G08 failed: No attributable success signal before deadline 2026-10-08T18:12:32.787Z.",
+    "Goal G08 succeeded: Played new release T0035 (Yakani Panine) (exposure: False).",
+    "Goal G08 failed: No attributable success signal before deadline 2026-10-08T18:12:32.787Z."
+  ]
+}

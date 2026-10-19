@@ -1,0 +1,96 @@
+{
+  "viewer_id": "U-03826",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-03T18:36:36.623Z",
+      "freshness_s": 49852489.3
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-03T18:36:36.623Z",
+      "freshness_s": 49852489.3
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-03T18:36:36.623Z",
+      "freshness_s": 49852489.3
+    },
+    "signup_at": {
+      "value": "2025-03-03T18:36:36.623Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-03-03T18:36:36.623Z",
+      "freshness_s": 49852489.3
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "events_purchase_completed",
+      "observed_at": "2025-03-03T18:36:36.623Z",
+      "freshness_s": 49852489.3
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-03T18:36:36.623Z",
+      "freshness_s": 49852489.3
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 5,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-2236",
+    "viewer_id": "U-03826",
+    "arm": "holdout",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T15:22:03.267Z",
+      "event_age_s": 84471.2,
+      "trigger_event_id": "05d06169-6f93-4bea-9c8f-4cf9874aad9a"
+    },
+    "goal": null,
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [],
+    "confidence": 0.99,
+    "confidence_reason": "Trigger event is 84471s old (> 600s threshold); offline-buffered event ignored.",
+    "evidence": [
+      {
+        "ref": "event:05d06169-6f93-4bea-9c8f-4cf9874aad9a",
+        "freshness_s": 84471.2
+      }
+    ],
+    "assumptions": [
+      "Offline-buffered historical app opens do not reflect a live user session."
+    ],
+    "checks": {
+      "passed": [
+        "stale_trigger_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "ABSTAINED",
+    "no_action_reason": "stale_trigger",
+    "model_calls": 0,
+    "tool_calls": 0,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 succeeded: Resumed series slug guka-kosusa-d2 on title T0522 (exposure: False).",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T19:26:25.661Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T19:26:25.661Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T19:26:25.661Z."
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "viewer_id": "U-04583",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-02-04T07:03:19.895Z",
+      "freshness_s": 52226886.0
+    },
+    "preferred_dialect": {
+      "value": "d4",
+      "source": "profile_snapshot",
+      "observed_at": "2025-02-04T07:03:19.895Z",
+      "freshness_s": 52226886.0
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-02-04T07:03:19.895Z",
+      "freshness_s": 52226886.0
+    },
+    "signup_at": {
+      "value": "2025-02-04T07:03:19.895Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-02-04T07:03:19.895Z",
+      "freshness_s": 52226886.0
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "live_purchase_event",
+      "observed_at": "2026-10-01T15:39:47.083Z",
+      "freshness_s": 10298.9
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-02-04T07:03:19.895Z",
+      "freshness_s": 52226886.0
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-2347",
+    "viewer_id": "U-04583",
+    "arm": "holdout",
+    "suppressed": true,
+    "would_have_action": "HOME_PAGE",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T15:52:23.247Z",
+      "event_age_s": 1.2,
+      "trigger_event_id": "6055af50-d678-40b9-a1aa-d101107e1fc7"
+    },
+    "goal": {
+      "id": "G06",
+      "deadline": "2026-10-15T15:37:55.556Z",
+      "signal": "purchase_completed",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d6",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d4"
+      ]
+    },
+    "content": [
+      "title:T1393",
+      "title:T1456",
+      "title:T1486",
+      "title:T1397",
+      "title:T1410"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:6055af50-d678-40b9-a1aa-d101107e1fc7",
+        "freshness_s": 1.2
+      },
+      {
+        "ref": "goal:G_INST_U-04583_G06_1790869075",
+        "freshness_s": 867.7
+      }
+    ],
+    "assumptions": [
+      "Viewer will interact with personalized rows in dialect d6."
+    ],
+    "checks": {
+      "passed": [
+        "max_rows",
+        "dialect_specified",
+        "hero_valid",
+        "goal_eligibility",
+        "evidence_grounding",
+        "home_page_structure",
+        "goal_measurable",
+        "holdout_compliance"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 2,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G06 succeeded: Reactivated subscription via purchase_completed at 2026-10-01T15:39:47.083Z (exposure: False).",
+    "Goal G06 succeeded: Reactivated subscription via purchase_completed at 2026-10-01T15:39:47.083Z (exposure: False).",
+    "Goal G06 succeeded: Reactivated subscription via purchase_completed at 2026-10-01T15:39:47.083Z (exposure: False).",
+    "Goal G06 succeeded: Reactivated subscription via purchase_completed at 2026-10-01T15:39:47.083Z (exposure: False)."
+  ]
+}

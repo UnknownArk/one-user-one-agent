@@ -1,0 +1,213 @@
+{
+  "viewer_id": "U-03689",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-10T23:15:21.018Z",
+      "freshness_s": 57006964.9
+    },
+    "preferred_dialect": {
+      "value": "d4",
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-10T23:15:21.018Z",
+      "freshness_s": 57006964.9
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-10T23:15:21.018Z",
+      "freshness_s": 57006964.9
+    },
+    "signup_at": {
+      "value": "2024-12-10T23:15:21.018Z",
+      "source": "profile_or_events",
+      "observed_at": "2024-12-10T23:15:21.018Z",
+      "freshness_s": 57006964.9
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-10T23:15:21.018Z",
+      "freshness_s": 57006964.9
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-10T23:15:21.018Z",
+      "freshness_s": 57006964.9
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-1571",
+    "viewer_id": "U-03689",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T12:29:53.600Z",
+      "event_age_s": 2.6,
+      "trigger_event_id": "c59dbb58-bfd9-43c9-8a50-4dfdc267909b"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T12:29:53.600Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-1444",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d4",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T1155",
+      "title:T1048",
+      "title:T0922",
+      "title:T0956",
+      "title:T1013"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:c59dbb58-bfd9-43c9-8a50-4dfdc267909b",
+        "freshness_s": 2.6
+      },
+      {
+        "ref": "event:c56517d1-2854-4a41-a80f-c8b4f859a2fe",
+        "freshness_s": 401029.5
+      },
+      {
+        "ref": "episode:bagi-baya-d4-s1e4",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0916",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug bagi-baya-d4 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d4."
+    ],
+    "checks": {
+      "passed": [
+        "quiet_hours",
+        "home_page_structure",
+        "evidence_grounding",
+        "goal_plausibility",
+        "max_rows",
+        "message_title_valid",
+        "duplicate_action",
+        "push_consent",
+        "holdout_compliance",
+        "hero_valid",
+        "push_copy_valid",
+        "dialect_specified",
+        "goal_measurable",
+        "frequency_cap",
+        "goal_eligibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 5,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1443",
+      "decision_id": "D-1571",
+      "user_id": "U-03689",
+      "trigger_event_id": "c59dbb58-bfd9-43c9-8a50-4dfdc267909b",
+      "type": "home_page",
+      "published_at": "2026-10-01T12:29:53.605Z",
+      "dialect": "d4",
+      "hero_title_id": "T1155",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T1048",
+            "T0922",
+            "T0956",
+            "T1011",
+            "T1104",
+            "T1108"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T1013",
+            "T1118",
+            "T1062",
+            "T0920",
+            "T1169",
+            "T1160"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0937",
+            "T1040",
+            "T1107",
+            "T1116",
+            "T1014",
+            "T1162"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T1056",
+            "T1079",
+            "T0990",
+            "T1019",
+            "T1028",
+            "T1102"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-1444",
+      "decision_id": "D-1571",
+      "user_id": "U-03689",
+      "trigger_event_id": "c59dbb58-bfd9-43c9-8a50-4dfdc267909b",
+      "type": "push",
+      "published_at": "2026-10-01T12:29:53.605Z",
+      "send_at": "2026-10-01T12:30:08.600Z",
+      "title_id": "T1155",
+      "dialect": "d4",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d4",
+        "body": "Watch Vadi now on STAGE."
+      },
+      "deeplink": "ott://title/T1155"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T12:29:53.600Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T12:29:53.600Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T12:29:53.600Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T12:29:53.600Z."
+  ]
+}

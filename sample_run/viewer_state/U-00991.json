@@ -1,0 +1,146 @@
+{
+  "viewer_id": "U-00991",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-07-07T20:04:03.569Z",
+      "freshness_s": 38960842.4
+    },
+    "preferred_dialect": {
+      "value": "d3",
+      "source": "profile_snapshot",
+      "observed_at": "2025-07-07T20:04:03.569Z",
+      "freshness_s": 38960842.4
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2025-07-07T20:04:03.569Z",
+      "freshness_s": 38960842.4
+    },
+    "signup_at": {
+      "value": "2025-07-07T20:04:03.569Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-07-07T20:04:03.569Z",
+      "freshness_s": 38960842.4
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2025-07-07T20:04:03.569Z",
+      "freshness_s": 38960842.4
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-07-07T20:04:03.569Z",
+      "freshness_s": 38960842.4
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-2398",
+    "viewer_id": "U-00991",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T16:08:55.683Z",
+      "event_age_s": 2.7,
+      "trigger_event_id": "9df44a85-d6a1-49ec-81ec-9b82c952be9a"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T16:08:55.683Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0908",
+      "title:T0913",
+      "title:T0911",
+      "title:T0905",
+      "title:T0910"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:9df44a85-d6a1-49ec-81ec-9b82c952be9a",
+      "event:d7c6830e-031c-48db-a1e7-8aed9ee569b1"
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug yatite-roloda-d3 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d3."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "holdout_compliance",
+        "dialect_specified",
+        "hero_valid",
+        "goal_eligibility",
+        "goal_measurable",
+        "holdout_veto",
+        "home_page_structure",
+        "max_rows"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1773",
+      "decision_id": "D-2398",
+      "user_id": "U-00991",
+      "trigger_event_id": "9df44a85-d6a1-49ec-81ec-9b82c952be9a",
+      "type": "home_page",
+      "published_at": "2026-10-01T16:08:55.684Z",
+      "dialect": "d3",
+      "hero_title_id": "T0908",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0913",
+            "T0911",
+            "T0905",
+            "T0902",
+            "T0904",
+            "T0901"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0910",
+            "T0903",
+            "T0906",
+            "T0909",
+            "T0907",
+            "T0914"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:08:55.683Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:08:55.683Z.",
+    "Goal G07 succeeded: Resumed series slug yatite-roloda-d3 on title T0901 (exposure: True).",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:08:55.683Z."
+  ]
+}

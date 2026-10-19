@@ -1,0 +1,165 @@
+{
+  "viewer_id": "U-04170",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-13T03:24:29.554Z",
+      "freshness_s": 6966416.4
+    },
+    "preferred_dialect": {
+      "value": "d5",
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-13T03:24:29.554Z",
+      "freshness_s": 6966416.4
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-13T03:24:29.554Z",
+      "freshness_s": 6966416.4
+    },
+    "signup_at": {
+      "value": "2026-07-13T03:24:29.554Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-07-13T03:24:29.554Z",
+      "freshness_s": 6966416.4
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-13T03:24:29.554Z",
+      "freshness_s": 6966416.4
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-13T03:24:29.554Z",
+      "freshness_s": 6966416.4
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-1112",
+    "viewer_id": "U-04170",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T08:57:18.842Z",
+      "event_age_s": 2.8,
+      "trigger_event_id": "ab2ffb08-e330-47ce-b5e3-934e31d8697c"
+    },
+    "goal": {
+      "id": "G08",
+      "deadline": "2026-10-08T08:57:18.842Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "dialect": {
+      "used": "d5",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T1192",
+      "title:T1213",
+      "title:T1326",
+      "title:T1181",
+      "title:T1198"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:ab2ffb08-e330-47ce-b5e3-934e31d8697c",
+      "fact:status:2026-07-13T03:24:29.554Z"
+    ],
+    "assumptions": [
+      "Interprets G08: active subscriber eligible to discover titles released in last 30 days.",
+      "Viewer will interact with personalized rows in dialect d5."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "max_rows",
+        "holdout_veto",
+        "goal_measurable",
+        "holdout_compliance",
+        "hero_valid",
+        "goal_eligibility",
+        "home_page_structure",
+        "dialect_specified"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 2,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0727",
+      "decision_id": "D-1112",
+      "user_id": "U-04170",
+      "trigger_event_id": "ab2ffb08-e330-47ce-b5e3-934e31d8697c",
+      "type": "home_page",
+      "published_at": "2026-10-01T08:57:18.844Z",
+      "dialect": "d5",
+      "hero_title_id": "T1192",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T1213",
+            "T1326",
+            "T1181",
+            "T1258",
+            "T1299",
+            "T1242"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T1198",
+            "T1270",
+            "T1350",
+            "T1279",
+            "T1214",
+            "T1293"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T1219",
+            "T1250",
+            "T1264",
+            "T1183",
+            "T1381",
+            "T1189"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T1371",
+            "T1315",
+            "T1179",
+            "T1331",
+            "T1329",
+            "T1323"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G08 succeeded: Played new release T1210 (Guko Lorina) (exposure: False)."
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "viewer_id": "U-03133",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-12T07:46:23.622Z",
+      "freshness_s": 41165102.3
+    },
+    "preferred_dialect": {
+      "value": "d6",
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-12T07:46:23.622Z",
+      "freshness_s": 41165102.3
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-12T07:46:23.622Z",
+      "freshness_s": 41165102.3
+    },
+    "signup_at": {
+      "value": "2025-06-12T07:46:23.622Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-06-12T07:46:23.622Z",
+      "freshness_s": 41165102.3
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-12T07:46:23.622Z",
+      "freshness_s": 41165102.3
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-12T07:46:23.622Z",
+      "freshness_s": 41165102.3
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-0072",
+    "viewer_id": "U-03133",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T00:02:45.093Z",
+      "event_age_s": 2.1,
+      "trigger_event_id": "108d8096-230f-4e24-8aca-ae4da79dc102"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T00:02:45.093Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-0085",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d6",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T1472",
+      "title:T1400",
+      "title:T1459",
+      "title:T1402",
+      "title:T1417"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:108d8096-230f-4e24-8aca-ae4da79dc102",
+        "freshness_s": 2.1
+      },
+      {
+        "ref": "event:0b1fc62d-c80d-4330-bfa5-b398f8a696bc",
+        "freshness_s": 804835.4
+      },
+      {
+        "ref": "episode:rasuya-moni-d6-s1e6",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T1387",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug rasuya-moni-d6 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d6."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_specified",
+        "push_consent",
+        "hero_valid",
+        "evidence_grounding",
+        "frequency_cap",
+        "push_copy_valid",
+        "home_page_structure",
+        "duplicate_action",
+        "holdout_compliance",
+        "max_rows",
+        "message_title_valid",
+        "goal_measurable",
+        "goal_eligibility",
+        "quiet_hours",
+        "goal_plausibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 4,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0084",
+      "decision_id": "D-0072",
+      "user_id": "U-03133",
+      "trigger_event_id": "108d8096-230f-4e24-8aca-ae4da79dc102",
+      "type": "home_page",
+      "published_at": "2026-10-01T00:02:45.097Z",
+      "dialect": "d6",
+      "hero_title_id": "T1472",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T1400",
+            "T1459",
+            "T1402",
+            "T1436",
+            "T1479",
+            "T1426"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T1417",
+            "T1496",
+            "T1492",
+            "T1440",
+            "T1413",
+            "T1395"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T1421",
+            "T1461",
+            "T1468",
+            "T1491",
+            "T1484",
+            "T1463"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T1431",
+            "T1387",
+            "T1423",
+            "T1489",
+            "T1388",
+            "T1493"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-0085",
+      "decision_id": "D-0072",
+      "user_id": "U-03133",
+      "trigger_event_id": "108d8096-230f-4e24-8aca-ae4da79dc102",
+      "type": "push",
+      "published_at": "2026-10-01T00:02:45.097Z",
+      "send_at": "2026-10-01T02:35:00.000Z",
+      "title_id": "T1472",
+      "dialect": "d6",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d6",
+        "body": "Watch Riri now on STAGE."
+      },
+      "deeplink": "ott://title/T1472"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T00:02:45.093Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T00:02:45.093Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T00:02:45.093Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T00:02:45.093Z."
+  ]
+}

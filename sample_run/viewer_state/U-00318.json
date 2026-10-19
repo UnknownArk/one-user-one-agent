@@ -1,0 +1,111 @@
+{
+  "viewer_id": "U-00318",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-17T02:35:31.349Z",
+      "freshness_s": 1266954.6
+    },
+    "preferred_dialect": {
+      "value": "d3",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-17T02:35:31.349Z",
+      "freshness_s": 1266954.6
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-17T02:35:31.349Z",
+      "freshness_s": 1266954.6
+    },
+    "signup_at": {
+      "value": "2026-09-17T02:35:31.349Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-09-17T02:35:31.349Z",
+      "freshness_s": 1266954.6
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-17T02:35:31.349Z",
+      "freshness_s": 1266954.6
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-17T02:35:31.349Z",
+      "freshness_s": 1266954.6
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-0255",
+    "viewer_id": "U-00318",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T03:34:31.242Z",
+      "event_age_s": 2.2,
+      "trigger_event_id": "a191c1b2-da86-4a60-8f95-f1c8abe16e95"
+    },
+    "goal": {
+      "id": "G05",
+      "deadline": "2026-10-08T03:34:31.242Z",
+      "signal": "purchase_completed",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "NA",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d3"
+      ]
+    },
+    "content": [],
+    "confidence": 0.95,
+    "confidence_reason": "No active titles available for dialect NA at this time.",
+    "evidence": [
+      {
+        "ref": "event:a191c1b2-da86-4a60-8f95-f1c8abe16e95",
+        "freshness_s": 2.2
+      },
+      {
+        "ref": "fact:subscription_status:never:profile_snapshot",
+        "freshness_s": 1213139.9
+      },
+      {
+        "ref": "event:c872702d-bf53-4e60-93b5-bf00455c0b6c",
+        "freshness_s": 1213139.9
+      }
+    ],
+    "assumptions": [
+      "Assumes user is ready for paid conversion proposition."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 2,
+    "status": "ABSTAINED",
+    "no_action_reason": "insufficient_evidence",
+    "model_calls": 1,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G05 failed: No attributable success signal before deadline 2026-10-08T03:34:31.242Z.",
+    "Goal G05 failed: No attributable success signal before deadline 2026-10-08T03:34:31.242Z.",
+    "Goal G05 failed: No attributable success signal before deadline 2026-10-08T03:34:31.242Z.",
+    "Goal G05 failed: No attributable success signal before deadline 2026-10-08T03:34:31.242Z."
+  ]
+}

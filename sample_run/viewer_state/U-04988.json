@@ -1,0 +1,277 @@
+{
+  "viewer_id": "U-04988",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-29T22:35:15.332Z",
+      "freshness_s": 5514970.6
+    },
+    "preferred_dialect": {
+      "value": "d4",
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-29T22:35:15.332Z",
+      "freshness_s": 5514970.6
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-29T22:35:15.332Z",
+      "freshness_s": 5514970.6
+    },
+    "signup_at": {
+      "value": "2026-07-29T22:35:15.332Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-07-29T22:35:15.332Z",
+      "freshness_s": 5514970.6
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-29T22:35:15.332Z",
+      "freshness_s": 5514970.6
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-29T22:35:15.332Z",
+      "freshness_s": 5514970.6
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 4,
+  "actions_count": 4,
+  "recent_decision": {
+    "decision_id": "D-2541",
+    "viewer_id": "U-04988",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T16:48:33.982Z",
+      "event_age_s": 3.0,
+      "trigger_event_id": "e40f8906-9423-4da8-92f5-ff5bd6cf49a2"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T02:56:20.261Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "message_decision": {
+      "status": "VETOED",
+      "channel": "push",
+      "reason": "frequency_cap"
+    },
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d4"
+      ]
+    },
+    "content": [
+      "title:T0616",
+      "title:T0679",
+      "title:T0779",
+      "title:T0832",
+      "title:T0706"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:e40f8906-9423-4da8-92f5-ff5bd6cf49a2",
+        "freshness_s": 3.0
+      },
+      {
+        "ref": "goal:G_INST_U-04988_G07_1790823380",
+        "freshness_s": 49933.7
+      }
+    ],
+    "assumptions": [
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_specified",
+        "push_consent",
+        "evidence_grounding",
+        "push_copy_valid",
+        "message_title_valid",
+        "holdout_compliance",
+        "goal_measurable",
+        "goal_eligibility",
+        "quiet_hours",
+        "goal_plausibility"
+      ],
+      "failed": [
+        "duplicate_action",
+        "frequency_cap"
+      ]
+    },
+    "decided_in_ms": 2,
+    "status": "VETOED",
+    "no_action_reason": "duplicate_action",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0213",
+      "decision_id": "D-0193",
+      "user_id": "U-04988",
+      "trigger_event_id": "4292852c-e34e-4aa8-a8cc-025e4153e148",
+      "type": "home_page",
+      "published_at": "2026-10-01T02:56:20.267Z",
+      "dialect": "d2",
+      "hero_title_id": "T0616",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0679",
+            "T0779",
+            "T0832",
+            "T0575",
+            "T0711",
+            "T0552"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0706",
+            "T0852",
+            "T0800",
+            "T0815",
+            "T0786",
+            "T0871"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0535",
+            "T0584",
+            "T0596",
+            "T0829",
+            "T0746",
+            "T0741"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0820",
+            "T0664",
+            "T0816",
+            "T0817",
+            "T0658",
+            "T0580"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-0214",
+      "decision_id": "D-0193",
+      "user_id": "U-04988",
+      "trigger_event_id": "4292852c-e34e-4aa8-a8cc-025e4153e148",
+      "type": "push",
+      "published_at": "2026-10-01T02:56:20.267Z",
+      "send_at": "2026-10-01T02:56:35.261Z",
+      "title_id": "T0616",
+      "dialect": "d2",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d2",
+        "body": "Watch Baha Lobhaka now on STAGE."
+      },
+      "deeplink": "ott://title/T0616"
+    },
+    {
+      "action_id": "A-2487",
+      "decision_id": "D-2540",
+      "user_id": "U-04988",
+      "trigger_event_id": "caeca35a-1047-44b1-8b98-cb1ce5c8a5bb",
+      "type": "home_page",
+      "published_at": "2026-10-01T16:48:30.261Z",
+      "dialect": "d2",
+      "hero_title_id": "T0616",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0679",
+            "T0779",
+            "T0832",
+            "T0575",
+            "T0711",
+            "T0552"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0706",
+            "T0852",
+            "T0800",
+            "T0815",
+            "T0786",
+            "T0871"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0535",
+            "T0584",
+            "T0596",
+            "T0829",
+            "T0746",
+            "T0741"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0820",
+            "T0664",
+            "T0816",
+            "T0817",
+            "T0658",
+            "T0580"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-2488",
+      "decision_id": "D-2540",
+      "user_id": "U-04988",
+      "trigger_event_id": "caeca35a-1047-44b1-8b98-cb1ce5c8a5bb",
+      "type": "push",
+      "published_at": "2026-10-01T16:48:30.261Z",
+      "send_at": "2026-10-02T02:35:00.000Z",
+      "title_id": "T0616",
+      "dialect": "d2",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d2",
+        "body": "Watch Baha Lobhaka now on STAGE."
+      },
+      "deeplink": "ott://title/T0616"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T02:56:20.261Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T02:56:20.261Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T02:56:20.261Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T02:56:20.261Z."
+  ]
+}

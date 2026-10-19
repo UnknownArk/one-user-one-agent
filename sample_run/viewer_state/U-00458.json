@@ -1,0 +1,153 @@
+{
+  "viewer_id": "U-00458",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-16T14:04:52.847Z",
+      "freshness_s": 19628793.1
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-16T14:04:52.847Z",
+      "freshness_s": 19628793.1
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-16T14:04:52.847Z",
+      "freshness_s": 19628793.1
+    },
+    "signup_at": {
+      "value": "2026-02-16T14:04:52.847Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-02-16T14:04:52.847Z",
+      "freshness_s": 19628793.1
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-16T14:04:52.847Z",
+      "freshness_s": 19628793.1
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-16T14:04:52.847Z",
+      "freshness_s": 19628793.1
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-2571",
+    "viewer_id": "U-00458",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T16:58:30.027Z",
+      "event_age_s": 47149.4,
+      "trigger_event_id": "9704ef21-6d92-42e6-ab24-a68493994d17"
+    },
+    "goal": null,
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [],
+    "confidence": 0.99,
+    "confidence_reason": "Trigger event is 47149s old (> 600s threshold); offline-buffered event ignored.",
+    "evidence": [
+      {
+        "ref": "event:9704ef21-6d92-42e6-ab24-a68493994d17",
+        "freshness_s": 47149.4
+      }
+    ],
+    "assumptions": [
+      "Offline-buffered historical app opens do not reflect a live user session."
+    ],
+    "checks": {
+      "passed": [
+        "stale_trigger_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "ABSTAINED",
+    "no_action_reason": "stale_trigger",
+    "model_calls": 0,
+    "tool_calls": 0,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0926",
+      "decision_id": "D-1099",
+      "user_id": "U-00458",
+      "trigger_event_id": "381cf155-373d-4b1a-95ec-1bc57242400f",
+      "type": "home_page",
+      "published_at": "2026-10-01T08:46:23.163Z",
+      "dialect": "d1",
+      "hero_title_id": "T0195",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0413",
+            "T0419",
+            "T0072",
+            "T0218",
+            "T0277",
+            "T0390"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0305",
+            "T0230",
+            "T0447",
+            "T0196",
+            "T0214",
+            "T0363"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0426",
+            "T0382",
+            "T0435",
+            "T0036",
+            "T0137",
+            "T0511"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0458",
+            "T0465",
+            "T0127",
+            "T0160",
+            "T0174",
+            "T0172"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G08 succeeded: Played new release T0033 (Pati Dida) (exposure: True).",
+    "Goal G08 succeeded: Played new release T0033 (Pati Dida) (exposure: True).",
+    "Goal G08 succeeded: Played new release T0034 (Labha) (exposure: True).",
+    "Goal G08 succeeded: Played new release T0016 (Gune Halo) (exposure: True)."
+  ]
+}

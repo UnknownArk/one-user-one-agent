@@ -1,0 +1,21 @@
+{
+  "seed": "s2",
+  "triggered_users": 1746,
+  "events_written": 31901,
+  "counts": {
+    "actions_total": 1313,
+    "home_page_accepted": 896,
+    "home_page_published_but_not_shown": 16,
+    "home_page_shown_personalised": 840,
+    "organic_purchases_scripted": 36,
+    "push_clicked": 5,
+    "push_delivered": 341,
+    "push_requested": 390,
+    "push_undeliverable_token": 49,
+    "whatsapp_clicked": 1,
+    "whatsapp_delivered": 27,
+    "whatsapp_requested": 27
+  },
+  "policy_problems": [],
+  "policy_problem_count": 0
+}

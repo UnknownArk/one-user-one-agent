@@ -1,0 +1,186 @@
+{
+  "viewer_id": "U-02671",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-11T23:20:07.871Z",
+      "freshness_s": 17608278.1
+    },
+    "preferred_dialect": {
+      "value": "d5",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-11T23:20:07.871Z",
+      "freshness_s": 17608278.1
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-11T23:20:07.871Z",
+      "freshness_s": 17608278.1
+    },
+    "signup_at": {
+      "value": "2026-03-11T23:20:07.871Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-03-11T23:20:07.871Z",
+      "freshness_s": 17608278.1
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-11T23:20:07.871Z",
+      "freshness_s": 17608278.1
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-11T23:20:07.871Z",
+      "freshness_s": 17608278.1
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-2664",
+    "viewer_id": "U-02671",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T17:28:42.592Z",
+      "event_age_s": 2.6,
+      "trigger_event_id": "6127eb3f-ca21-461b-9847-1de444726006"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T17:28:42.592Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d5"
+      ]
+    },
+    "content": [
+      "title:T0419",
+      "title:T0277",
+      "title:T0097",
+      "title:T0211",
+      "title:T0031"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:6127eb3f-ca21-461b-9847-1de444726006",
+        "freshness_s": 2.6
+      },
+      {
+        "ref": "event:267465e4-e8cb-424c-bdd0-76931c2b12d5",
+        "freshness_s": 819093.9
+      },
+      {
+        "ref": "episode:hama-chudibha-d1-s1e3",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0002",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug hama-chudibha-d1 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d1."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "dialect_specified",
+        "home_page_structure",
+        "max_rows",
+        "holdout_compliance",
+        "hero_valid",
+        "goal_eligibility",
+        "goal_measurable"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 4,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1990",
+      "decision_id": "D-2664",
+      "user_id": "U-02671",
+      "trigger_event_id": "6127eb3f-ca21-461b-9847-1de444726006",
+      "type": "home_page",
+      "published_at": "2026-10-01T17:28:42.596Z",
+      "dialect": "d1",
+      "hero_title_id": "T0419",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0277",
+            "T0097",
+            "T0211",
+            "T0028",
+            "T0196",
+            "T0403"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0031",
+            "T0070",
+            "T0214",
+            "T0384",
+            "T0258",
+            "T0271"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0426",
+            "T0382",
+            "T0435",
+            "T0195",
+            "T0036",
+            "T0413"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0302",
+            "T0174",
+            "T0234",
+            "T0446",
+            "T0425",
+            "T0332"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T17:28:42.592Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T17:28:42.592Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T17:28:42.592Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T17:28:42.592Z."
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "viewer_id": "U-03180",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-05T13:48:27.994Z",
+      "freshness_s": 18160977.9
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-05T13:48:27.994Z",
+      "freshness_s": 18160977.9
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-05T13:48:27.994Z",
+      "freshness_s": 18160977.9
+    },
+    "signup_at": {
+      "value": "2026-03-05T13:48:27.994Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-03-05T13:48:27.994Z",
+      "freshness_s": 18160977.9
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-05T13:48:27.994Z",
+      "freshness_s": 18160977.9
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-03-05T13:48:27.994Z",
+      "freshness_s": 18160977.9
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 4,
+  "actions_count": 3,
+  "recent_decision": {
+    "decision_id": "D-2492",
+    "viewer_id": "U-03180",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T16:35:59.733Z",
+      "event_age_s": 0.7,
+      "trigger_event_id": "45833c77-a9ba-4c95-9989-bb34a4e5e479"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T16:07:15.343Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-2434",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d2"
+      ]
+    },
+    "content": [
+      "title:T0905",
+      "title:T0908",
+      "title:T0903",
+      "title:T0902",
+      "title:T0906"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:45833c77-a9ba-4c95-9989-bb34a4e5e479",
+        "freshness_s": 0.7
+      },
+      {
+        "ref": "goal:G_INST_U-03180_G07_1790870835",
+        "freshness_s": 1724.4
+      }
+    ],
+    "assumptions": [
+      "Viewer will interact with personalized rows in dialect d3."
+    ],
+    "checks": {
+      "passed": [
+        "quiet_hours",
+        "goal_eligibility",
+        "evidence_grounding",
+        "push_copy_valid",
+        "goal_plausibility",
+        "frequency_cap",
+        "goal_measurable",
+        "dialect_specified",
+        "message_title_valid",
+        "push_consent",
+        "holdout_compliance"
+      ],
+      "failed": [
+        "duplicate_action"
+      ]
+    },
+    "decided_in_ms": 1,
+    "status": "VETOED",
+    "no_action_reason": "duplicate_action",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-2319",
+      "decision_id": "D-2388",
+      "user_id": "U-03180",
+      "trigger_event_id": "3e37c593-ac2f-468e-8f71-bb5563b7711a",
+      "type": "home_page",
+      "published_at": "2026-10-01T16:07:15.345Z",
+      "dialect": "d3",
+      "hero_title_id": "T0905",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0908",
+            "T0903",
+            "T0902",
+            "T0904",
+            "T0901",
+            "T0910"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0906",
+            "T0913",
+            "T0909",
+            "T0907",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-2320",
+      "decision_id": "D-2388",
+      "user_id": "U-03180",
+      "trigger_event_id": "3e37c593-ac2f-468e-8f71-bb5563b7711a",
+      "type": "push",
+      "published_at": "2026-10-01T16:07:15.345Z",
+      "send_at": "2026-10-01T16:07:30.343Z",
+      "title_id": "T0905",
+      "dialect": "d3",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d3",
+        "body": "Watch Yadha Kopa now on STAGE."
+      },
+      "deeplink": "ott://title/T0905"
+    },
+    {
+      "action_id": "A-2434",
+      "decision_id": "D-2492",
+      "user_id": "U-03180",
+      "trigger_event_id": "45833c77-a9ba-4c95-9989-bb34a4e5e479",
+      "type": "push",
+      "published_at": "2026-10-01T16:35:59.733Z",
+      "send_at": "2026-10-02T02:35:00.000Z",
+      "title_id": "T0905",
+      "dialect": "d3",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d3",
+        "body": "Watch Yadha Kopa now on STAGE."
+      },
+      "deeplink": "ott://title/T0905"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:07:15.343Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:07:15.343Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:07:15.343Z.",
+    "Goal G07 succeeded: Resumed series slug yane-tegi-d3 on title T0903 (exposure: True)."
+  ]
+}

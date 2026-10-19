@@ -1,0 +1,216 @@
+{
+  "viewer_id": "U-02004",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-01-17T14:45:47.115Z",
+      "freshness_s": 22218338.8
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2026-01-17T14:45:47.115Z",
+      "freshness_s": 22218338.8
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2026-01-17T14:45:47.115Z",
+      "freshness_s": 22218338.8
+    },
+    "signup_at": {
+      "value": "2026-01-17T14:45:47.115Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-01-17T14:45:47.115Z",
+      "freshness_s": 22218338.8
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-01-17T14:45:47.115Z",
+      "freshness_s": 22218338.8
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-01-17T14:45:47.115Z",
+      "freshness_s": 22218338.8
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-0226",
+    "viewer_id": "U-02004",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T03:15:02.575Z",
+      "event_age_s": 1.6,
+      "trigger_event_id": "cc2d4381-37c7-4cbc-8ab4-fd21cc06f307"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T03:15:02.575Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-0241",
+      "channel": "whatsapp"
+    },
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": [
+        "deeplink:d2"
+      ]
+    },
+    "content": [
+      "title:T0195",
+      "title:T0007",
+      "title:T0294",
+      "title:T0403",
+      "title:T0465"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:cc2d4381-37c7-4cbc-8ab4-fd21cc06f307",
+        "freshness_s": 1.6
+      },
+      {
+        "ref": "event:92f1d731-51f8-4ea8-ab5b-2dff0578b7d6",
+        "freshness_s": 1850484.4
+      },
+      {
+        "ref": "episode:bagugu-gigupi-d1-s1e1",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0009",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug bagugu-gigupi-d1 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d1."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_specified",
+        "wa_template_approved",
+        "hero_valid",
+        "evidence_grounding",
+        "frequency_cap",
+        "home_page_structure",
+        "duplicate_action",
+        "holdout_compliance",
+        "max_rows",
+        "message_title_valid",
+        "goal_measurable",
+        "goal_eligibility",
+        "whatsapp_consent",
+        "quiet_hours",
+        "goal_plausibility",
+        "wa_variables_complete"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 6,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0240",
+      "decision_id": "D-0226",
+      "user_id": "U-02004",
+      "trigger_event_id": "cc2d4381-37c7-4cbc-8ab4-fd21cc06f307",
+      "type": "home_page",
+      "published_at": "2026-10-01T03:15:02.581Z",
+      "dialect": "d1",
+      "hero_title_id": "T0195",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0007",
+            "T0294",
+            "T0403",
+            "T0070",
+            "T0417",
+            "T0458"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0465",
+            "T0075",
+            "T0127",
+            "T0384",
+            "T0147",
+            "T0440"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0426",
+            "T0382",
+            "T0435",
+            "T0036",
+            "T0413",
+            "T0137"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0405",
+            "T0202",
+            "T0006",
+            "T0278",
+            "T0438",
+            "T0332"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-0241",
+      "decision_id": "D-0226",
+      "user_id": "U-02004",
+      "trigger_event_id": "cc2d4381-37c7-4cbc-8ab4-fd21cc06f307",
+      "type": "whatsapp",
+      "published_at": "2026-10-01T03:15:02.581Z",
+      "send_at": "2026-10-01T03:15:17.575Z",
+      "title_id": "T0195",
+      "dialect": "d1",
+      "goal_id": "G07",
+      "template_id": "wa_recommend_title_v1",
+      "variables": {
+        "title_name": "Dhati Tiniha",
+        "dialect_name": "d1"
+      }
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:15:02.575Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:15:02.575Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:15:02.575Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:15:02.575Z."
+  ]
+}

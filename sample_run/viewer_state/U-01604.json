@@ -1,0 +1,213 @@
+{
+  "viewer_id": "U-01604",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-09-09T22:13:00.273Z",
+      "freshness_s": 33423505.7
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2025-09-09T22:13:00.273Z",
+      "freshness_s": 33423505.7
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-09-09T22:13:00.273Z",
+      "freshness_s": 33423505.7
+    },
+    "signup_at": {
+      "value": "2025-09-09T22:13:00.273Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-09-09T22:13:00.273Z",
+      "freshness_s": 33423505.7
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2025-09-09T22:13:00.273Z",
+      "freshness_s": 33423505.7
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-09-09T22:13:00.273Z",
+      "freshness_s": 33423505.7
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-2462",
+    "viewer_id": "U-01604",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T16:27:21.431Z",
+      "event_age_s": 2.4,
+      "trigger_event_id": "930a2868-5ec0-4f09-93c6-4d8f8308a4f0"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T16:27:21.431Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-2404",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0584",
+      "title:T0596",
+      "title:T0575",
+      "title:T0726",
+      "title:T0762"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:930a2868-5ec0-4f09-93c6-4d8f8308a4f0",
+        "freshness_s": 2.4
+      },
+      {
+        "ref": "event:fa68812d-37f1-4150-aaa1-1d05b2f94a1e",
+        "freshness_s": 2597451.7
+      },
+      {
+        "ref": "episode:kolani-mari-d2-s1e1",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0542",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug kolani-mari-d2 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "quiet_hours",
+        "duplicate_action",
+        "max_rows",
+        "goal_eligibility",
+        "evidence_grounding",
+        "push_copy_valid",
+        "goal_plausibility",
+        "frequency_cap",
+        "home_page_structure",
+        "goal_measurable",
+        "dialect_specified",
+        "message_title_valid",
+        "push_consent",
+        "holdout_compliance",
+        "hero_valid"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-2403",
+      "decision_id": "D-2462",
+      "user_id": "U-01604",
+      "trigger_event_id": "930a2868-5ec0-4f09-93c6-4d8f8308a4f0",
+      "type": "home_page",
+      "published_at": "2026-10-01T16:27:21.432Z",
+      "dialect": "d2",
+      "hero_title_id": "T0584",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0596",
+            "T0575",
+            "T0726",
+            "T0587",
+            "T0815",
+            "T0564"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0762",
+            "T0847",
+            "T0676",
+            "T0686",
+            "T0897",
+            "T0605"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0535",
+            "T0616",
+            "T0679",
+            "T0779",
+            "T0829",
+            "T0832"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0790",
+            "T0602",
+            "T0843",
+            "T0557",
+            "T0831",
+            "T0542"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-2404",
+      "decision_id": "D-2462",
+      "user_id": "U-01604",
+      "trigger_event_id": "930a2868-5ec0-4f09-93c6-4d8f8308a4f0",
+      "type": "push",
+      "published_at": "2026-10-01T16:27:21.432Z",
+      "send_at": "2026-10-01T16:27:36.431Z",
+      "title_id": "T0584",
+      "dialect": "d2",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d2",
+        "body": "Watch Vate Vavada now on STAGE."
+      },
+      "deeplink": "ott://title/T0584"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:27:21.431Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:27:21.431Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:27:21.431Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T16:27:21.431Z."
+  ]
+}

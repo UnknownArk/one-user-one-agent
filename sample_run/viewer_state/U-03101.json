@@ -1,0 +1,184 @@
+{
+  "viewer_id": "U-03101",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-07-06T22:49:52.582Z",
+      "freshness_s": 39037293.4
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2025-07-06T22:49:52.582Z",
+      "freshness_s": 39037293.4
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-07-06T22:49:52.582Z",
+      "freshness_s": 39037293.4
+    },
+    "signup_at": {
+      "value": "2025-07-06T22:49:52.582Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-07-06T22:49:52.582Z",
+      "freshness_s": 39037293.4
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2025-07-06T22:49:52.582Z",
+      "freshness_s": 39037293.4
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-07-06T22:49:52.582Z",
+      "freshness_s": 39037293.4
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-2027",
+    "viewer_id": "U-03101",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T15:00:51.854Z",
+      "event_age_s": 1.4,
+      "trigger_event_id": "0cf265c7-7c7d-4388-8557-9f99f75d4a54"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T15:00:51.854Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0829",
+      "title:T0832",
+      "title:T0746",
+      "title:T0711",
+      "title:T0807"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:0cf265c7-7c7d-4388-8557-9f99f75d4a54",
+        "freshness_s": 1.4
+      },
+      {
+        "ref": "event:27c3dae4-be96-4345-9765-0dc6e2a7b2fd",
+        "freshness_s": 928776.0
+      },
+      {
+        "ref": "episode:molo-d2-s1e3",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0521",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug molo-d2 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "dialect_specified",
+        "home_page_structure",
+        "max_rows",
+        "holdout_compliance",
+        "hero_valid",
+        "goal_eligibility",
+        "goal_measurable"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 6,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1464",
+      "decision_id": "D-2027",
+      "user_id": "U-03101",
+      "trigger_event_id": "0cf265c7-7c7d-4388-8557-9f99f75d4a54",
+      "type": "home_page",
+      "published_at": "2026-10-01T15:00:51.860Z",
+      "dialect": "d2",
+      "hero_title_id": "T0829",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0832",
+            "T0746",
+            "T0711",
+            "T0726",
+            "T0706",
+            "T0852"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0807",
+            "T0866",
+            "T0762",
+            "T0745",
+            "T0790",
+            "T0522"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0535",
+            "T0584",
+            "T0596",
+            "T0616",
+            "T0679",
+            "T0779"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0837",
+            "T0697",
+            "T0633",
+            "T0699",
+            "T0556",
+            "T0835"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:00:51.854Z.",
+    "Goal G07 succeeded: Resumed series slug molo-d2 on title T0521 (exposure: True).",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:00:51.854Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:00:51.854Z."
+  ]
+}

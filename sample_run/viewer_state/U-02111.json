@@ -1,0 +1,184 @@
+{
+  "viewer_id": "U-02111",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-05T02:31:34.105Z",
+      "freshness_s": 41788791.8
+    },
+    "preferred_dialect": {
+      "value": "d5",
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-05T02:31:34.105Z",
+      "freshness_s": 41788791.8
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-05T02:31:34.105Z",
+      "freshness_s": 41788791.8
+    },
+    "signup_at": {
+      "value": "2025-06-05T02:31:34.105Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-06-05T02:31:34.105Z",
+      "freshness_s": 41788791.8
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-05T02:31:34.105Z",
+      "freshness_s": 41788791.8
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-06-05T02:31:34.105Z",
+      "freshness_s": 41788791.8
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-0344",
+    "viewer_id": "U-02111",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T04:35:16.830Z",
+      "event_age_s": 0.8,
+      "trigger_event_id": "cd72af18-18eb-42e9-ae70-0db488f56278"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T04:35:16.830Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "dialect": {
+      "used": "d5",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T1183",
+      "title:T1381",
+      "title:T1189",
+      "title:T1202",
+      "title:T1198"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:cd72af18-18eb-42e9-ae70-0db488f56278",
+        "freshness_s": 0.8
+      },
+      {
+        "ref": "event:a656adfe-302d-4146-9b65-c89ff0f71123",
+        "freshness_s": 1167314.4
+      },
+      {
+        "ref": "episode:labha-pako-d5-s1e1",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T1199",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug labha-pako-d5 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d5."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "dialect_specified",
+        "home_page_structure",
+        "max_rows",
+        "holdout_compliance",
+        "hero_valid",
+        "goal_eligibility",
+        "goal_measurable"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 7,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0278",
+      "decision_id": "D-0344",
+      "user_id": "U-02111",
+      "trigger_event_id": "cd72af18-18eb-42e9-ae70-0db488f56278",
+      "type": "home_page",
+      "published_at": "2026-10-01T04:35:16.837Z",
+      "dialect": "d5",
+      "hero_title_id": "T1183",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T1381",
+            "T1189",
+            "T1202",
+            "T1278",
+            "T1341",
+            "T1260"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T1198",
+            "T1266",
+            "T1272",
+            "T1303",
+            "T1276",
+            "T1210"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T1192",
+            "T1213",
+            "T1219",
+            "T1250",
+            "T1264",
+            "T1215"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T1244",
+            "T1178",
+            "T1239",
+            "T1342",
+            "T1306",
+            "T1309"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T04:35:16.830Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T04:35:16.830Z.",
+    "Goal G07 succeeded: Resumed series slug labha-pako-d5 on title T1199 (exposure: True).",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T04:35:16.830Z."
+  ]
+}

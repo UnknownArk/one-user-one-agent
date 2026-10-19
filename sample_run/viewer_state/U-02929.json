@@ -1,0 +1,200 @@
+{
+  "viewer_id": "U-02929",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-05-26T14:42:16.049Z",
+      "freshness_s": 42608949.9
+    },
+    "preferred_dialect": {
+      "value": "d3",
+      "source": "profile_snapshot",
+      "observed_at": "2025-05-26T14:42:16.049Z",
+      "freshness_s": 42608949.9
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-05-26T14:42:16.049Z",
+      "freshness_s": 42608949.9
+    },
+    "signup_at": {
+      "value": "2025-05-26T14:42:16.049Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-05-26T14:42:16.049Z",
+      "freshness_s": 42608949.9
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2025-05-26T14:42:16.049Z",
+      "freshness_s": 42608949.9
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-05-26T14:42:16.049Z",
+      "freshness_s": 42608949.9
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-2305",
+    "viewer_id": "U-02929",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T15:40:58.066Z",
+      "event_age_s": 2.1,
+      "trigger_event_id": "3032fa9c-f18f-41b2-945d-f3f9f94d8fa3"
+    },
+    "goal": {
+      "id": "G05",
+      "deadline": "2026-10-08T05:44:53.400Z",
+      "signal": "purchase_completed",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "VETOED",
+      "channel": "push",
+      "reason": "push_consent"
+    },
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0905",
+      "title:T0902",
+      "title:T0910",
+      "title:T0904",
+      "title:T0906"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:3032fa9c-f18f-41b2-945d-f3f9f94d8fa3",
+        "freshness_s": 2.1
+      },
+      {
+        "ref": "goal:G_INST_U-02929_G05_1790833493",
+        "freshness_s": 35764.7
+      }
+    ],
+    "assumptions": [
+      "Viewer will interact with personalized rows in dialect d3."
+    ],
+    "checks": {
+      "passed": [
+        "quiet_hours",
+        "duplicate_action",
+        "max_rows",
+        "goal_eligibility",
+        "evidence_grounding",
+        "push_copy_valid",
+        "goal_plausibility",
+        "frequency_cap",
+        "home_page_structure",
+        "goal_measurable",
+        "dialect_specified",
+        "message_title_valid",
+        "holdout_compliance",
+        "hero_valid"
+      ],
+      "failed": [
+        "push_consent"
+      ]
+    },
+    "decided_in_ms": 1,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0503",
+      "decision_id": "D-0705",
+      "user_id": "U-02929",
+      "trigger_event_id": "cf9ddbd2-06c2-4d1b-bbd4-fe61f1e95b34",
+      "type": "home_page",
+      "published_at": "2026-10-01T05:44:53.401Z",
+      "dialect": "d3",
+      "hero_title_id": "T0905",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0902",
+            "T0910",
+            "T0904",
+            "T0908",
+            "T0901",
+            "T0903"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0906",
+            "T0913",
+            "T0909",
+            "T0907",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-2227",
+      "decision_id": "D-2305",
+      "user_id": "U-02929",
+      "trigger_event_id": "3032fa9c-f18f-41b2-945d-f3f9f94d8fa3",
+      "type": "home_page",
+      "published_at": "2026-10-01T15:40:58.066Z",
+      "dialect": "d3",
+      "hero_title_id": "T0905",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0902",
+            "T0910",
+            "T0904",
+            "T0908",
+            "T0901",
+            "T0903"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0906",
+            "T0913",
+            "T0909",
+            "T0907",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G05 failed: No attributable success signal before deadline 2026-10-08T05:44:53.400Z.",
+    "Goal G05 failed: No attributable success signal before deadline 2026-10-08T05:44:53.400Z.",
+    "Goal G05 failed: No attributable success signal before deadline 2026-10-08T05:44:53.400Z.",
+    "Goal G05 failed: No attributable success signal before deadline 2026-10-08T05:44:53.400Z."
+  ]
+}

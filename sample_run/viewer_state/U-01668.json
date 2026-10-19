@@ -1,0 +1,277 @@
+{
+  "viewer_id": "U-01668",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-08-07T06:10:00.347Z",
+      "freshness_s": 36332485.6
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2025-08-07T06:10:00.347Z",
+      "freshness_s": 36332485.6
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-08-07T06:10:00.347Z",
+      "freshness_s": 36332485.6
+    },
+    "signup_at": {
+      "value": "2025-08-07T06:10:00.347Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-08-07T06:10:00.347Z",
+      "freshness_s": 36332485.6
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2025-08-07T06:10:00.347Z",
+      "freshness_s": 36332485.6
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-08-07T06:10:00.347Z",
+      "freshness_s": 36332485.6
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 5,
+  "actions_count": 4,
+  "recent_decision": {
+    "decision_id": "D-2661",
+    "viewer_id": "U-01668",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T17:27:51.983Z",
+      "event_age_s": 1.0,
+      "trigger_event_id": "74922985-8ec3-4a55-8f0a-92f748fa619c"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T02:34:13.703Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-2615",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d1"
+      ]
+    },
+    "content": [
+      "title:T0829",
+      "title:T0832",
+      "title:T0746",
+      "title:T0711",
+      "title:T0807"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:74922985-8ec3-4a55-8f0a-92f748fa619c",
+        "freshness_s": 1.0
+      },
+      {
+        "ref": "goal:G_INST_U-01668_G07_1790822053",
+        "freshness_s": 53618.3
+      }
+    ],
+    "assumptions": [
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_specified",
+        "push_consent",
+        "evidence_grounding",
+        "frequency_cap",
+        "push_copy_valid",
+        "message_title_valid",
+        "holdout_compliance",
+        "goal_measurable",
+        "goal_eligibility",
+        "quiet_hours",
+        "goal_plausibility"
+      ],
+      "failed": [
+        "duplicate_action"
+      ]
+    },
+    "decided_in_ms": 4,
+    "status": "VETOED",
+    "no_action_reason": "duplicate_action",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0185",
+      "decision_id": "D-0167",
+      "user_id": "U-01668",
+      "trigger_event_id": "24a8f910-4a8f-487e-a27a-07c94bd6e0a4",
+      "type": "home_page",
+      "published_at": "2026-10-01T02:34:13.710Z",
+      "dialect": "d2",
+      "hero_title_id": "T0829",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0832",
+            "T0746",
+            "T0711",
+            "T0726",
+            "T0706",
+            "T0852"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0807",
+            "T0866",
+            "T0530",
+            "T0762",
+            "T0745",
+            "T0790"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0535",
+            "T0584",
+            "T0596",
+            "T0616",
+            "T0679",
+            "T0779"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0522",
+            "T0837",
+            "T0697",
+            "T0633",
+            "T0699",
+            "T0556"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-0186",
+      "decision_id": "D-0167",
+      "user_id": "U-01668",
+      "trigger_event_id": "24a8f910-4a8f-487e-a27a-07c94bd6e0a4",
+      "type": "push",
+      "published_at": "2026-10-01T02:34:13.710Z",
+      "send_at": "2026-10-01T02:34:28.703Z",
+      "title_id": "T0829",
+      "dialect": "d2",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d2",
+        "body": "Watch Riya now on STAGE."
+      },
+      "deeplink": "ott://title/T0829"
+    },
+    {
+      "action_id": "A-2336",
+      "decision_id": "D-2404",
+      "user_id": "U-01668",
+      "trigger_event_id": "28cc66a3-b447-4379-968a-06461824e08f",
+      "type": "home_page",
+      "published_at": "2026-10-01T16:10:55.385Z",
+      "dialect": "d2",
+      "hero_title_id": "T0829",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0832",
+            "T0746",
+            "T0711",
+            "T0726",
+            "T0706",
+            "T0852"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0807",
+            "T0866",
+            "T0762",
+            "T0745",
+            "T0790",
+            "T0522"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0535",
+            "T0584",
+            "T0596",
+            "T0616",
+            "T0679",
+            "T0779"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0837",
+            "T0697",
+            "T0633",
+            "T0699",
+            "T0556",
+            "T0835"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-2615",
+      "decision_id": "D-2661",
+      "user_id": "U-01668",
+      "trigger_event_id": "74922985-8ec3-4a55-8f0a-92f748fa619c",
+      "type": "push",
+      "published_at": "2026-10-01T17:27:51.987Z",
+      "send_at": "2026-10-02T02:35:00.000Z",
+      "title_id": "T0829",
+      "dialect": "d2",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d2",
+        "body": "Watch Riya now on STAGE."
+      },
+      "deeplink": "ott://title/T0829"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T02:34:13.703Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T02:34:13.703Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T02:34:13.703Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T02:34:13.703Z."
+  ]
+}

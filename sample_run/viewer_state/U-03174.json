@@ -1,0 +1,162 @@
+{
+  "viewer_id": "U-03174",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-08-05T07:19:20.070Z",
+      "freshness_s": 36501125.9
+    },
+    "preferred_dialect": {
+      "value": "d3",
+      "source": "profile_snapshot",
+      "observed_at": "2025-08-05T07:19:20.070Z",
+      "freshness_s": 36501125.9
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2025-08-05T07:19:20.070Z",
+      "freshness_s": 36501125.9
+    },
+    "signup_at": {
+      "value": "2025-08-05T07:19:20.070Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-08-05T07:19:20.070Z",
+      "freshness_s": 36501125.9
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2025-08-05T07:19:20.070Z",
+      "freshness_s": 36501125.9
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-08-05T07:19:20.070Z",
+      "freshness_s": 36501125.9
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-0263",
+    "viewer_id": "U-03174",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T03:39:18.452Z",
+      "event_age_s": 1.5,
+      "trigger_event_id": "7a417549-415e-497c-a773-e2d00e8a4ec5"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T03:39:18.452Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0901",
+      "title:T0910",
+      "title:T0909",
+      "title:T0905",
+      "title:T0903"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:7a417549-415e-497c-a773-e2d00e8a4ec5",
+        "freshness_s": 1.5
+      },
+      {
+        "ref": "event:7ea2a3cf-562c-4c1c-8e97-fb1fe51a6064",
+        "freshness_s": 279246.7
+      },
+      {
+        "ref": "episode:ririgi-d3-s1e3",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0914",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug ririgi-d3 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d3."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "dialect_specified",
+        "home_page_structure",
+        "max_rows",
+        "holdout_compliance",
+        "hero_valid",
+        "goal_eligibility",
+        "goal_measurable"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 11,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0215",
+      "decision_id": "D-0263",
+      "user_id": "U-03174",
+      "trigger_event_id": "7a417549-415e-497c-a773-e2d00e8a4ec5",
+      "type": "home_page",
+      "published_at": "2026-10-01T03:39:18.463Z",
+      "dialect": "d3",
+      "hero_title_id": "T0901",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0910",
+            "T0909",
+            "T0905",
+            "T0902",
+            "T0904",
+            "T0908"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0903",
+            "T0906",
+            "T0913",
+            "T0907",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:39:18.452Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:39:18.452Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:39:18.452Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:39:18.452Z."
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "viewer_id": "U-03772",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-14T15:17:54.521Z",
+      "freshness_s": 59282011.4
+    },
+    "preferred_dialect": {
+      "value": "d4",
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-14T15:17:54.521Z",
+      "freshness_s": 59282011.4
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-14T15:17:54.521Z",
+      "freshness_s": 59282011.4
+    },
+    "signup_at": {
+      "value": "2024-11-14T15:17:54.521Z",
+      "source": "profile_or_events",
+      "observed_at": "2024-11-14T15:17:54.521Z",
+      "freshness_s": 59282011.4
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-14T15:17:54.521Z",
+      "freshness_s": 59282011.4
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-14T15:17:54.521Z",
+      "freshness_s": 59282011.4
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-0878",
+    "viewer_id": "U-03772",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T07:11:56.563Z",
+      "event_age_s": 0.6,
+      "trigger_event_id": "4426e0a0-c8c4-40c5-a54a-979cd0fe449d"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T07:11:56.563Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-0699",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d4",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T1116",
+      "title:T1101",
+      "title:T1031",
+      "title:T1105",
+      "title:T1132"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:4426e0a0-c8c4-40c5-a54a-979cd0fe449d",
+        "freshness_s": 0.6
+      },
+      {
+        "ref": "event:87721a7b-c23c-4c4e-9c61-6569afb899d7",
+        "freshness_s": 259842.8
+      },
+      {
+        "ref": "episode:nisu-sapapa-d4-s1e2",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0928",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug nisu-sapapa-d4 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d4."
+    ],
+    "checks": {
+      "passed": [
+        "quiet_hours",
+        "home_page_structure",
+        "evidence_grounding",
+        "goal_plausibility",
+        "max_rows",
+        "message_title_valid",
+        "duplicate_action",
+        "push_consent",
+        "holdout_compliance",
+        "hero_valid",
+        "push_copy_valid",
+        "dialect_specified",
+        "goal_measurable",
+        "frequency_cap",
+        "goal_eligibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 7,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0698",
+      "decision_id": "D-0878",
+      "user_id": "U-03772",
+      "trigger_event_id": "4426e0a0-c8c4-40c5-a54a-979cd0fe449d",
+      "type": "home_page",
+      "published_at": "2026-10-01T07:11:56.570Z",
+      "dialect": "d4",
+      "hero_title_id": "T1116",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T1101",
+            "T1031",
+            "T1105",
+            "T0974",
+            "T1151",
+            "T1021"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T1132",
+            "T1120",
+            "T1079",
+            "T1006",
+            "T1170",
+            "T1088"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T1155",
+            "T0937",
+            "T1040",
+            "T1107",
+            "T1014",
+            "T1162"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0963",
+            "T1172",
+            "T1020",
+            "T0953",
+            "T1033",
+            "T0921"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-0699",
+      "decision_id": "D-0878",
+      "user_id": "U-03772",
+      "trigger_event_id": "4426e0a0-c8c4-40c5-a54a-979cd0fe449d",
+      "type": "push",
+      "published_at": "2026-10-01T07:11:56.570Z",
+      "send_at": "2026-10-01T07:12:11.563Z",
+      "title_id": "T1116",
+      "dialect": "d4",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d4",
+        "body": "Watch Rosu Makagi now on STAGE."
+      },
+      "deeplink": "ott://title/T1116"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T07:11:56.563Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T07:11:56.563Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T07:11:56.563Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T07:11:56.563Z."
+  ]
+}

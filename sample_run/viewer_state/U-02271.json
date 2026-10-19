@@ -1,0 +1,107 @@
+{
+  "viewer_id": "U-02271",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-03T01:52:44.445Z",
+      "freshness_s": 49912721.5
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-03T01:52:44.445Z",
+      "freshness_s": 49912721.5
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-03T01:52:44.445Z",
+      "freshness_s": 49912721.5
+    },
+    "signup_at": {
+      "value": "2025-03-03T01:52:44.445Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-03-03T01:52:44.445Z",
+      "freshness_s": 49912721.5
+    },
+    "subscription_status": {
+      "value": "lapsed",
+      "source": "events_subscription_lapsed",
+      "observed_at": "2025-03-03T01:52:44.445Z",
+      "freshness_s": 49912721.5
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-03T01:52:44.445Z",
+      "freshness_s": 49912721.5
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-1875",
+    "viewer_id": "U-02271",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T14:21:49.495Z",
+      "event_age_s": 0.5,
+      "trigger_event_id": "739ebfe3-39fe-4abd-b666-78acc159e9eb"
+    },
+    "goal": {
+      "id": "G06",
+      "deadline": "2026-10-15T14:21:49.495Z",
+      "signal": "purchase_completed",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "NA",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d2"
+      ]
+    },
+    "content": [],
+    "confidence": 0.95,
+    "confidence_reason": "No active titles available for dialect NA at this time.",
+    "evidence": [
+      {
+        "ref": "event:739ebfe3-39fe-4abd-b666-78acc159e9eb",
+        "freshness_s": 0.5
+      },
+      {
+        "ref": "event:7a4834ea-1788-409d-8030-4c73954b709b",
+        "freshness_s": 504061.3
+      }
+    ],
+    "assumptions": [
+      "Assumes lapsed viewer has interest in new catalogue additions."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "ABSTAINED",
+    "no_action_reason": "insufficient_evidence",
+    "model_calls": 1,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T14:21:49.495Z.",
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T14:21:49.495Z.",
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T14:21:49.495Z.",
+    "Goal G06 failed: No attributable success signal before deadline 2026-10-15T14:21:49.495Z."
+  ]
+}

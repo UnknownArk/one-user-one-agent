@@ -1,0 +1,119 @@
+{
+  "viewer_id": "U-00979",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-04T21:14:13.815Z",
+      "freshness_s": 49756632.1
+    },
+    "preferred_dialect": {
+      "value": "d5",
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-04T21:14:13.815Z",
+      "freshness_s": 49756632.1
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-04T21:14:13.815Z",
+      "freshness_s": 49756632.1
+    },
+    "signup_at": {
+      "value": "2025-03-04T21:14:13.815Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-03-04T21:14:13.815Z",
+      "freshness_s": 49756632.1
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "events_purchase_completed",
+      "observed_at": "2025-03-04T21:14:13.815Z",
+      "freshness_s": 49756632.1
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-03-04T21:14:13.815Z",
+      "freshness_s": 49756632.1
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-2612",
+    "viewer_id": "U-00979",
+    "arm": "holdout",
+    "suppressed": true,
+    "would_have_action": "HOME_PAGE",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T17:10:58.191Z",
+      "event_age_s": 1.2,
+      "trigger_event_id": "d1313999-cce4-40b3-8fee-cc8bf2e6f16e"
+    },
+    "goal": {
+      "id": "G08",
+      "deadline": "2026-10-08T17:10:58.191Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d5",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T1213",
+      "title:T1326",
+      "title:T1278",
+      "title:T1236",
+      "title:T1303"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:d1313999-cce4-40b3-8fee-cc8bf2e6f16e",
+        "freshness_s": 1.2
+      },
+      {
+        "ref": "fact:status:2025-03-04T21:14:13.815Z",
+        "freshness_s": 49751804.4
+      }
+    ],
+    "assumptions": [
+      "Interprets G08: active subscriber eligible to discover titles released in last 30 days.",
+      "Viewer will interact with personalized rows in dialect d5."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_specified",
+        "goal_eligibility",
+        "home_page_structure",
+        "goal_measurable",
+        "evidence_grounding",
+        "hero_valid",
+        "max_rows",
+        "holdout_compliance"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 2,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G08 succeeded: Played new release T1194 (Lala Gunesa) (exposure: False).",
+    "Goal G08 succeeded: Played new release T1180 (Kova Sako) (exposure: False).",
+    "Goal G08 succeeded: Played new release T1181 (Pana Mobako) (exposure: False).",
+    "Goal G08 succeeded: Played new release T1219 (Kane Kopa) (exposure: False)."
+  ]
+}

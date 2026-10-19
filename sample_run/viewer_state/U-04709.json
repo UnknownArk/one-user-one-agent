@@ -1,0 +1,146 @@
+{
+  "viewer_id": "U-04709",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-20T09:10:19.107Z",
+      "freshness_s": 19300866.8
+    },
+    "preferred_dialect": {
+      "value": "d3",
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-20T09:10:19.107Z",
+      "freshness_s": 19300866.8
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-20T09:10:19.107Z",
+      "freshness_s": 19300866.8
+    },
+    "signup_at": {
+      "value": "2026-02-20T09:10:19.107Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-02-20T09:10:19.107Z",
+      "freshness_s": 19300866.8
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-20T09:10:19.107Z",
+      "freshness_s": 19300866.8
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-02-20T09:10:19.107Z",
+      "freshness_s": 19300866.8
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-2221",
+    "viewer_id": "U-04709",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T15:17:58.216Z",
+      "event_age_s": 0.2,
+      "trigger_event_id": "40e973c8-b1be-4362-9842-943ec79dad7a"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T15:17:58.216Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0904",
+      "title:T0903",
+      "title:T0905",
+      "title:T0902",
+      "title:T0906"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:40e973c8-b1be-4362-9842-943ec79dad7a",
+      "event:d0531500-1659-4536-929c-234a6dfafca5"
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug jakasa-dapi-d3 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d3."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "holdout_compliance",
+        "dialect_specified",
+        "hero_valid",
+        "goal_eligibility",
+        "goal_measurable",
+        "holdout_veto",
+        "home_page_structure",
+        "max_rows"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1631",
+      "decision_id": "D-2221",
+      "user_id": "U-04709",
+      "trigger_event_id": "40e973c8-b1be-4362-9842-943ec79dad7a",
+      "type": "home_page",
+      "published_at": "2026-10-01T15:17:58.217Z",
+      "dialect": "d3",
+      "hero_title_id": "T0904",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0903",
+            "T0905",
+            "T0902",
+            "T0908",
+            "T0901",
+            "T0910"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0906",
+            "T0913",
+            "T0909",
+            "T0907",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:17:58.216Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:17:58.216Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:17:58.216Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:17:58.216Z."
+  ]
+}

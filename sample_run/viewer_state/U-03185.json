@@ -1,0 +1,171 @@
+{
+  "viewer_id": "U-03185",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-10T09:42:26.623Z",
+      "freshness_s": 1846139.3
+    },
+    "preferred_dialect": {
+      "value": "",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-10T09:42:26.623Z",
+      "freshness_s": 1846139.3
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-10T09:42:26.623Z",
+      "freshness_s": 1846139.3
+    },
+    "signup_at": {
+      "value": "2026-09-10T09:42:26.623Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-09-10T09:42:26.623Z",
+      "freshness_s": 1846139.3
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-10T09:42:26.623Z",
+      "freshness_s": 1846139.3
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-10T09:42:26.623Z",
+      "freshness_s": 1846139.3
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-1320",
+    "viewer_id": "U-03185",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T10:37:21.101Z",
+      "event_age_s": 2.1,
+      "trigger_event_id": "948dfa93-92e6-4f1f-8885-1761991586b1"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T10:37:21.101Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:"
+      ]
+    },
+    "content": [
+      "title:T0521",
+      "title:T0522",
+      "title:T0530",
+      "title:T0533",
+      "title:T0556"
+    ],
+    "confidence": 0.72,
+    "confidence_reason": "Heuristic layout generated during model fault fallback.",
+    "evidence": [
+      "event:948dfa93-92e6-4f1f-8885-1761991586b1",
+      "event:0ef2ee55-27e0-4bf0-8e90-ac86d55072f6"
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug guka-kosusa-d2 and inactive for >= 3 days.",
+      "Model dependency degraded/failed (ModelUnavailable503Exception); rule-based ranking fallback used.",
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "holdout_compliance",
+        "dialect_specified",
+        "hero_valid",
+        "goal_eligibility",
+        "goal_measurable",
+        "holdout_veto",
+        "home_page_structure",
+        "max_rows"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 1,
+    "tool_calls": 1,
+    "fallback_used": true
+  },
+  "actions": [
+    {
+      "action_id": "A-0898",
+      "decision_id": "D-1320",
+      "user_id": "U-03185",
+      "trigger_event_id": "948dfa93-92e6-4f1f-8885-1761991586b1",
+      "type": "home_page",
+      "published_at": "2026-10-01T10:37:21.102Z",
+      "dialect": "d2",
+      "hero_title_id": "T0521",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0522",
+            "T0530",
+            "T0533",
+            "T0540",
+            "T0548",
+            "T0550"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0556",
+            "T0566",
+            "T0568",
+            "T0576",
+            "T0579",
+            "T0597"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0829",
+            "T0535",
+            "T0584",
+            "T0596",
+            "T0616",
+            "T0679"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0606",
+            "T0607",
+            "T0609",
+            "T0612",
+            "T0615",
+            "T0625"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T10:37:21.101Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T10:37:21.101Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T10:37:21.101Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T10:37:21.101Z."
+  ]
+}

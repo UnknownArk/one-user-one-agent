@@ -1,0 +1,176 @@
+{
+  "viewer_id": "U-00649",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-12-13T10:09:45.034Z",
+      "freshness_s": 25258900.9
+    },
+    "preferred_dialect": {
+      "value": "d4",
+      "source": "profile_snapshot",
+      "observed_at": "2025-12-13T10:09:45.034Z",
+      "freshness_s": 25258900.9
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2025-12-13T10:09:45.034Z",
+      "freshness_s": 25258900.9
+    },
+    "signup_at": {
+      "value": "2025-12-13T10:09:45.034Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-12-13T10:09:45.034Z",
+      "freshness_s": 25258900.9
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "live_purchase_event",
+      "observed_at": "2026-10-01T07:37:32.152Z",
+      "freshness_s": 39233.8
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-12-13T10:09:45.034Z",
+      "freshness_s": 25258900.9
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-0936",
+    "viewer_id": "U-00649",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T07:35:14.802Z",
+      "event_age_s": 2.8,
+      "trigger_event_id": "17530592-11e5-4685-9158-04843b924866"
+    },
+    "goal": {
+      "id": "G05",
+      "deadline": "2026-10-08T07:35:14.802Z",
+      "signal": "purchase_completed",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "dialect": {
+      "used": "d4",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T1116",
+      "title:T1101",
+      "title:T1031",
+      "title:T1105",
+      "title:T1132"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:17530592-11e5-4685-9158-04843b924866",
+        "freshness_s": 2.8
+      },
+      {
+        "ref": "fact:subscription_status:never:profile_snapshot",
+        "freshness_s": 25219529.8
+      }
+    ],
+    "assumptions": [
+      "Assumes user is ready for paid conversion proposition.",
+      "Viewer will interact with personalized rows in dialect d4."
+    ],
+    "checks": {
+      "passed": [
+        "holdout_compliance",
+        "goal_eligibility",
+        "evidence_grounding",
+        "max_rows",
+        "dialect_specified",
+        "hero_valid",
+        "home_page_structure",
+        "goal_measurable"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0593",
+      "decision_id": "D-0936",
+      "user_id": "U-00649",
+      "trigger_event_id": "17530592-11e5-4685-9158-04843b924866",
+      "type": "home_page",
+      "published_at": "2026-10-01T07:35:14.802Z",
+      "dialect": "d4",
+      "hero_title_id": "T1116",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T1101",
+            "T1031",
+            "T1105",
+            "T0974",
+            "T1151",
+            "T1021"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T1132",
+            "T1120",
+            "T1079",
+            "T1006",
+            "T1170",
+            "T1088"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T1155",
+            "T0937",
+            "T1040",
+            "T1107",
+            "T1014",
+            "T1162"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0963",
+            "T1172",
+            "T1020",
+            "T0953",
+            "T1033",
+            "T0921"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G05 succeeded: Purchased paid plan P_MONTH (price \u20b9149) (exposure: True).",
+    "Goal G05 succeeded: Purchased paid plan P_MONTH (price \u20b9149) (exposure: True).",
+    "Goal G05 succeeded: Purchased paid plan P_MONTH (price \u20b9149) (exposure: True).",
+    "Goal G05 succeeded: Purchased paid plan P_MONTH (price \u20b9149) (exposure: False)."
+  ]
+}

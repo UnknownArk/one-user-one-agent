@@ -1,0 +1,91 @@
+{
+  "viewer_id": "U-03537",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-07T18:15:00.804Z",
+      "freshness_s": 46829785.1
+    },
+    "preferred_dialect": {
+      "value": "d3",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-07T18:15:00.804Z",
+      "freshness_s": 46829785.1
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-07T18:15:00.804Z",
+      "freshness_s": 46829785.1
+    },
+    "signup_at": {
+      "value": "2025-04-07T18:15:00.804Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-04-07T18:15:00.804Z",
+      "freshness_s": 46829785.1
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-07T18:15:00.804Z",
+      "freshness_s": 46829785.1
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-04-07T18:15:00.804Z",
+      "freshness_s": 46829785.1
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-0561",
+    "viewer_id": "U-03537",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T04:47:41.370Z",
+      "event_age_s": 9910.4,
+      "trigger_event_id": "ead8ef69-2ee7-4f26-adcd-ac9ea2b329ab"
+    },
+    "goal": null,
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [],
+    "confidence": 0.99,
+    "confidence_reason": "Trigger event is 9910s old (> 600s threshold); offline-buffered event ignored.",
+    "evidence": [
+      {
+        "ref": "event:ead8ef69-2ee7-4f26-adcd-ac9ea2b329ab",
+        "freshness_s": 9910.4
+      }
+    ],
+    "assumptions": [
+      "Offline-buffered historical app opens do not reflect a live user session."
+    ],
+    "checks": {
+      "passed": [
+        "stale_trigger_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "ABSTAINED",
+    "no_action_reason": "stale_trigger",
+    "model_calls": 0,
+    "tool_calls": 0,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": []
+}

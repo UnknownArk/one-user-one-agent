@@ -1,0 +1,111 @@
+{
+  "viewer_id": "U-00591",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-09T08:03:40.532Z",
+      "freshness_s": 1938465.4
+    },
+    "preferred_dialect": {
+      "value": "",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-09T08:03:40.532Z",
+      "freshness_s": 1938465.4
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-09T08:03:40.532Z",
+      "freshness_s": 1938465.4
+    },
+    "signup_at": {
+      "value": "2026-09-09T08:03:40.532Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-09-09T08:03:40.532Z",
+      "freshness_s": 1938465.4
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "live_purchase_event",
+      "observed_at": "2026-10-01T15:07:47.924Z",
+      "freshness_s": 12218.0
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-09T08:03:40.532Z",
+      "freshness_s": 1938465.4
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-2109",
+    "viewer_id": "U-00591",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T15:05:45.368Z",
+      "event_age_s": 2.4,
+      "trigger_event_id": "49f66ce3-472a-4d8a-af5b-27e137c84ce9"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T15:05:45.368Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:"
+      ]
+    },
+    "content": [
+      "title:T0195",
+      "title:T0007",
+      "title:T0294",
+      "title:T0403",
+      "title:T0465"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:49f66ce3-472a-4d8a-af5b-27e137c84ce9",
+      "event:5ad6c1f4-1f8c-4017-86e8-0d506f2a81e8"
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug gima-bhadaba-d1 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d1."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "holdout_compliance",
+        "dialect_specified",
+        "goal_eligibility",
+        "goal_measurable"
+      ],
+      "failed": [
+        "holdout_veto"
+      ]
+    },
+    "decided_in_ms": 2,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:05:45.368Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:05:45.368Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:05:45.368Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:05:45.368Z."
+  ]
+}

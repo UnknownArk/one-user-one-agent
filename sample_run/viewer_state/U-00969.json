@@ -1,0 +1,90 @@
+{
+  "viewer_id": "U-00969",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-21T10:26:52.944Z",
+      "freshness_s": 61373073.0
+    },
+    "preferred_dialect": {
+      "value": "d7",
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-21T10:26:52.944Z",
+      "freshness_s": 61373073.0
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-21T10:26:52.944Z",
+      "freshness_s": 61373073.0
+    },
+    "signup_at": {
+      "value": "2024-10-21T10:26:52.944Z",
+      "source": "profile_or_events",
+      "observed_at": "2024-10-21T10:26:52.944Z",
+      "freshness_s": 61373073.0
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-21T10:26:52.944Z",
+      "freshness_s": 61373073.0
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-21T10:26:52.944Z",
+      "freshness_s": 61373073.0
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-2453",
+    "viewer_id": "U-00969",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T16:25:35.975Z",
+      "event_age_s": 3.0,
+      "trigger_event_id": "ad92c592-a7ad-4a84-9f46-f4e0c9f1b463"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-03T19:23:07.693Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d7",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [],
+    "confidence": 0.95,
+    "confidence_reason": "No active titles available for dialect d7 at this time.",
+    "evidence": [
+      "event:ad92c592-a7ad-4a84-9f46-f4e0c9f1b463"
+    ],
+    "assumptions": [],
+    "checks": {
+      "passed": [
+        "dialect_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "ABSTAINED",
+    "no_action_reason": "insufficient_evidence",
+    "model_calls": 1,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T19:23:07.693Z."
+  ]
+}

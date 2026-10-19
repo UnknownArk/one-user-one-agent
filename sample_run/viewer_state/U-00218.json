@@ -1,0 +1,167 @@
+{
+  "viewer_id": "U-00218",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-18T10:07:20.466Z",
+      "freshness_s": 1153445.5
+    },
+    "preferred_dialect": {
+      "value": "",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-18T10:07:20.466Z",
+      "freshness_s": 1153445.5
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-18T10:07:20.466Z",
+      "freshness_s": 1153445.5
+    },
+    "signup_at": {
+      "value": "2026-09-18T10:07:20.466Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-09-18T10:07:20.466Z",
+      "freshness_s": 1153445.5
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-18T10:07:20.466Z",
+      "freshness_s": 1153445.5
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-18T10:07:20.466Z",
+      "freshness_s": 1153445.5
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-1984",
+    "viewer_id": "U-00218",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T14:50:53.629Z",
+      "event_age_s": 0.6,
+      "trigger_event_id": "b42ba22e-1a76-4fb7-8423-ceeb3fa6bfb2"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T14:50:53.629Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "dialect": {
+      "used": "d4",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:"
+      ]
+    },
+    "content": [
+      "title:T1155",
+      "title:T1048",
+      "title:T0922",
+      "title:T0956",
+      "title:T1013"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:b42ba22e-1a76-4fb7-8423-ceeb3fa6bfb2",
+      "event:c589380d-e5be-4ffc-b7e5-9a4ef31895f0"
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug bagi-baya-d4 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d4."
+    ],
+    "checks": {
+      "passed": [
+        "home_page_structure",
+        "goal_eligibility",
+        "dialect_specified",
+        "holdout_compliance",
+        "hero_valid",
+        "max_rows",
+        "goal_measurable",
+        "evidence_grounding",
+        "holdout_veto"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-1424",
+      "decision_id": "D-1984",
+      "user_id": "U-00218",
+      "trigger_event_id": "b42ba22e-1a76-4fb7-8423-ceeb3fa6bfb2",
+      "type": "home_page",
+      "published_at": "2026-10-01T14:50:53.630Z",
+      "dialect": "d4",
+      "hero_title_id": "T1155",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T1048",
+            "T0922",
+            "T0956",
+            "T1011",
+            "T1104",
+            "T1108"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T1013",
+            "T1118",
+            "T1062",
+            "T0920",
+            "T1169",
+            "T1160"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0937",
+            "T1040",
+            "T1107",
+            "T1116",
+            "T1014",
+            "T1162"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T1056",
+            "T1079",
+            "T0990",
+            "T1019",
+            "T1028",
+            "T1102"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T14:50:53.629Z."
+  ]
+}

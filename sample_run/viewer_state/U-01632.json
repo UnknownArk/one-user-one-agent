@@ -1,0 +1,333 @@
+{
+  "viewer_id": "U-01632",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-10T19:02:11.917Z",
+      "freshness_s": 28078154.0
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-10T19:02:11.917Z",
+      "freshness_s": 28078154.0
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-10T19:02:11.917Z",
+      "freshness_s": 28078154.0
+    },
+    "signup_at": {
+      "value": "2025-11-10T19:02:11.917Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-11-10T19:02:11.917Z",
+      "freshness_s": 28078154.0
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-10T19:02:11.917Z",
+      "freshness_s": 28078154.0
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-10T19:02:11.917Z",
+      "freshness_s": 28078154.0
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 3,
+  "actions_count": 5,
+  "recent_decision": {
+    "decision_id": "D-2641",
+    "viewer_id": "U-01632",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T17:20:17.765Z",
+      "event_age_s": 2.8,
+      "trigger_event_id": "6123cb9c-6c45-4b3f-9805-f8d5abb6a1b6"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T01:02:50.710Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-2598",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0195",
+      "title:T0413",
+      "title:T0419",
+      "title:T0072",
+      "title:T0305"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:6123cb9c-6c45-4b3f-9805-f8d5abb6a1b6",
+        "freshness_s": 2.8
+      },
+      {
+        "ref": "goal:G_INST_U-01632_G07_1790816570",
+        "freshness_s": 58647.1
+      }
+    ],
+    "assumptions": [
+      "Viewer will interact with personalized rows in dialect d1."
+    ],
+    "checks": {
+      "passed": [
+        "quiet_hours",
+        "duplicate_action",
+        "max_rows",
+        "goal_eligibility",
+        "evidence_grounding",
+        "push_copy_valid",
+        "goal_plausibility",
+        "frequency_cap",
+        "home_page_structure",
+        "goal_measurable",
+        "dialect_specified",
+        "message_title_valid",
+        "push_consent",
+        "holdout_compliance",
+        "hero_valid"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 2,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0110",
+      "decision_id": "D-0096",
+      "user_id": "U-01632",
+      "trigger_event_id": "336cafa4-3af2-4347-8552-cf0b091e3fd1",
+      "type": "home_page",
+      "published_at": "2026-10-01T01:02:50.712Z",
+      "dialect": "d1",
+      "hero_title_id": "T0195",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0413",
+            "T0419",
+            "T0072",
+            "T0218",
+            "T0277",
+            "T0390"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0305",
+            "T0230",
+            "T0447",
+            "T0196",
+            "T0214",
+            "T0363"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0426",
+            "T0382",
+            "T0435",
+            "T0036",
+            "T0137",
+            "T0511"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0458",
+            "T0465",
+            "T0127",
+            "T0160",
+            "T0174",
+            "T0172"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-0111",
+      "decision_id": "D-0096",
+      "user_id": "U-01632",
+      "trigger_event_id": "336cafa4-3af2-4347-8552-cf0b091e3fd1",
+      "type": "push",
+      "published_at": "2026-10-01T01:02:50.712Z",
+      "send_at": "2026-10-01T02:35:00.000Z",
+      "title_id": "T0195",
+      "dialect": "d1",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d1",
+        "body": "Watch Dhati Tiniha now on STAGE."
+      },
+      "deeplink": "ott://title/T0195"
+    },
+    {
+      "action_id": "A-1671",
+      "decision_id": "D-1796",
+      "user_id": "U-01632",
+      "trigger_event_id": "c813392e-dc44-44e7-b8e3-bb8f5cf3db5b",
+      "type": "home_page",
+      "published_at": "2026-10-01T13:58:40.902Z",
+      "dialect": "d1",
+      "hero_title_id": "T0195",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0413",
+            "T0419",
+            "T0072",
+            "T0218",
+            "T0277",
+            "T0390"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0305",
+            "T0230",
+            "T0447",
+            "T0196",
+            "T0214",
+            "T0363"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0426",
+            "T0382",
+            "T0435",
+            "T0036",
+            "T0137",
+            "T0511"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0458",
+            "T0465",
+            "T0127",
+            "T0160",
+            "T0174",
+            "T0172"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-2597",
+      "decision_id": "D-2641",
+      "user_id": "U-01632",
+      "trigger_event_id": "6123cb9c-6c45-4b3f-9805-f8d5abb6a1b6",
+      "type": "home_page",
+      "published_at": "2026-10-01T17:20:17.767Z",
+      "dialect": "d1",
+      "hero_title_id": "T0195",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0413",
+            "T0419",
+            "T0072",
+            "T0218",
+            "T0277",
+            "T0390"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0305",
+            "T0230",
+            "T0447",
+            "T0196",
+            "T0214",
+            "T0363"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0426",
+            "T0382",
+            "T0435",
+            "T0036",
+            "T0137",
+            "T0511"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0458",
+            "T0465",
+            "T0127",
+            "T0160",
+            "T0174",
+            "T0172"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-2598",
+      "decision_id": "D-2641",
+      "user_id": "U-01632",
+      "trigger_event_id": "6123cb9c-6c45-4b3f-9805-f8d5abb6a1b6",
+      "type": "push",
+      "published_at": "2026-10-01T17:20:17.767Z",
+      "send_at": "2026-10-02T02:35:00.000Z",
+      "title_id": "T0195",
+      "dialect": "d1",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d1",
+        "body": "Watch Dhati Tiniha now on STAGE."
+      },
+      "deeplink": "ott://title/T0195"
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T01:02:50.710Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T01:02:50.710Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T01:02:50.710Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T01:02:50.710Z."
+  ]
+}

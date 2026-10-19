@@ -1,0 +1,115 @@
+{
+  "viewer_id": "U-00609",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-26T01:52:00.437Z",
+      "freshness_s": 58293565.5
+    },
+    "preferred_dialect": {
+      "value": "d3",
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-26T01:52:00.437Z",
+      "freshness_s": 58293565.5
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-26T01:52:00.437Z",
+      "freshness_s": 58293565.5
+    },
+    "signup_at": {
+      "value": "2024-11-26T01:52:00.437Z",
+      "source": "profile_or_events",
+      "observed_at": "2024-11-26T01:52:00.437Z",
+      "freshness_s": 58293565.5
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-26T01:52:00.437Z",
+      "freshness_s": 58293565.5
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2024-11-26T01:52:00.437Z",
+      "freshness_s": 58293565.5
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-1946",
+    "viewer_id": "U-00609",
+    "arm": "holdout",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T14:39:15.632Z",
+      "event_age_s": 0.6,
+      "trigger_event_id": "c592d857-d7df-4e0a-a211-2a518554fcff"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T14:39:15.632Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d7",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d3"
+      ]
+    },
+    "content": [],
+    "confidence": 0.95,
+    "confidence_reason": "No active titles available for dialect d7 at this time.",
+    "evidence": [
+      {
+        "ref": "event:c592d857-d7df-4e0a-a211-2a518554fcff",
+        "freshness_s": 0.6
+      },
+      {
+        "ref": "event:7c16cd21-8f57-4cdd-9592-c74881dba65a",
+        "freshness_s": 1052667.0
+      },
+      {
+        "ref": "episode:dhapipa-gini-d2-s1e3",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0523",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug dhapipa-gini-d2 and inactive for >= 3 days."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 2,
+    "status": "ABSTAINED",
+    "no_action_reason": "insufficient_evidence",
+    "model_calls": 1,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T14:39:15.632Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T14:39:15.632Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T14:39:15.632Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T14:39:15.632Z."
+  ]
+}

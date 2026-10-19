@@ -1,0 +1,108 @@
+{
+  "viewer_id": "U-04175",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-21T07:09:07.462Z",
+      "freshness_s": 27170538.5
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-21T07:09:07.462Z",
+      "freshness_s": 27170538.5
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-21T07:09:07.462Z",
+      "freshness_s": 27170538.5
+    },
+    "signup_at": {
+      "value": "2025-11-21T07:09:07.462Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-11-21T07:09:07.462Z",
+      "freshness_s": 27170538.5
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-21T07:09:07.462Z",
+      "freshness_s": 27170538.5
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2025-11-21T07:09:07.462Z",
+      "freshness_s": 27170538.5
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-1232",
+    "viewer_id": "U-04175",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T09:47:08.461Z",
+      "event_age_s": 0.5,
+      "trigger_event_id": "153199ef-5a2c-448c-a844-8674eb3c7209"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T09:47:08.461Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": [
+        "deeplink:d5"
+      ]
+    },
+    "content": [
+      "title:T0584",
+      "title:T0596",
+      "title:T0575",
+      "title:T0726",
+      "title:T0762"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:153199ef-5a2c-448c-a844-8674eb3c7209",
+      "event:f477e273-7f73-49c3-ad42-8235ea546779"
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug gibha-bhalomo-d2 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "goal_measurable",
+        "holdout_compliance",
+        "goal_eligibility",
+        "dialect_specified"
+      ],
+      "failed": [
+        "holdout_veto"
+      ]
+    },
+    "decided_in_ms": 2,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T09:47:08.461Z."
+  ]
+}

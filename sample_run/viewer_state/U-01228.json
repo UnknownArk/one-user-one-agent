@@ -1,0 +1,123 @@
+{
+  "viewer_id": "U-01228",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-02T18:05:15.650Z",
+      "freshness_s": 13134370.3
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-02T18:05:15.650Z",
+      "freshness_s": 13134370.3
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-02T18:05:15.650Z",
+      "freshness_s": 13134370.3
+    },
+    "signup_at": {
+      "value": "2026-05-02T18:05:15.650Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-05-02T18:05:15.650Z",
+      "freshness_s": 13134370.3
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-02T18:05:15.650Z",
+      "freshness_s": 13134370.3
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-05-02T18:05:15.650Z",
+      "freshness_s": 13134370.3
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-1288",
+    "viewer_id": "U-01228",
+    "arm": "holdout",
+    "suppressed": true,
+    "would_have_action": "HOME_PAGE",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T10:17:39.959Z",
+      "event_age_s": 2.0,
+      "trigger_event_id": "a682a1aa-90bd-4734-befe-875bd5e503b3"
+    },
+    "goal": {
+      "id": "G08",
+      "deadline": "2026-10-08T10:17:39.959Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "message_decision": null,
+    "dialect": {
+      "used": "d4",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d2"
+      ]
+    },
+    "content": [
+      "title:T1150",
+      "title:T0956",
+      "title:T0941",
+      "title:T0915",
+      "title:T0968"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:a682a1aa-90bd-4734-befe-875bd5e503b3",
+        "freshness_s": 2.0
+      },
+      {
+        "ref": "fact:status:2026-05-02T18:05:15.650Z",
+        "freshness_s": 13104744.3
+      }
+    ],
+    "assumptions": [
+      "Interprets G08: active subscriber eligible to discover titles released in last 30 days.",
+      "Viewer will interact with personalized rows in dialect d4."
+    ],
+    "checks": {
+      "passed": [
+        "home_page_structure",
+        "evidence_grounding",
+        "max_rows",
+        "duplicate_action",
+        "holdout_compliance",
+        "hero_valid",
+        "dialect_specified",
+        "goal_measurable",
+        "goal_eligibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 4,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G08 succeeded: Played new release T0948 (Naparo Chupi) (exposure: False).",
+    "Goal G08 succeeded: Played new release T0927 (Riya Gune) (exposure: False).",
+    "Goal G08 succeeded: Played new release T0947 (Loda) (exposure: False).",
+    "Goal G08 succeeded: Played new release T0927 (Riya Gune) (exposure: False)."
+  ]
+}

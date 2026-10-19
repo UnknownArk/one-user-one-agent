@@ -1,0 +1,109 @@
+{
+  "viewer_id": "U-04849",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-15T01:12:45.963Z",
+      "freshness_s": 56654320.0
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-15T01:12:45.963Z",
+      "freshness_s": 56654320.0
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-15T01:12:45.963Z",
+      "freshness_s": 56654320.0
+    },
+    "signup_at": {
+      "value": "2024-12-15T01:12:45.963Z",
+      "source": "profile_or_events",
+      "observed_at": "2024-12-15T01:12:45.963Z",
+      "freshness_s": 56654320.0
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-15T01:12:45.963Z",
+      "freshness_s": 56654320.0
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2024-12-15T01:12:45.963Z",
+      "freshness_s": 56654320.0
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-0216",
+    "viewer_id": "U-04849",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T03:07:17.421Z",
+      "event_age_s": 1.4,
+      "trigger_event_id": "66bab9d4-5588-4c26-84af-02c69fd3af3a"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T03:07:17.421Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0829",
+      "title:T0832",
+      "title:T0746",
+      "title:T0711",
+      "title:T0807"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:66bab9d4-5588-4c26-84af-02c69fd3af3a",
+      "event:ccba07d0-4f2e-4ec8-ac21-dc5c61cdabd9"
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug pirima-d2 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "holdout_compliance",
+        "dialect_specified",
+        "goal_eligibility",
+        "goal_measurable"
+      ],
+      "failed": [
+        "holdout_veto"
+      ]
+    },
+    "decided_in_ms": 1,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:07:17.421Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:07:17.421Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:07:17.421Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T03:07:17.421Z."
+  ]
+}

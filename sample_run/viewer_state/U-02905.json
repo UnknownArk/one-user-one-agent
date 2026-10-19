@@ -1,0 +1,115 @@
+{
+  "viewer_id": "U-02905",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-08-06T01:21:06.732Z",
+      "freshness_s": 4900219.2
+    },
+    "preferred_dialect": {
+      "value": "d3",
+      "source": "profile_snapshot",
+      "observed_at": "2026-08-06T01:21:06.732Z",
+      "freshness_s": 4900219.2
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2026-08-06T01:21:06.732Z",
+      "freshness_s": 4900219.2
+    },
+    "signup_at": {
+      "value": "2026-08-06T01:21:06.732Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-08-06T01:21:06.732Z",
+      "freshness_s": 4900219.2
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-08-06T01:21:06.732Z",
+      "freshness_s": 4900219.2
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-08-06T01:21:06.732Z",
+      "freshness_s": 4900219.2
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-0004",
+    "viewer_id": "U-02905",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-09-30T18:40:57.413Z",
+      "event_age_s": 1.4,
+      "trigger_event_id": "a43ac846-f170-4199-bf07-2c47b3a4b224"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-03T18:40:57.413Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "NA",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d3"
+      ]
+    },
+    "content": [],
+    "confidence": 0.95,
+    "confidence_reason": "No active titles available for dialect NA at this time.",
+    "evidence": [
+      {
+        "ref": "event:a43ac846-f170-4199-bf07-2c47b3a4b224",
+        "freshness_s": 1.4
+      },
+      {
+        "ref": "event:f866e446-c598-48ff-9e1c-e6461a11c2a2",
+        "freshness_s": 904321.9
+      },
+      {
+        "ref": "episode:yatite-roloda-d3-s1e5",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0901",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug yatite-roloda-d3 and inactive for >= 3 days."
+    ],
+    "checks": {
+      "passed": [
+        "dialect_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 5,
+    "status": "ABSTAINED",
+    "no_action_reason": "insufficient_evidence",
+    "model_calls": 1,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T18:40:57.413Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T18:40:57.413Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T18:40:57.413Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T18:40:57.413Z."
+  ]
+}

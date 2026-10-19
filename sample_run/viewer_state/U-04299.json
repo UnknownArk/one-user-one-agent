@@ -1,0 +1,153 @@
+{
+  "viewer_id": "U-04299",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-11T16:04:05.086Z",
+      "freshness_s": 7093640.9
+    },
+    "preferred_dialect": {
+      "value": "d1",
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-11T16:04:05.086Z",
+      "freshness_s": 7093640.9
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-11T16:04:05.086Z",
+      "freshness_s": 7093640.9
+    },
+    "signup_at": {
+      "value": "2026-07-11T16:04:05.086Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-07-11T16:04:05.086Z",
+      "freshness_s": 7093640.9
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-11T16:04:05.086Z",
+      "freshness_s": 7093640.9
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2026-07-11T16:04:05.086Z",
+      "freshness_s": 7093640.9
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 2,
+  "actions_count": 1,
+  "recent_decision": {
+    "decision_id": "D-0572",
+    "viewer_id": "U-04299",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T04:47:49.326Z",
+      "event_age_s": 80399.1,
+      "trigger_event_id": "ca94e6ac-aeb2-4046-ab7a-99ab24e11e66"
+    },
+    "goal": null,
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d1",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [],
+    "confidence": 0.99,
+    "confidence_reason": "Trigger event is 80399s old (> 600s threshold); offline-buffered event ignored.",
+    "evidence": [
+      {
+        "ref": "event:ca94e6ac-aeb2-4046-ab7a-99ab24e11e66",
+        "freshness_s": 80399.1
+      }
+    ],
+    "assumptions": [
+      "Offline-buffered historical app opens do not reflect a live user session."
+    ],
+    "checks": {
+      "passed": [
+        "stale_trigger_check"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 1,
+    "status": "ABSTAINED",
+    "no_action_reason": "stale_trigger",
+    "model_calls": 0,
+    "tool_calls": 0,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-0027",
+      "decision_id": "D-0031",
+      "user_id": "U-04299",
+      "trigger_event_id": "97f39220-3f28-45c6-8322-9be73493d3a6",
+      "type": "home_page",
+      "published_at": "2026-09-30T19:43:42.415Z",
+      "dialect": "d1",
+      "hero_title_id": "T0511",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0060",
+            "T0274",
+            "T0051",
+            "T0303",
+            "T0390",
+            "T0046"
+          ]
+        },
+        {
+          "row_type": "because_you_watched",
+          "title_ids": [
+            "T0363",
+            "T0047",
+            "T0263",
+            "T0495",
+            "T0258",
+            "T0179"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0426",
+            "T0382",
+            "T0435",
+            "T0195",
+            "T0036",
+            "T0413"
+          ]
+        },
+        {
+          "row_type": "genre",
+          "title_ids": [
+            "T0270",
+            "T0162",
+            "T0338",
+            "T0198",
+            "T0065",
+            "T0299"
+          ]
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T19:43:42.411Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T19:43:42.411Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T19:43:42.411Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-03T19:43:42.411Z."
+  ]
+}

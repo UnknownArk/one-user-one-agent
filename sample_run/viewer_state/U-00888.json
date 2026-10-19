@@ -1,0 +1,194 @@
+{
+  "viewer_id": "U-00888",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-23T19:18:18.734Z",
+      "freshness_s": 61168387.2
+    },
+    "preferred_dialect": {
+      "value": "d4",
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-23T19:18:18.734Z",
+      "freshness_s": 61168387.2
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-23T19:18:18.734Z",
+      "freshness_s": 61168387.2
+    },
+    "signup_at": {
+      "value": "2024-10-23T19:18:18.734Z",
+      "source": "profile_or_events",
+      "observed_at": "2024-10-23T19:18:18.734Z",
+      "freshness_s": 61168387.2
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-23T19:18:18.734Z",
+      "freshness_s": 61168387.2
+    },
+    "whatsapp_opt_in": {
+      "value": false,
+      "source": "profile_snapshot",
+      "observed_at": "2024-10-23T19:18:18.734Z",
+      "freshness_s": 61168387.2
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 2,
+  "recent_decision": {
+    "decision_id": "D-2280",
+    "viewer_id": "U-00888",
+    "arm": "agent",
+    "suppressed": false,
+    "would_have_action": null,
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T15:32:10.433Z",
+      "event_age_s": 0.4,
+      "trigger_event_id": "defdca6a-23a7-4cb9-aae5-153c84d6bede"
+    },
+    "goal": {
+      "id": "G07",
+      "deadline": "2026-10-04T15:32:10.433Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "HOME_PAGE",
+    "message_decision": {
+      "status": "PUBLISHED",
+      "action_id": "A-2198",
+      "channel": "push"
+    },
+    "dialect": {
+      "used": "d3",
+      "source": "app_setting",
+      "conflicts": [
+        "profile:d4",
+        "deeplink:d6"
+      ]
+    },
+    "content": [
+      "title:T0901",
+      "title:T0910",
+      "title:T0909",
+      "title:T0905",
+      "title:T0903"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:defdca6a-23a7-4cb9-aae5-153c84d6bede",
+        "freshness_s": 0.4
+      },
+      {
+        "ref": "event:4dd5db41-45a6-45d6-86e3-320fbef3cef1",
+        "freshness_s": 2456458.1
+      },
+      {
+        "ref": "episode:yane-tegi-d3-s1e1",
+        "freshness_s": 0.0
+      },
+      {
+        "ref": "catalogue:T0903",
+        "freshness_s": 0.0
+      }
+    ],
+    "assumptions": [
+      "Interprets G07: unwatched episodes exist for slug yane-tegi-d3 and inactive for >= 3 days.",
+      "Viewer will interact with personalized rows in dialect d3."
+    ],
+    "checks": {
+      "passed": [
+        "quiet_hours",
+        "home_page_structure",
+        "evidence_grounding",
+        "goal_plausibility",
+        "max_rows",
+        "message_title_valid",
+        "duplicate_action",
+        "push_consent",
+        "holdout_compliance",
+        "hero_valid",
+        "push_copy_valid",
+        "dialect_specified",
+        "goal_measurable",
+        "frequency_cap",
+        "goal_eligibility"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 4,
+    "status": "PUBLISHED",
+    "no_action_reason": null,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [
+    {
+      "action_id": "A-2197",
+      "decision_id": "D-2280",
+      "user_id": "U-00888",
+      "trigger_event_id": "defdca6a-23a7-4cb9-aae5-153c84d6bede",
+      "type": "home_page",
+      "published_at": "2026-10-01T15:32:10.437Z",
+      "dialect": "d3",
+      "hero_title_id": "T0901",
+      "rows": [
+        {
+          "row_type": "popular_in_dialect",
+          "title_ids": [
+            "T0910",
+            "T0909",
+            "T0905",
+            "T0902",
+            "T0904",
+            "T0908"
+          ]
+        },
+        {
+          "row_type": "new_releases",
+          "title_ids": [
+            "T0903",
+            "T0906",
+            "T0913",
+            "T0907",
+            "T0914",
+            "T0911"
+          ]
+        }
+      ]
+    },
+    {
+      "action_id": "A-2198",
+      "decision_id": "D-2280",
+      "user_id": "U-00888",
+      "trigger_event_id": "defdca6a-23a7-4cb9-aae5-153c84d6bede",
+      "type": "push",
+      "published_at": "2026-10-01T15:32:10.437Z",
+      "send_at": "2026-10-01T15:32:25.433Z",
+      "title_id": "T0901",
+      "dialect": "d3",
+      "goal_id": "G07",
+      "text": {
+        "title": "Recommended in d3",
+        "body": "Watch Yatite Roloda now on STAGE."
+      },
+      "deeplink": "ott://title/T0901"
+    }
+  ],
+  "lessons": [
+    "Goal G07 succeeded: Resumed series slug yane-tegi-d3 on title T0903 (exposure: True).",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:32:10.433Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:32:10.433Z.",
+    "Goal G07 failed: No attributable success signal before deadline 2026-10-04T15:32:10.433Z."
+  ]
+}

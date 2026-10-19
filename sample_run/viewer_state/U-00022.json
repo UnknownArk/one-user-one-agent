@@ -1,0 +1,109 @@
+{
+  "viewer_id": "U-00022",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-12-18T04:45:42.996Z",
+      "freshness_s": 24846342.9
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2025-12-18T04:45:42.996Z",
+      "freshness_s": 24846342.9
+    },
+    "preferred_language": {
+      "value": "en",
+      "source": "profile_snapshot",
+      "observed_at": "2025-12-18T04:45:42.996Z",
+      "freshness_s": 24846342.9
+    },
+    "signup_at": {
+      "value": "2025-12-18T04:45:42.996Z",
+      "source": "profile_or_events",
+      "observed_at": "2025-12-18T04:45:42.996Z",
+      "freshness_s": 24846342.9
+    },
+    "subscription_status": {
+      "value": "active",
+      "source": "profile_snapshot",
+      "observed_at": "2025-12-18T04:45:42.996Z",
+      "freshness_s": 24846342.9
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2025-12-18T04:45:42.996Z",
+      "freshness_s": 24846342.9
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-0773",
+    "viewer_id": "U-00022",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T06:15:56.565Z",
+      "event_age_s": 1.6,
+      "trigger_event_id": "62ec9753-17bf-41a6-b847-e4dcc24d9a9c"
+    },
+    "goal": {
+      "id": "G08",
+      "deadline": "2026-10-08T06:15:56.565Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0741",
+      "title:T0787",
+      "title:T0724",
+      "title:T0657",
+      "title:T0695"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      "event:62ec9753-17bf-41a6-b847-e4dcc24d9a9c",
+      "fact:status:2025-12-18T04:45:42.996Z"
+    ],
+    "assumptions": [
+      "Interprets G08: active subscriber eligible to discover titles released in last 30 days.",
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "holdout_compliance",
+        "dialect_specified",
+        "goal_eligibility",
+        "goal_measurable"
+      ],
+      "failed": [
+        "holdout_veto"
+      ]
+    },
+    "decided_in_ms": 1,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G08 succeeded: Played new release T0544 (Giba Hane) (exposure: False).",
+    "Goal G08 succeeded: Played new release T0528 (Gibha Bhalomo) (exposure: False).",
+    "Goal G08 succeeded: Played new release T0538 (Gisu) (exposure: False).",
+    "Goal G08 succeeded: Played new release T0529 (Neba) (exposure: False)."
+  ]
+}

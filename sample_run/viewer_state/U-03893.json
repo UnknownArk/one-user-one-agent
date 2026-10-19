@@ -1,0 +1,123 @@
+{
+  "viewer_id": "U-03893",
+  "exported_at": "2026-10-01T18:31:25.944Z",
+  "facts": {
+    "notifications_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-30T09:23:33.470Z",
+      "freshness_s": 119272.5
+    },
+    "preferred_dialect": {
+      "value": "d2",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-30T09:23:33.470Z",
+      "freshness_s": 119272.5
+    },
+    "preferred_language": {
+      "value": "hin",
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-30T09:23:33.470Z",
+      "freshness_s": 119272.5
+    },
+    "signup_at": {
+      "value": "2026-09-30T09:23:33.470Z",
+      "source": "profile_or_events",
+      "observed_at": "2026-09-30T09:23:33.470Z",
+      "freshness_s": 119272.5
+    },
+    "subscription_status": {
+      "value": "never",
+      "source": "events_synthesis",
+      "observed_at": "2026-09-30T09:23:33.470Z",
+      "freshness_s": 119272.5
+    },
+    "whatsapp_opt_in": {
+      "value": true,
+      "source": "profile_snapshot",
+      "observed_at": "2026-09-30T09:23:33.470Z",
+      "freshness_s": 119272.5
+    }
+  },
+  "active_goal": null,
+  "decisions_count": 1,
+  "actions_count": 0,
+  "recent_decision": {
+    "decision_id": "D-2375",
+    "viewer_id": "U-03893",
+    "arm": "holdout",
+    "suppressed": true,
+    "would_have_action": "HOME_PAGE",
+    "trigger": {
+      "event": "app_open",
+      "received_at": "2026-10-01T16:01:45.981Z",
+      "event_age_s": 1.0,
+      "trigger_event_id": "7bf73380-b459-4372-9da9-ecae6583f2d1"
+    },
+    "goal": {
+      "id": "G01",
+      "deadline": "2026-10-02T16:01:45.981Z",
+      "signal": "play_started",
+      "rule_version": "2026-09-30"
+    },
+    "action": "NO_ACTION",
+    "dialect": {
+      "used": "d2",
+      "source": "app_setting",
+      "conflicts": []
+    },
+    "content": [
+      "title:T0521",
+      "title:T0522",
+      "title:T0523",
+      "title:T0524",
+      "title:T0535"
+    ],
+    "confidence": 0.88,
+    "confidence_reason": "Personalized layout matches viewer dialect and favorite genres.",
+    "evidence": [
+      {
+        "ref": "event:7bf73380-b459-4372-9da9-ecae6583f2d1",
+        "freshness_s": 1.0
+      },
+      {
+        "ref": "fact:signup_at:2026-09-30T09:23:33.470Z",
+        "freshness_s": 110292.5
+      },
+      {
+        "ref": "event:2416beed-eb49-4236-9c82-653958340931",
+        "freshness_s": 110292.5
+      }
+    ],
+    "assumptions": [
+      "Assumes viewer will discover catalog on home page.",
+      "Viewer will interact with personalized rows in dialect d2."
+    ],
+    "checks": {
+      "passed": [
+        "evidence_grounding",
+        "dialect_specified",
+        "home_page_structure",
+        "max_rows",
+        "holdout_compliance",
+        "hero_valid",
+        "goal_eligibility",
+        "goal_measurable"
+      ],
+      "failed": []
+    },
+    "decided_in_ms": 4,
+    "status": "HOLDOUT_SUPPRESSED",
+    "no_action_reason": "holdout",
+    "model_calls": 2,
+    "tool_calls": 1,
+    "fallback_used": false
+  },
+  "actions": [],
+  "lessons": [
+    "Goal G01 failed: No attributable success signal before deadline 2026-10-02T16:01:45.981Z.",
+    "Goal G01 succeeded: First play started on title T0538 at 2026-10-01T16:03:13.981Z (exposure: False).",
+    "Goal G01 failed: No attributable success signal before deadline 2026-10-02T16:01:45.981Z.",
+    "Goal G01 failed: No attributable success signal before deadline 2026-10-02T16:01:45.981Z."
+  ]
+}
