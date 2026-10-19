@@ -10,7 +10,22 @@ from src.model_provider import MockReplayModelProvider, ModelTimeoutException, M
 from src.verifier import PolicyVerifier
 from src.decide import DecisionEngine
 
-PACK_DIR = "one_user_one_agent_pack"
+def find_pack_dir() -> str:
+    env_p = os.environ.get("PACK_DIR")
+    if env_p and os.path.exists(env_p):
+        return env_p
+    for candidate in [
+        "one_user_one_agent_pack",
+        "../one_user_one_agent_pack",
+        "../../one_user_one_agent_pack",
+        "data_pack",
+        "../data_pack"
+    ]:
+        if os.path.exists(candidate):
+            return candidate
+    return "one_user_one_agent_pack"
+
+PACK_DIR = find_pack_dir()
 
 @pytest.fixture
 def test_setup():
